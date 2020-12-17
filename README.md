@@ -1,36 +1,20 @@
 部标JT808协议解码包
 ====================
-# 项目介绍
+## 项目介绍
 * 基于Netty-buffer，实现JT/T808部标协议的编码解码
 
 问题交流群：[906230542]
 
-# 主要特性
-* 代码足够精简，便于二次开发；
-* 使用注解描述协议，告别繁琐的封包、解包；
+## 主要特性
 * 兼容2011、2013、2019部标协议版本，支持分包请求；
 * 支持JT/T1078音视频协议，T/JSATL12苏标主动安防协议；
-* 提供报文解释器（解析过程分析工具），编码解码不再抓瞎；
-* 全覆盖的测试用例，稳定发版。
 
-# 代码仓库
+## 代码仓库
  * Gitee仓库地址：[https://gitee.com/yezhihao/jt808-coder/tree/master](https://gitee.com/yezhihao/jt808-coder/tree/master)
  * Github仓库地址：[https://github.com/yezhihao/jt808-coder/tree/master](https://github.com/yezhihao/jt808-coder/tree/master)
 
-# 下载方式
- * Gitee下载命令：`git clone https://gitee.com/yezhihao/jt808-coder -b master`
- * Github下载命令：`git clone https://github.com/yezhihao/jt808-coder -b master`
 
-## 项目结构：
-```sh
-└── protocol
-    ├── basics 部标协议通用消息头，以及公共的消息定义
-    ├── codec 部标编码解码工具
-    ├── commons 部标协议ID，工具类等
-    ├── jsatl12 T/JSATL12 苏标协议（已完成）
-    ├── t808 JT/T808 部标协议（已完成）
-    └── t1078 JT/T1078 音视频协议（已完成）
- ```
+### 使用
  消息定义样例：
  ```java
 @Message(JT808.定位数据批量上传)
@@ -54,12 +38,34 @@ public class T0704 extends AbstractMessage<Header> {
 }
 ```
 
-## 4.test 808协议全覆盖的测试用例，以及报文解释器
+```java
+package org.yzh.codec;
 
-* Beans 测试数据
-* TestBeans 消息对象的封包解包
-* TestHex 原始报文测试
+import io.netty.buffer.ByteBuf;
+import io.netty.buffer.ByteBufUtil;
+import io.netty.buffer.Unpooled;
+import org.yzh.protocol.basics.JTMessage;
+import org.yzh.protocol.codec.JTMessageDecoder;
+import org.yzh.protocol.codec.JTMessageEncoder;
 
+public class SampleTest {
+
+    private static JTMessageDecoder messageDecoder = new JTMessageDecoder("org.yzh.protocol");
+    private static JTMessageEncoder messageEncoder = new JTMessageEncoder("org.yzh.protocol");
+
+    public static void main(String[] args) {
+        String hex = "020000d40123456789017fff000004000000080006eeb6ad02633df7013800030063200707192359642f000000400101020a0a02010a1e00640001b2070003640e200707192359000100000061646173200827111111010101652f000000410202020a0000000a1e00c8000516150006c81c20070719235900020000000064736d200827111111020202662900000042031e012c00087a23000a2c2a200707192359000300000074706d732008271111110303030067290000004304041e0190000bde31000d90382007071923590004000000006273642008271111110404049d";
+
+        JTMessage message = messageDecoder.decode(Unpooled.wrappedBuffer(ByteBufUtil.decodeHexDump(hex)));
+        System.out.println(message);
+
+        ByteBuf byteBuf = messageEncoder.encode(message);
+        System.out.println(ByteBufUtil.hexDump(byteBuf));
+    }
+}
+```
+
+### 测试
 * Elucidator 报文解释器 - 解码
 * DarkRepulsor 报文解释器 - 编码
 

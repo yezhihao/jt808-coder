@@ -61,7 +61,7 @@
         <dependency>
             <groupId>io.github.yezhihao</groupId>
             <artifactId>protostar</artifactId>
-            <version>1.0.2.RELEASE</version>
+            <version>1.0.3.RELEASE</version>
         </dependency>
     </dependencies>
 

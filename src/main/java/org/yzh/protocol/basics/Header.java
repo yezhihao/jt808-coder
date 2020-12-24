@@ -2,7 +2,6 @@ package org.yzh.protocol.basics;
 
 import io.github.yezhihao.protostar.DataType;
 import io.github.yezhihao.protostar.annotation.Field;
-import io.github.yezhihao.protostar.annotation.Fs;
 import org.yzh.protocol.commons.MessageId;
 
 /**
@@ -74,9 +73,8 @@ public class Header {
         this.versionNo = versionNo;
     }
 
-    @Fs({@Field(index = 4, type = DataType.BCD8421, length = 6, desc = "终端手机号", version = -1),
-            @Field(index = 4, type = DataType.BCD8421, length = 6, desc = "终端手机号", version = 0),
-            @Field(index = 5, type = DataType.BCD8421, length = 10, desc = "终端手机号", version = 1)})
+    @Field(index = 4, type = DataType.BCD8421, length = 6, desc = "终端手机号", version = {-1, 0})
+    @Field(index = 5, type = DataType.BCD8421, length = 10, desc = "终端手机号", version = 1)
     public String getMobileNo() {
         return mobileNo;
     }
@@ -85,9 +83,8 @@ public class Header {
         this.mobileNo = mobileNo;
     }
 
-    @Fs({@Field(index = 10, type = DataType.WORD, desc = "流水号", version = -1),
-            @Field(index = 10, type = DataType.WORD, desc = "流水号", version = 0),
-            @Field(index = 15, type = DataType.WORD, desc = "流水号", version = 1)})
+    @Field(index = 10, type = DataType.WORD, desc = "流水号", version = {-1, 0})
+    @Field(index = 15, type = DataType.WORD, desc = "流水号", version = 1)
     public int getSerialNo() {
         return serialNo;
     }
@@ -96,8 +93,8 @@ public class Header {
         this.serialNo = serialNo;
     }
 
-    @Fs({@Field(index = 12, type = DataType.WORD, desc = "消息包总数", version = 0),
-            @Field(index = 17, type = DataType.WORD, desc = "消息包总数", version = 1)})
+    @Field(index = 12, type = DataType.WORD, desc = "消息包总数", version = 0)
+    @Field(index = 17, type = DataType.WORD, desc = "消息包总数", version = 1)
     public Integer getPackageTotal() {
         if (isSubpackage())
             return packageTotal;
@@ -108,8 +105,8 @@ public class Header {
         this.packageTotal = packageTotal;
     }
 
-    @Fs({@Field(index = 14, type = DataType.WORD, desc = "包序号", version = 0),
-            @Field(index = 19, type = DataType.WORD, desc = "包序号", version = 1)})
+    @Field(index = 14, type = DataType.WORD, desc = "包序号", version = 0)
+    @Field(index = 19, type = DataType.WORD, desc = "包序号", version = 1)
     public Integer getPackageNo() {
         if (isSubpackage())
             return packageNo;

@@ -2166,18 +2166,10 @@ json1 {
   "direction": 99,
   "dateTime": "2020-07-07T19:23:59",
   "attributes": {
-    "1": {
-      "value": 11
-    },
-    "2": {
-      "value": 22
-    },
-    "3": {
-      "value": 33
-    },
-    "4": {
-      "value": 44
-    },
+    "1": 11,
+    "2": 22,
+    "3": 33,
+    "4": 44,
     "5": {
       "value": [
         55,
@@ -2212,9 +2204,7 @@ json1 {
         0
       ]
     },
-    "6": {
-      "value": 2
-    },
+    "6": 2,
     "17": {
       "positionType": 66,
       "areaId": 66
@@ -2229,21 +2219,11 @@ json1 {
       "driveTime": 88,
       "result": 88
     },
-    "37": {
-      "value": 99
-    },
-    "42": {
-      "value": 10
-    },
-    "43": {
-      "value": 20
-    },
-    "48": {
-      "value": 30
-    },
-    "49": {
-      "value": 40
-    }
+    "37": 99,
+    "42": 10,
+    "43": 20,
+    "48": 30,
+    "49": 40
   },
   "header": {
     "messageId": 512,
@@ -2265,18 +2245,10 @@ json2 {
   "direction": 99,
   "dateTime": "2020-07-07T19:23:59",
   "attributes": {
-    "1": {
-      "value": 11
-    },
-    "2": {
-      "value": 22
-    },
-    "3": {
-      "value": 33
-    },
-    "4": {
-      "value": 44
-    },
+    "1": 11,
+    "2": 22,
+    "3": 33,
+    "4": 44,
     "5": {
       "value": [
         55,
@@ -2311,9 +2283,7 @@ json2 {
         0
       ]
     },
-    "6": {
-      "value": 2
-    },
+    "6": 2,
     "17": {
       "positionType": 66,
       "areaId": 66
@@ -2328,21 +2298,11 @@ json2 {
       "driveTime": 88,
       "result": 88
     },
-    "37": {
-      "value": 99
-    },
-    "42": {
-      "value": 10
-    },
-    "43": {
-      "value": 20
-    },
-    "48": {
-      "value": 30
-    },
-    "49": {
-      "value": 40
-    }
+    "37": 99,
+    "42": 10,
+    "43": 20,
+    "48": 30,
+    "49": 40
   },
   "header": {
     "messageId": 512,
@@ -2364,18 +2324,10 @@ json1 {
   "direction": 99,
   "dateTime": "2020-07-07T19:23:59",
   "attributes": {
-    "1": {
-      "value": 11
-    },
-    "2": {
-      "value": 22
-    },
-    "3": {
-      "value": 33
-    },
-    "4": {
-      "value": 44
-    },
+    "1": 11,
+    "2": 22,
+    "3": 33,
+    "4": 44,
     "5": {
       "value": [
         55,
@@ -2410,9 +2362,7 @@ json1 {
         0
       ]
     },
-    "6": {
-      "value": 2
-    },
+    "6": 2,
     "17": {
       "positionType": 66,
       "areaId": 66
@@ -2427,21 +2377,11 @@ json1 {
       "driveTime": 88,
       "result": 88
     },
-    "37": {
-      "value": 99
-    },
-    "42": {
-      "value": 10
-    },
-    "43": {
-      "value": 20
-    },
-    "48": {
-      "value": 30
-    },
-    "49": {
-      "value": 40
-    }
+    "37": 99,
+    "42": 10,
+    "43": 20,
+    "48": 30,
+    "49": 40
   },
   "header": {
     "messageId": 512,
@@ -2463,18 +2403,10 @@ json2 {
   "direction": 99,
   "dateTime": "2020-07-07T19:23:59",
   "attributes": {
-    "1": {
-      "value": 11
-    },
-    "2": {
-      "value": 22
-    },
-    "3": {
-      "value": 33
-    },
-    "4": {
-      "value": 44
-    },
+    "1": 11,
+    "2": 22,
+    "3": 33,
+    "4": 44,
     "5": {
       "value": [
         55,
@@ -2509,9 +2441,7 @@ json2 {
         0
       ]
     },
-    "6": {
-      "value": 2
-    },
+    "6": 2,
     "17": {
       "positionType": 66,
       "areaId": 66
@@ -2526,21 +2456,11 @@ json2 {
       "driveTime": 88,
       "result": 88
     },
-    "37": {
-      "value": 99
-    },
-    "42": {
-      "value": 10
-    },
-    "43": {
-      "value": 20
-    },
-    "48": {
-      "value": 30
-    },
-    "49": {
-      "value": 40
-    }
+    "37": 99,
+    "42": 10,
+    "43": 20,
+    "48": 30,
+    "49": 40
   },
   "header": {
     "messageId": 512,
@@ -8924,18 +8844,10 @@ json2 {
   "direction": 99,
   "dateTime": "2020-07-07T19:23:59",
   "attributes": {
-    "1": {
-      "value": 11
-    },
-    "2": {
-      "value": 22
-    },
-    "3": {
-      "value": 33
-    },
-    "4": {
-      "value": 44
-    },
+    "1": 11,
+    "2": 22,
+    "3": 33,
+    "4": 44,
     "5": {
       "value": [
         55,
@@ -8984,21 +8896,11 @@ json2 {
       "driveTime": 88,
       "result": 88
     },
-    "37": {
-      "value": 99
-    },
-    "42": {
-      "value": 10
-    },
-    "43": {
-      "value": 20
-    },
-    "48": {
-      "value": 30
-    },
-    "49": {
-      "value": 40
-    }
+    "37": 99,
+    "42": 10,
+    "43": 20,
+    "48": 30,
+    "49": 40
   },
   "header": {
     "messageId": 512,
@@ -9020,18 +8922,10 @@ json2 {
   "direction": 99,
   "dateTime": "2020-07-07T19:23:59",
   "attributes": {
-    "1": {
-      "value": 11
-    },
-    "2": {
-      "value": 22
-    },
-    "3": {
-      "value": 33
-    },
-    "4": {
-      "value": 44
-    },
+    "1": 11,
+    "2": 22,
+    "3": 33,
+    "4": 44,
     "5": {
       "value": [
         55,
@@ -9080,21 +8974,11 @@ json2 {
       "driveTime": 88,
       "result": 88
     },
-    "37": {
-      "value": 99
-    },
-    "42": {
-      "value": 10
-    },
-    "43": {
-      "value": 20
-    },
-    "48": {
-      "value": 30
-    },
-    "49": {
-      "value": 40
-    }
+    "37": 99,
+    "42": 10,
+    "43": 20,
+    "48": 30,
+    "49": 40
   },
   "header": {
     "messageId": 512,
@@ -9117,18 +9001,10 @@ json2 {
   "direction": 99,
   "dateTime": "2020-07-07T19:23:59",
   "attributes": {
-    "1": {
-      "value": 11
-    },
-    "2": {
-      "value": 22
-    },
-    "3": {
-      "value": 33
-    },
-    "4": {
-      "value": 44
-    },
+    "1": 11,
+    "2": 22,
+    "3": 33,
+    "4": 44,
     "5": {
       "value": [
         55,
@@ -9177,21 +9053,11 @@ json2 {
       "driveTime": 88,
       "result": 88
     },
-    "37": {
-      "value": 99
-    },
-    "42": {
-      "value": 10
-    },
-    "43": {
-      "value": 20
-    },
-    "48": {
-      "value": 30
-    },
-    "49": {
-      "value": 40
-    }
+    "37": 99,
+    "42": 10,
+    "43": 20,
+    "48": 30,
+    "49": 40
   },
   "header": {
     "messageId": 512,
@@ -9213,18 +9079,10 @@ json2 {
   "direction": 99,
   "dateTime": "2020-07-07T19:23:59",
   "attributes": {
-    "1": {
-      "value": 11
-    },
-    "2": {
-      "value": 22
-    },
-    "3": {
-      "value": 33
-    },
-    "4": {
-      "value": 44
-    },
+    "1": 11,
+    "2": 22,
+    "3": 33,
+    "4": 44,
     "5": {
       "value": [
         55,
@@ -9273,21 +9131,11 @@ json2 {
       "driveTime": 88,
       "result": 88
     },
-    "37": {
-      "value": 99
-    },
-    "42": {
-      "value": 10
-    },
-    "43": {
-      "value": 20
-    },
-    "48": {
-      "value": 30
-    },
-    "49": {
-      "value": 40
-    }
+    "37": 99,
+    "42": 10,
+    "43": 20,
+    "48": 30,
+    "49": 40
   },
   "header": {
     "messageId": 512,
@@ -13837,9 +13685,7 @@ json2 {
   "direction": 300,
   "dateTime": "2020-05-12T12:12:59",
   "attributes": {
-    "1": {
-      "value": 3224115
-    }
+    "1": 3224115
   },
   "header": {
     "messageId": 513,
@@ -13862,9 +13708,7 @@ json2 {
   "direction": 300,
   "dateTime": "2020-05-12T12:12:59",
   "attributes": {
-    "1": {
-      "value": 3224115
-    }
+    "1": 3224115
   },
   "header": {
     "messageId": 513,
@@ -13888,9 +13732,7 @@ json2 {
   "direction": 300,
   "dateTime": "2020-05-12T12:12:59",
   "attributes": {
-    "1": {
-      "value": 3224115
-    }
+    "1": 3224115
   },
   "header": {
     "messageId": 513,
@@ -13913,9 +13755,7 @@ json2 {
   "direction": 300,
   "dateTime": "2020-05-12T12:12:59",
   "attributes": {
-    "1": {
-      "value": 3224115
-    }
+    "1": 3224115
   },
   "header": {
     "messageId": 513,
@@ -14498,7 +14338,7 @@ json2 {
 }
 
 7e0900000f0123456789017fff006173647a786371776531323333354c7e
-[main] WARN org.yzh.protocol.commons.transform.PassthroughConverter[28]未识别的透传消息：ID[0], HEX[6173647a78637177653132333335]
+[main] WARN org.yzh.protocol.commons.transform.PassthroughConverter - 未识别的透传消息:ID[dec:0,hex:0], VALUE[6173647a78637177653132333335]
 {
   "message": {
     "id": 0,
@@ -14528,9 +14368,9 @@ json2 {
     "verified": true
   }
 }
-[main] WARN org.yzh.protocol.commons.transform.PassthroughConverter[44]未注册的透传消息：ID[0], HEX[6173647a78637177653132333335]
+[main] WARN org.yzh.protocol.commons.transform.PassthroughConverter - 未注册的透传消息:ID[dec:0,hex:0], VALUE[6173647a78637177653132333335]
 7e0900000f0123456789017fff006173647a786371776531323333354c7e
-[main] WARN org.yzh.protocol.commons.transform.PassthroughConverter[28]未识别的透传消息：ID[0], HEX[6173647a78637177653132333335]
+[main] WARN org.yzh.protocol.commons.transform.PassthroughConverter - 未识别的透传消息:ID[dec:0,hex:0], VALUE[6173647a78637177653132333335]
 {
   "message": {
     "id": 0,
@@ -14562,7 +14402,7 @@ json2 {
 }
 
 7e0900400f0100000000017299841738ffff006173647a78637177653132333335447e
-[main] WARN org.yzh.protocol.commons.transform.PassthroughConverter[28]未识别的透传消息：ID[0], HEX[6173647a78637177653132333335]
+[main] WARN org.yzh.protocol.commons.transform.PassthroughConverter - 未识别的透传消息:ID[dec:0,hex:0], VALUE[6173647a78637177653132333335]
 {
   "message": {
     "id": 0,
@@ -14592,9 +14432,9 @@ json2 {
     "verified": true
   }
 }
-[main] WARN org.yzh.protocol.commons.transform.PassthroughConverter[44]未注册的透传消息：ID[0], HEX[6173647a78637177653132333335]
+[main] WARN org.yzh.protocol.commons.transform.PassthroughConverter - 未注册的透传消息:ID[dec:0,hex:0], VALUE[6173647a78637177653132333335]
 7e0900400f0100000000017299841738ffff006173647a78637177653132333335447e
-[main] WARN org.yzh.protocol.commons.transform.PassthroughConverter[28]未识别的透传消息：ID[0], HEX[6173647a78637177653132333335]
+[main] WARN org.yzh.protocol.commons.transform.PassthroughConverter - 未识别的透传消息:ID[dec:0,hex:0], VALUE[6173647a78637177653132333335]
 {
   "message": {
     "id": 0,
@@ -14625,24 +14465,24 @@ json2 {
   }
 }
 
-[main] INFO MultiPacketDecoder   [51]>>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=1, retryCount=0, time=0, packets={1, , , , , , , , , , , , , , , , , }]
-[main] INFO MultiPacketDecoder   [51]>>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=2, retryCount=0, time=0, packets={1,2, , , , , , , , , , , , , , , , }]
-[main] INFO MultiPacketDecoder   [51]>>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=3, retryCount=0, time=0, packets={1,2,3, , , , , , , , , , , , , , , }]
-[main] INFO MultiPacketDecoder   [51]>>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=4, retryCount=0, time=0, packets={1,2,3,4, , , , , , , , , , , , , , }]
-[main] INFO MultiPacketDecoder   [51]>>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=5, retryCount=0, time=0, packets={1,2,3,4,5, , , , , , , , , , , , , }]
-[main] INFO MultiPacketDecoder   [51]>>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=6, retryCount=0, time=0, packets={1,2,3,4,5,6, , , , , , , , , , , , }]
-[main] INFO MultiPacketDecoder   [51]>>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=7, retryCount=0, time=0, packets={1,2,3,4,5,6,7, , , , , , , , , , , }]
-[main] INFO MultiPacketDecoder   [51]>>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=8, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8, , , , , , , , , , }]
-[main] INFO MultiPacketDecoder   [51]>>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=9, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9, , , , , , , , , }]
-[main] INFO MultiPacketDecoder   [51]>>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=10, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10, , , , , , , , }]
-[main] INFO MultiPacketDecoder   [51]>>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=11, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10,11, , , , , , , }]
-[main] INFO MultiPacketDecoder   [51]>>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=12, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10,11,12, , , , , , }]
-[main] INFO MultiPacketDecoder   [51]>>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=13, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10,11,12,13, , , , , }]
-[main] INFO MultiPacketDecoder   [51]>>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=14, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10,11,12,13,14, , , , }]
-[main] INFO MultiPacketDecoder   [51]>>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=15, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15, , , }]
-[main] INFO MultiPacketDecoder   [51]>>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=16, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16, , }]
-[main] INFO MultiPacketDecoder   [51]>>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=17, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17, }]
-[main] INFO MultiPacketDecoder   [51]>>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=18, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18}]
+[main] INFO MultiPacketDecoder - >>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=1, retryCount=0, time=0, packets={1, , , , , , , , , , , , , , , , , }]
+[main] INFO MultiPacketDecoder - >>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=2, retryCount=0, time=0, packets={1,2, , , , , , , , , , , , , , , , }]
+[main] INFO MultiPacketDecoder - >>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=3, retryCount=0, time=0, packets={1,2,3, , , , , , , , , , , , , , , }]
+[main] INFO MultiPacketDecoder - >>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=4, retryCount=0, time=0, packets={1,2,3,4, , , , , , , , , , , , , , }]
+[main] INFO MultiPacketDecoder - >>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=5, retryCount=0, time=0, packets={1,2,3,4,5, , , , , , , , , , , , , }]
+[main] INFO MultiPacketDecoder - >>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=6, retryCount=0, time=0, packets={1,2,3,4,5,6, , , , , , , , , , , , }]
+[main] INFO MultiPacketDecoder - >>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=7, retryCount=0, time=0, packets={1,2,3,4,5,6,7, , , , , , , , , , , }]
+[main] INFO MultiPacketDecoder - >>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=8, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8, , , , , , , , , , }]
+[main] INFO MultiPacketDecoder - >>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=9, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9, , , , , , , , , }]
+[main] INFO MultiPacketDecoder - >>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=10, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10, , , , , , , , }]
+[main] INFO MultiPacketDecoder - >>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=11, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10,11, , , , , , , }]
+[main] INFO MultiPacketDecoder - >>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=12, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10,11,12, , , , , , }]
+[main] INFO MultiPacketDecoder - >>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=13, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10,11,12,13, , , , , }]
+[main] INFO MultiPacketDecoder - >>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=14, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10,11,12,13,14, , , , }]
+[main] INFO MultiPacketDecoder - >>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=15, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15, , , }]
+[main] INFO MultiPacketDecoder - >>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=16, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16, , }]
+[main] INFO MultiPacketDecoder - >>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=17, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17, }]
+[main] INFO MultiPacketDecoder - >>>>>>>>>>分包信息[clientId=17299841738, messageId=1205, total=18, count=18, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18}]
 {
   "serialNo": 2,
   "count": 180,
@@ -18079,10 +17919,10 @@ json2 {
     "verified": true
   }
 }
-[main] INFO MultiPacketDecoder   [51]>>>>>>>>>>分包信息[clientId=13224005528, messageId=104, total=2, count=1, retryCount=0, time=0, packets={1, }]
-[main] INFO MultiPacketDecoder   [51]>>>>>>>>>>分包信息[clientId=13224005528, messageId=104, total=2, count=2, retryCount=0, time=0, packets={1,2}]
-[main] WARN org.yzh.protocol.commons.transform.ParameterConverter[26]未识别的终端参数项：ID[2063597568], HEX[0000]
-[main] WARN org.yzh.protocol.commons.transform.ParameterConverter[26]未识别的终端参数项：ID[2080374784], HEX[0000000000000000000000000000000000000000]
+[main] INFO MultiPacketDecoder - >>>>>>>>>>分包信息[clientId=13224005528, messageId=104, total=2, count=1, retryCount=0, time=0, packets={1, }]
+[main] INFO MultiPacketDecoder - >>>>>>>>>>分包信息[clientId=13224005528, messageId=104, total=2, count=2, retryCount=0, time=0, packets={1,2}]
+[main] WARN org.yzh.protocol.commons.transform.ParameterConverter - 未识别的终端参数项:ID[dec:2063597568,hex:7b000000], VALUE[0000]
+[main] WARN org.yzh.protocol.commons.transform.ParameterConverter - 未识别的终端参数项:ID[dec:2080374784,hex:7c000000], VALUE[0000000000000000000000000000000000000000]
 {
   "serialNo": 420,
   "total": 88,

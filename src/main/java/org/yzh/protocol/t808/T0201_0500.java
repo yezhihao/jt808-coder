@@ -6,7 +6,6 @@ import io.github.yezhihao.protostar.annotation.Field;
 import io.github.yezhihao.protostar.annotation.Message;
 import org.yzh.protocol.basics.JTMessage;
 import org.yzh.protocol.commons.JT808;
-import org.yzh.protocol.commons.transform.Attribute;
 import org.yzh.protocol.commons.transform.AttributeConverter;
 
 import java.time.LocalDateTime;
@@ -28,7 +27,7 @@ public class T0201_0500 extends JTMessage {
     private int speed;
     private int direction;
     private LocalDateTime dateTime;
-    private Map<Integer, Attribute> attributes;
+    private Map<Integer, Object> attributes;
 
     @Field(index = 0, type = DataType.WORD, desc = "应答流水号")
     public int getSerialNo() {
@@ -113,11 +112,11 @@ public class T0201_0500 extends JTMessage {
 
     @Convert(converter = AttributeConverter.class)
     @Field(index = 30, type = DataType.MAP, desc = "位置附加信息")
-    public Map<Integer, Attribute> getAttributes() {
+    public Map<Integer, Object> getAttributes() {
         return attributes;
     }
 
-    public void setAttributes(Map<Integer, Attribute> attributes) {
+    public void setAttributes(Map<Integer, Object> attributes) {
         this.attributes = attributes;
     }
 }

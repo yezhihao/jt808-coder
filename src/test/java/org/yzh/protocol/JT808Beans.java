@@ -7,7 +7,7 @@ import org.yzh.protocol.basics.KeyValuePair;
 import org.yzh.protocol.commons.Action;
 import org.yzh.protocol.commons.Bin;
 import org.yzh.protocol.commons.ShapeAction;
-import org.yzh.protocol.commons.transform.Attribute;
+import org.yzh.protocol.commons.transform.AttributeId;
 import org.yzh.protocol.commons.transform.attribute.*;
 import org.yzh.protocol.commons.transform.parameter.ParamADAS;
 import org.yzh.protocol.commons.transform.parameter.ParamVideo;
@@ -194,21 +194,23 @@ public class JT808Beans {
     //位置信息汇报
     public static T0200 T0200Attributes() {
         T0200 bean = T0200();
-        Map<Integer, Attribute> attributes = new TreeMap();
-        attributes.put(Mileage.attributeId, new Mileage(11));
-        attributes.put(Oil.attributeId, new Oil(22));
-        attributes.put(Speed.attributeId, new Speed(33));
-        attributes.put(AlarmEventId.attributeId, new AlarmEventId(44));
-        attributes.put(TirePressure.attributeId, new TirePressure(new byte[]{55, 55, 55}));
-        attributes.put(CarriageTemperature.attributeId, new CarriageTemperature(2));
-        attributes.put(OverSpeedAlarm.attributeId, new OverSpeedAlarm((byte) 66, 66));
-        attributes.put(InOutAreaAlarm.attributeId, new InOutAreaAlarm((byte) 77, 77, (byte) 77));
-        attributes.put(RouteDriveTimeAlarm.attributeId, new RouteDriveTimeAlarm(88, 88, (byte) 88));
-        attributes.put(Signal.attributeId, new Signal(99));
-        attributes.put(IoState.attributeId, new IoState(10));
-        attributes.put(AnalogQuantity.attributeId, new AnalogQuantity(20));
-        attributes.put(SignalStrength.attributeId, new SignalStrength(30));
-        attributes.put(GnssCount.attributeId, new GnssCount(40));
+        Map<Integer, Object> attributes = new TreeMap();
+        attributes.put(AttributeId.Mileage, 11);
+        attributes.put(AttributeId.Gas, 22);
+        attributes.put(AttributeId.Speed, 33);
+        attributes.put(AttributeId.AlarmEventId, 44);
+        attributes.put(AttributeId.TirePressure, new TirePressure(new byte[]{55, 55, 55}));
+        attributes.put(AttributeId.CarriageTemperature, 2);
+
+        attributes.put(AttributeId.OverSpeedAlarm, new OverSpeedAlarm((byte) 66, 66));
+        attributes.put(AttributeId.InOutAreaAlarm, new InOutAreaAlarm((byte) 77, 77, (byte) 77));
+        attributes.put(AttributeId.RouteDriveTimeAlarm, new RouteDriveTimeAlarm(88, 88, (byte) 88));
+
+        attributes.put(AttributeId.Signal, 99);
+        attributes.put(AttributeId.IoState, 10);
+        attributes.put(AttributeId.AnalogQuantity, 20);
+        attributes.put(AttributeId.SignalStrength, 30);
+        attributes.put(AttributeId.GnssCount, 40);
         bean.setAttributes(attributes);
         return bean;
     }
@@ -273,11 +275,11 @@ public class JT808Beans {
 
 
         T0200 bean = T0200();
-        Map<Integer, Attribute> attributes = new TreeMap();
-        attributes.put(AlarmADAS.attributeId, alarmADAS);
-        attributes.put(AlarmDSM.attributeId, alarmDSM);
-        attributes.put(AlarmTPMS.attributeId, alarmTPMS);
-        attributes.put(AlarmBSD.attributeId, alarmBSD);
+        Map<Integer, Object> attributes = new TreeMap();
+        attributes.put(AlarmADAS.id, alarmADAS);
+        attributes.put(AlarmDSM.id, alarmDSM);
+        attributes.put(AlarmTPMS.id, alarmTPMS);
+        attributes.put(AlarmBSD.id, alarmBSD);
 
         bean.setAttributes(attributes);
         return bean;

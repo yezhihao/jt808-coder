@@ -1,11 +1,8 @@
 package org.yzh.protocol;
 
-import io.github.yezhihao.protostar.annotation.Message;
-import org.yzh.protocol.basics.Header;
-import org.yzh.protocol.basics.JTMessage;
 import org.yzh.protocol.basics.KeyValuePair;
 import org.yzh.protocol.commons.Action;
-import org.yzh.protocol.commons.Bin;
+import org.yzh.protocol.commons.Shape;
 import org.yzh.protocol.commons.ShapeAction;
 import org.yzh.protocol.commons.transform.AttributeId;
 import org.yzh.protocol.commons.transform.attribute.*;
@@ -16,7 +13,10 @@ import org.yzh.protocol.jsatl12.AlarmId;
 import org.yzh.protocol.t808.*;
 
 import java.time.LocalDateTime;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 /**
  * JT/T 808协议单元测试数据
@@ -25,39 +25,8 @@ import java.util.*;
  */
 public class JT808Beans {
 
+    private static final String STR_TIME = "200707192359";
     private static final LocalDateTime TIME = LocalDateTime.of(2020, 7, 7, 19, 23, 59);
-    private static final String STR16 = "O8gYkVE6kfz8ec6Y";
-    private static final Random R = new Random(1);
-
-    /** 2013版消息头 */
-    public static JTMessage H2013(JTMessage message) {
-        Header header = new Header();
-        Message type = message.getClass().getAnnotation(Message.class);
-        if (type != null)
-            header.setMessageId(type.value()[0]);
-        header.setMobileNo("12345678901");
-        header.setSerialNo((int) Short.MAX_VALUE);
-        header.setEncryption(0);
-        header.setReserved(false);
-        message.setHeader(header);
-        return message;
-    }
-
-    /** 2019版消息头 */
-    public static JTMessage H2019(JTMessage message) {
-        Header header = new Header();
-        Message type = message.getClass().getAnnotation(Message.class);
-        if (type != null)
-            header.setMessageId(type.value()[0]);
-        header.setVersionNo(1);
-        header.setMobileNo("17299841738");
-        header.setSerialNo(65535);
-        header.setEncryption(0);
-        header.setVersion(true);
-        header.setReserved(false);
-        message.setHeader(header);
-        return message;
-    }
 
     //平台RSA公钥|终端RSA公钥
     public static T0A00_8A00 T0A00_8A00() {
@@ -70,15 +39,9 @@ public class JT808Beans {
     //终端通用应答|平台通用应答
     public static T0001 T0001() {
         T0001 bean = new T0001();
-        bean.setSerialNo(123);
-        bean.setReplyId(456);
+        bean.setResponseSerialNo(123);
+        bean.setResponseMessageId(456);
         bean.setResultCode(3);
-        return bean;
-    }
-
-    //终端心跳
-    public static JTMessage T0002() {
-        JTMessage bean = new JTMessage();
         return bean;
     }
 
@@ -113,7 +76,7 @@ public class JT808Beans {
     //查询终端参数应答
     public static T0104 T0104() {
         T0104 bean = new T0104();
-        bean.setSerialNo(104);
+        bean.setResponseSerialNo(104);
         bean.setParameters(parameters());
         return bean;
     }
@@ -166,28 +129,28 @@ public class JT808Beans {
     //位置信息汇报
     public static T0200 T0200() {
         T0200 bean = new T0200();
-        bean.setWarningMark(1024);
-        bean.setStatus(2048);
+        bean.setWarnBit(1024);
+        bean.setStatusBit(2048);
         bean.setLatitude(116307629);
         bean.setLongitude(40058359);
         bean.setAltitude(312);
         bean.setSpeed(3);
         bean.setDirection(99);
-        bean.setDateTime(TIME);
+        bean.setDateTime(STR_TIME);
         return bean;
     }
 
     //位置信息汇报
     public static T0200 T0200_() {
         T0200 bean = new T0200();
-        bean.setWarningMark(1024 * 2);
-        bean.setStatus(2048 * 2);
+        bean.setWarnBit(1024 * 2);
+        bean.setStatusBit(2048 * 2);
         bean.setLatitude(116307629 * 2);
         bean.setLongitude(40058359 * 2);
         bean.setAltitude(312 * 2);
         bean.setSpeed(3 * 2);
         bean.setDirection(99 * 2);
-        bean.setDateTime(TIME.plusYears(1));
+        bean.setDateTime(STR_TIME);
         return bean;
     }
 
@@ -195,7 +158,7 @@ public class JT808Beans {
     public static T0200 T0200Attributes() {
         T0200 bean = T0200();
         Map<Integer, Object> attributes = new TreeMap();
-        attributes.put(AttributeId.Mileage, 11);
+        attributes.put(AttributeId.Mileage, 11L);
         attributes.put(AttributeId.Gas, 22);
         attributes.put(AttributeId.Speed, 33);
         attributes.put(AttributeId.AlarmEventId, 44);
@@ -206,9 +169,9 @@ public class JT808Beans {
         attributes.put(AttributeId.InOutAreaAlarm, new InOutAreaAlarm((byte) 77, 77, (byte) 77));
         attributes.put(AttributeId.RouteDriveTimeAlarm, new RouteDriveTimeAlarm(88, 88, (byte) 88));
 
-        attributes.put(AttributeId.Signal, 99);
+        attributes.put(AttributeId.Signal, 99L);
         attributes.put(AttributeId.IoState, 10);
-        attributes.put(AttributeId.AnalogQuantity, 20);
+        attributes.put(AttributeId.AnalogQuantity, 20L);
         attributes.put(AttributeId.SignalStrength, 30);
         attributes.put(AttributeId.GnssCount, 40);
         bean.setAttributes(attributes);
@@ -288,9 +251,9 @@ public class JT808Beans {
     //位置信息查询应答|车辆控制应答
     public static T0201_0500 T0201_0500() {
         T0201_0500 bean = new T0201_0500();
-        bean.setSerialNo(26722);
-        bean.setWarningMark(10842);
-        bean.setStatus(29736);
+        bean.setResponseSerialNo(26722);
+        bean.setWarnBit(10842);
+        bean.setStatusBit(29736);
         bean.setLatitude(41957);
         bean.setLongitude(56143);
         bean.setAltitude(48243);
@@ -310,7 +273,7 @@ public class JT808Beans {
     //提问应答
     public static T0302 T0302() {
         T0302 bean = new T0302();
-        bean.setSerialNo(61252);
+        bean.setResponseSerialNo(61252);
         bean.setAnswerId(127);
         return bean;
     }
@@ -354,9 +317,9 @@ public class JT808Beans {
         T0705 bean = new T0705();
         bean.setDateTime("235959");
         List<T0705.Item> items = new ArrayList<>();
-        items.add(new T0705.Item(new byte[]{1, 2, 3, 4}, new byte[]{1, 2, 3, 4, 5, 6, 7, 8}));
-        items.add(new T0705.Item(new byte[]{1, 2, 3, 4}, new byte[]{1, 2, 3, 4, 5, 6, 7, 8}));
-        items.add(new T0705.Item(new byte[]{1, 2, 3, 4}, new byte[]{1, 2, 3, 4, 5, 6, 7, 8}));
+        items.add(new T0705.Item(16909060, new byte[]{1, 2, 3, 4, 5, 6, 7, 8}));
+        items.add(new T0705.Item(16909060, new byte[]{1, 2, 3, 4, 5, 6, 7, 8}));
+        items.add(new T0705.Item(16909060, new byte[]{1, 2, 3, 4, 5, 6, 7, 8}));
         bean.setItems(items);
         return bean;
     }
@@ -380,7 +343,7 @@ public class JT808Beans {
         bean.setFormat(2);
         bean.setEvent(1);
         bean.setChannelId(2);
-        bean.setPosition(T0200());
+        bean.setLocation(T0200());
         bean.setPacket(new byte[]{13, 123, 13, 123, 123});
         return bean;
     }
@@ -388,7 +351,7 @@ public class JT808Beans {
     //存储多媒体数据检索应答
     public static T0802 T0802() {
         T0802 bean = new T0802();
-        bean.setSerialNo(123);
+        bean.setResponseSerialNo(123);
         List<T0802.Item> items = new ArrayList<>();
         items.add(new T0802.Item(1, 1, 1, 1, T0200()));
         items.add(new T0802.Item(2, 1, 1, 1, T0200_()));
@@ -401,9 +364,9 @@ public class JT808Beans {
     //摄像头立即拍摄命令应答
     public static T0805 T0805() {
         T0805 bean = new T0805();
-        bean.setSerialNo(62656);
+        bean.setResponseSerialNo(62656);
         bean.setResult(0);
-        bean.setItems(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9});
+        bean.setId(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9});
         return bean;
     }
 
@@ -417,15 +380,15 @@ public class JT808Beans {
     //补传分包请求
     public static T8003 T8003() {
         T8003 bean = new T8003();
-        bean.setSerialNo(4249);
-        bean.setItems(new byte[]{1, 2, 3, 4, 5, 6, 7, 8, 9});
+        bean.setResponseSerialNo(4249);
+        bean.setId(new short[]{1, 2, 3, 4, 5, 6, 7, 8, 9});
         return bean;
     }
 
     //终端注册应答
     public static T8100 T8100() {
         T8100 bean = new T8100();
-        bean.setSerialNo(38668);
+        bean.setResponseSerialNo(38668);
         bean.setResultCode(T8100.Success);
         bean.setToken("chwD0SE1fchwD0SE1fchwD0SE1f");
         return bean;
@@ -448,8 +411,7 @@ public class JT808Beans {
 
     //查询指定终端参数
     public static T8106 T8106() {
-        T8106 bean = new T8106();
-        bean.setId(new byte[]{1, 3, 5, 7, 9, 127});
+        T8106 bean = new T8106(1, 3, 5, 7, 9, 127);
         return bean;
     }
 
@@ -474,20 +436,18 @@ public class JT808Beans {
     //人工确认报警消息
     public static T8203 T8203() {
         T8203 bean = new T8203();
-        bean.setSerialNo(123);
+        bean.setResponseSerialNo(123);
         bean.setType(40286);
         return bean;
     }
 
     //提问下发
     public static T8302 T8302() {
-        T8302 bean = new T8302();
         List<T8302.Option> options = new ArrayList();
-        bean.buildSign(new int[]{1});
-        bean.setContent("123");
-        bean.setOptions(options);
         options.add(new T8302.Option(1, "asd1"));
         options.add(new T8302.Option(2, "zxc2"));
+        T8302 bean = new T8302("123", 1);
+        bean.setOptions(options);
         return bean;
     }
 
@@ -520,7 +480,7 @@ public class JT808Beans {
     public static T8400 T8400() {
         T8400 bean = new T8400();
         bean.setType(T8400.Normal);
-        bean.setMobileNo("1234567890123");
+        bean.setPhoneNumber("1234567890123");
         return bean;
     }
 
@@ -568,13 +528,9 @@ public class JT808Beans {
         return bean;
     }
 
-    //删除圆形区域|删除矩形区域|删除多边形区域
+    //删除圆形区域|删除矩形区域|删除多边形区域|删除路线
     public static T8601 T8601() {
-        T8601 bean = new T8601();
-        bean.addItem(1);
-        bean.addItem(2);
-        bean.addItem(3);
-        bean.addItem(65535);
+        T8601 bean = new T8601(1, 2, 3, 65535);
         return bean;
     }
 
@@ -601,13 +557,11 @@ public class JT808Beans {
         bean.setEndTime("200707192359");
         bean.setMaxSpeed(123);
         bean.setDuration(60);
-        List<T8604.Coordinate> items = new ArrayList<>();
-        items.add(new T8604.Coordinate(123, 345));
-        items.add(new T8604.Coordinate(123, 345));
-        items.add(new T8604.Coordinate(123, 345));
-        items.add(new T8604.Coordinate(123, 345));
-        items.add(new T8604.Coordinate(123, 345));
-        bean.setItems(items);
+        bean.addPoint(345, 123);
+        bean.addPoint(345, 123);
+        bean.addPoint(345, 123);
+        bean.addPoint(345, 123);
+        bean.addPoint(345, 123);
         return bean;
     }
 
@@ -623,7 +577,15 @@ public class JT808Beans {
         item.add(new T8606.Point(2, 1, 123, 123, 1, 2, 3, 4, 5, 6));
         item.add(new T8606.Point(3, 1, 123, 123, 1, 2, 3, 4, 5, 6));
         item.add(new T8606.Point(4, 1, 123, 123, 1, 2, 3, 4, 5, 6));
-        bean.setItem(item);
+        bean.setItems(item);
+        return bean;
+    }
+
+    //查询区域或线路数据
+    public static T8608 T8608() {
+        T8608 bean = new T8608();
+        bean.setTotal(Shape.Route);
+        bean.setId(new int[]{2, 4, 6, 8, 999999999});
         return bean;
     }
 
@@ -631,7 +593,7 @@ public class JT808Beans {
     public static T8800 T8800() {
         T8800 bean = new T8800();
         bean.setMediaId(49503);
-        bean.setItems(new byte[]{1, 2, 3, 4, 5, 6, 7, 8, 9});
+        bean.setId(new short[]{1, 2, 3, 4, 5, 6, 7, 8, 9});
         return bean;
     }
 
@@ -720,17 +682,12 @@ public class JT808Beans {
 
     //文本信息下发
     public static T8300 T8300_2013() {
-        T8300 bean = new T8300();
-        bean.setSign(Bin.writeInt(1, 1, 1, 1, 1, 1));
-        bean.setContent("测试123@456#abc!...结束");
+        T8300 bean = new T8300("测试123@456#abc!...结束", 1, 1, 1, 1, 1, 1);
         return bean;
     }
 
     public static T8300 T8300_2019() {
-        T8300 bean = new T8300();
-        bean.setSign(Bin.writeInt(1, 1, 1, 1, 1, 1));
-        bean.setType(1);
-        bean.setContent("测试123@456#abc!...结束");
+        T8300 bean = new T8300(1, "测试123@456#abc!...结束", 1, 1, 1, 1, 1, 1);
         return bean;
     }
 }

@@ -1,5 +1,6 @@
 package org.yzh.protocol.t1078;
 
+
 import io.github.yezhihao.protostar.DataType;
 import io.github.yezhihao.protostar.annotation.Field;
 import io.github.yezhihao.protostar.annotation.Message;
@@ -13,19 +14,19 @@ import org.yzh.protocol.commons.JT1078;
 @Message(JT1078.文件上传控制)
 public class T9207 extends JTMessage {
 
-    private int serialNo;
+    @Field(index = 0, type = DataType.WORD, desc = "应答流水号")
+    private int responseSerialNo;
+    @Field(index = 2, type = DataType.BYTE, desc = "上传控制：0.暂停 1.继续 2.取消")
     private int command;
 
-    @Field(index = 0, type = DataType.WORD, desc = "应答流水号")
-    public int getSerialNo() {
-        return serialNo;
+    public int getResponseSerialNo() {
+        return responseSerialNo;
     }
 
-    public void setSerialNo(int serialNo) {
-        this.serialNo = serialNo;
+    public void setResponseSerialNo(int responseSerialNo) {
+        this.responseSerialNo = responseSerialNo;
     }
 
-    @Field(index = 2, type = DataType.BYTE, desc = "上传控制")
     public int getCommand() {
         return command;
     }

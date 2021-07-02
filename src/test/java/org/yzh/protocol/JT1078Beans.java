@@ -1,8 +1,5 @@
 package org.yzh.protocol;
 
-import io.github.yezhihao.protostar.annotation.Message;
-import org.yzh.protocol.basics.Header;
-import org.yzh.protocol.basics.JTMessage;
 import org.yzh.protocol.t1078.*;
 
 import java.time.LocalDateTime;
@@ -19,35 +16,6 @@ public class JT1078Beans {
     private static final LocalDateTime startTime = LocalDateTime.of(2020, 01, 01, 00, 00, 00);
     private static final LocalDateTime endTime = LocalDateTime.of(2020, 12, 31, 23, 59, 59);
 
-    /** 2013版消息头 */
-    public static JTMessage H2013(JTMessage message) {
-        Header header = new Header();
-        Message type = message.getClass().getAnnotation(Message.class);
-        if (type != null)
-            header.setMessageId(type.value()[0]);
-        header.setMobileNo("12345678901");
-        header.setSerialNo((int) Short.MAX_VALUE);
-        header.setEncryption(0);
-        header.setReserved(false);
-        message.setHeader(header);
-        return message;
-    }
-
-    /** 2019版消息头 */
-    public static JTMessage H2019(JTMessage message) {
-        Header header = new Header();
-        Message type = message.getClass().getAnnotation(Message.class);
-        if (type != null)
-            header.setMessageId(type.value()[0]);
-        header.setVersionNo(1);
-        header.setMobileNo("17299841738");
-        header.setSerialNo(65535);
-        header.setEncryption(0);
-        header.setVersion(true);
-        header.setReserved(false);
-        message.setHeader(header);
-        return message;
-    }
 
     //终端上传音视频属性
     public static T1003 T1003() {
@@ -76,13 +44,12 @@ public class JT1078Beans {
 
     //终端上传音视频资源列表
     public static T1205 T1205() {
-        byte[] bytes = new byte[8];
         List<T1205.Item> items = new ArrayList<>();
-        items.add(new T1205.Item(1, startTime, endTime, bytes, 1, 1, 1, 1024));
-        items.add(new T1205.Item(2, startTime, endTime, bytes, 2, 2, 2, 2048));
+        items.add(new T1205.Item(1, startTime, endTime, 0, 0, 1, 1, 1, 1024));
+        items.add(new T1205.Item(2, startTime, endTime, 0, 0, 2, 2, 2, 2048));
 
         T1205 bean = new T1205();
-        bean.setSerialNo(4321);
+        bean.setResponseSerialNo(4321);
         bean.setCount(items.size());
         bean.setItems(items);
         return bean;
@@ -91,7 +58,7 @@ public class JT1078Beans {
     //文件上传完成通知
     public static T1206 T1206() {
         T1206 bean = new T1206();
-        bean.setSerialNo(7050);
+        bean.setResponseSerialNo(7050);
         bean.setResult(1);
         return bean;
     }
@@ -135,7 +102,7 @@ public class JT1078Beans {
         bean.setChannelNo(26674);
         bean.setMediaType(2);
         bean.setStreamType(0);
-        bean.setMemoryType(0);
+        bean.setStorageType(0);
         bean.setPlaybackMode(0);
         bean.setPlaybackSpeed(0);
         bean.setStartTime("200707192359");
@@ -160,8 +127,9 @@ public class JT1078Beans {
         bean.setMediaType(20635);
         bean.setStartTime("200707192359");
         bean.setEndTime("200707192359");
-        bean.setWarningMark(new byte[8]);
-        bean.setMemoryType(42752);
+        bean.setWarnBit1(0);
+        bean.setWarnBit2(0);
+        bean.setStorageType(42752);
         bean.setStreamType(40558);
         return bean;
     }
@@ -177,9 +145,10 @@ public class JT1078Beans {
         bean.setChannelNo(1);
         bean.setStartTime("200707192359");
         bean.setEndTime("200707192359");
-        bean.setWarningMark(new byte[8]);
+        bean.setWarnBit1(0);
+        bean.setWarnBit2(0);
         bean.setMediaType(0);
-        bean.setMemoryType(1);
+        bean.setStorageType(1);
         bean.setStreamType(1);
         bean.setCondition(1);
         return bean;
@@ -188,7 +157,7 @@ public class JT1078Beans {
     //文件上传控制
     public static T9207 T9207() {
         T9207 bean = new T9207();
-        bean.setSerialNo(27133);
+        bean.setResponseSerialNo(27133);
         bean.setCommand(2);
         return bean;
     }

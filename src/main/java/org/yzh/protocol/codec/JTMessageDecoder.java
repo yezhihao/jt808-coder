@@ -1,13 +1,13 @@
 package org.yzh.protocol.codec;
 
 import io.github.yezhihao.protostar.ProtostarUtil;
-import io.github.yezhihao.protostar.Schema;
-import io.netty.buffer.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.yzh.protocol.basics.Header;
+import io.github.yezhihao.protostar.schema.RuntimeSchema;
+import io.netty.buffer.ByteBuf;
+import io.netty.buffer.CompositeByteBuf;
+import io.netty.buffer.Unpooled;
+import io.netty.buffer.UnpooledByteBufAllocator;
 import org.yzh.protocol.basics.JTMessage;
-import org.yzh.protocol.commons.Bin;
+import org.yzh.protocol.commons.Bit;
 import org.yzh.protocol.commons.JTUtils;
 
 import java.util.ArrayList;
@@ -21,70 +21,67 @@ import java.util.Map;
  */
 public class JTMessageDecoder {
 
-    private static final Logger log = LoggerFactory.getLogger(JTMessageDecoder.class.getSimpleName());
-
-    private Map<Integer, Schema<Header>> headerSchemaMap;
+    private Map<Integer, RuntimeSchema<JTMessage>> headerSchemaMap;
 
     public JTMessageDecoder(String basePackage) {
         ProtostarUtil.initial(basePackage);
-        this.headerSchemaMap = ProtostarUtil.getSchema(Header.class);
+        this.headerSchemaMap = ProtostarUtil.getRuntimeSchema(JTMessage.class);
     }
 
-    public JTMessage decode(ByteBuf buf) {
-        buf = unescape(buf);
+    public JTMessage decode(ByteBuf input) {
+        ByteBuf buf = unescape(input);
 
         boolean verified = verify(buf);
-        if (!verified)
-            log.error("校验码错误{},{}", ByteBufUtil.hexDump(buf));
-
+        int messageId = buf.getUnsignedShort(0);
         int properties = buf.getUnsignedShort(2);
 
         //缺省值为2013版本
         Integer version = 0;
         //识别2019版本
-        if (Bin.get(properties, 14)) {
+        if (Bit.get(properties, 14)) {
             version = (int) buf.getUnsignedByte(4);
         }
 
         int headLen;
-        boolean isSubpackage = Bin.get(properties, 13);
+        boolean isSubpackage = Bit.get(properties, 13);
         headLen = JTUtils.headerLength(version, isSubpackage);
 
-        Schema<? extends Header> headerSchema = headerSchemaMap.get(version);
-
-        Header header = headerSchema.readFrom(buf.slice(0, headLen));
-        header.setVerified(verified);
+        RuntimeSchema<JTMessage> headSchema = headerSchemaMap.get(version);
+        RuntimeSchema<JTMessage> bodySchema = ProtostarUtil.getRuntimeSchema(messageId, version);
 
         JTMessage message;
-        Schema<? extends JTMessage> bodySchema = ProtostarUtil.getSchema(header.getMessageId(), version);
+        if (bodySchema == null)
+            message = new JTMessage();
+        else
+            message = bodySchema.newInstance();
+        message.setVerified(verified);
+        message.setPayload(input);
+
+        headSchema.mergeFrom(buf.slice(0, headLen), message);
+
         if (bodySchema != null) {
-            int bodyLen = header.getBodyLength();
+            int bodyLen = message.getBodyLength();
 
             if (isSubpackage) {
 
                 byte[] bytes = new byte[bodyLen];
                 buf.getBytes(headLen, bytes);
 
-                byte[][] packages = addAndGet(header, bytes);
+                byte[][] packages = addAndGet(message, bytes);
                 if (packages == null)
                     return null;
 
                 ByteBuf bodyBuf = Unpooled.wrappedBuffer(packages);
-                message = bodySchema.readFrom(bodyBuf);
+                bodySchema.mergeFrom(bodyBuf, message);
 
             } else {
-                message = bodySchema.readFrom(buf.slice(headLen, bodyLen));
+                bodySchema.mergeFrom(buf.slice(headLen, bodyLen), message);
             }
-        } else {
-            message = new JTMessage();
-            log.debug("未找到对应的Schema[{}]", header);
         }
-
-        message.setHeader(header);
         return message;
     }
 
-    protected byte[][] addAndGet(Header header, byte[] bytes) {
+    protected byte[][] addAndGet(JTMessage message, byte[] bytes) {
         return null;
     }
 

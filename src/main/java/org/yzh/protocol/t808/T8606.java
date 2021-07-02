@@ -6,7 +6,6 @@ import io.github.yezhihao.protostar.annotation.Message;
 import org.yzh.protocol.basics.JTMessage;
 import org.yzh.protocol.commons.JT808;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,14 +15,19 @@ import java.util.List;
 @Message(JT808.设置路线)
 public class T8606 extends JTMessage {
 
-    private int id;
-    private int attribute;
-    private String startTime;
-    private String endTime;
-    private int total;
-    private List<Point> item;
-
     @Field(index = 0, type = DataType.DWORD, desc = "路线ID")
+    private int id;
+    @Field(index = 4, type = DataType.WORD, desc = "路线属性")
+    private int attribute;
+    @Field(index = 6, type = DataType.BCD8421, length = 6, desc = "起始时间(YYMMDDHHMMSS)")
+    private String startTime;
+    @Field(index = 12, type = DataType.BCD8421, length = 6, desc = "结束时间(YYMMDDHHMMSS)")
+    private String endTime;
+    @Field(index = 18, type = DataType.WORD, desc = "拐点数")
+    private int total;
+    @Field(index = 20, type = DataType.LIST, desc = "拐点列表")
+    private List<Point> items;
+
     public int getId() {
         return id;
     }
@@ -32,7 +36,6 @@ public class T8606 extends JTMessage {
         this.id = id;
     }
 
-    @Field(index = 4, type = DataType.WORD, desc = "路线属性")
     public int getAttribute() {
         return attribute;
     }
@@ -41,7 +44,6 @@ public class T8606 extends JTMessage {
         this.attribute = attribute;
     }
 
-    @Field(index = 6, type = DataType.BCD8421, length = 6, desc = "起始时间")
     public String getStartTime() {
         return startTime;
     }
@@ -50,7 +52,6 @@ public class T8606 extends JTMessage {
         this.startTime = startTime;
     }
 
-    @Field(index = 12, type = DataType.BCD8421, length = 6, desc = "结束时间")
     public String getEndTime() {
         return endTime;
     }
@@ -59,7 +60,6 @@ public class T8606 extends JTMessage {
         this.endTime = endTime;
     }
 
-    @Field(index = 18, type = DataType.WORD, desc = "拐点数")
     public int getTotal() {
         return total;
     }
@@ -68,40 +68,35 @@ public class T8606 extends JTMessage {
         this.total = total;
     }
 
-    @Field(index = 20, type = DataType.LIST, desc = "拐点列表")
-    public List<Point> getItem() {
-        return item;
+    public List<Point> getItems() {
+        return items;
     }
 
-    public void setItem(List<Point> item) {
-        this.item = item;
-        this.total = item.size();
-    }
-
-    public void addPoint(Point point) {
-        if (item == null)
-            item = new ArrayList();
-        item.add(point);
-        total = item.size();
-    }
-
-    public void addPoint(int id) {
-        if (item == null)
-            item = new ArrayList();
-        item.add(new Point(id));
-        total = item.size();
+    public void setItems(List<Point> items) {
+        this.items = items;
+        this.total = items.size();
     }
 
     public static class Point {
+        @Field(index = 0, type = DataType.DWORD, desc = "拐点ID")
         private int id;
+        @Field(index = 4, type = DataType.DWORD, desc = "路段ID")
         private int routeId;
+        @Field(index = 8, type = DataType.DWORD, desc = "纬度")
         private int latitude;
+        @Field(index = 12, type = DataType.DWORD, desc = "经度")
         private int longitude;
+        @Field(index = 16, type = DataType.BYTE, desc = "宽度(米)")
         private int width;
+        @Field(index = 17, type = DataType.WORD, desc = "属性")
         private int attribute;
+        @Field(index = 18, type = DataType.WORD, desc = "路段行驶过长阈值(秒)")
         private int upperLimit;
+        @Field(index = 20, type = DataType.WORD, desc = "路段行驶不足阈值(秒)")
         private int lowerLimit;
+        @Field(index = 22, type = DataType.WORD, desc = "路段最高速度(公里每小时)")
         private int maxSpeed;
+        @Field(index = 24, type = DataType.BYTE, desc = "路段超速持续时间(秒)")
         private int duration;
 
         public Point() {
@@ -124,7 +119,6 @@ public class T8606 extends JTMessage {
             this.duration = duration;
         }
 
-        @Field(index = 0, type = DataType.DWORD, desc = "拐点ID")
         public int getId() {
             return id;
         }
@@ -133,7 +127,6 @@ public class T8606 extends JTMessage {
             this.id = id;
         }
 
-        @Field(index = 4, type = DataType.DWORD, desc = "路段ID")
         public int getRouteId() {
             return routeId;
         }
@@ -142,7 +135,6 @@ public class T8606 extends JTMessage {
             this.routeId = routeId;
         }
 
-        @Field(index = 8, type = DataType.DWORD, desc = "纬度")
         public int getLatitude() {
             return latitude;
         }
@@ -151,7 +143,6 @@ public class T8606 extends JTMessage {
             this.latitude = latitude;
         }
 
-        @Field(index = 12, type = DataType.DWORD, desc = "经度")
         public int getLongitude() {
             return longitude;
         }
@@ -160,7 +151,6 @@ public class T8606 extends JTMessage {
             this.longitude = longitude;
         }
 
-        @Field(index = 16, type = DataType.BYTE, desc = "宽度")
         public int getWidth() {
             return width;
         }
@@ -169,7 +159,6 @@ public class T8606 extends JTMessage {
             this.width = width;
         }
 
-        @Field(index = 17, type = DataType.WORD, desc = "属性")
         public int getAttribute() {
             return attribute;
         }
@@ -178,7 +167,6 @@ public class T8606 extends JTMessage {
             this.attribute = attribute;
         }
 
-        @Field(index = 18, type = DataType.WORD, desc = "路段行驶过长阈值")
         public int getUpperLimit() {
             return upperLimit;
         }
@@ -187,7 +175,6 @@ public class T8606 extends JTMessage {
             this.upperLimit = upperLimit;
         }
 
-        @Field(index = 20, type = DataType.WORD, desc = "路段行驶不足阈值")
         public int getLowerLimit() {
             return lowerLimit;
         }
@@ -196,7 +183,6 @@ public class T8606 extends JTMessage {
             this.lowerLimit = lowerLimit;
         }
 
-        @Field(index = 22, type = DataType.WORD, desc = "路段最高速度")
         public int getMaxSpeed() {
             return maxSpeed;
         }
@@ -205,13 +191,29 @@ public class T8606 extends JTMessage {
             this.maxSpeed = maxSpeed;
         }
 
-        @Field(index = 24, type = DataType.BYTE, desc = "路段超速持续时间")
         public int getDuration() {
             return duration;
         }
 
         public void setDuration(int duration) {
             this.duration = duration;
+        }
+
+        @Override
+        public String toString() {
+            final StringBuilder sb = new StringBuilder(240);
+            sb.append("{id=").append(id);
+            sb.append(",routeId=").append(routeId);
+            sb.append(",longitude=").append(longitude);
+            sb.append(",latitude=").append(latitude);
+            sb.append(",width=").append(width);
+            sb.append(",attribute=").append(attribute);
+            sb.append(",upperLimit=").append(upperLimit);
+            sb.append(",lowerLimit=").append(lowerLimit);
+            sb.append(",maxSpeed=").append(maxSpeed);
+            sb.append(",duration=").append(duration);
+            sb.append('}');
+            return sb.toString();
         }
     }
 }

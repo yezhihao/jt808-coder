@@ -17,11 +17,13 @@ import java.util.List;
 public class T8401 extends JTMessage {
 
     /** @see org.yzh.protocol.commons.Action */
+    @Field(index = 0, type = DataType.BYTE, desc = "类型")
     private int type;
+    @Field(index = 1, type = DataType.BYTE, desc = "总数")
     private int total;
+    @Field(index = 2, type = DataType.LIST, desc = "联系人列表")
     private List<Item> items;
 
-    @Field(index = 0, type = DataType.BYTE, desc = "类型")
     public int getType() {
         return type;
     }
@@ -30,8 +32,9 @@ public class T8401 extends JTMessage {
         this.type = type;
     }
 
-    @Field(index = 1, type = DataType.BYTE, desc = "总数")
     public int getTotal() {
+        if (items != null)
+            return items.size();
         return total;
     }
 
@@ -39,7 +42,6 @@ public class T8401 extends JTMessage {
         this.total = total;
     }
 
-    @Field(index = 2, type = DataType.LIST, desc = "联系人列表")
     public List<Item> getItems() {
         return items;
     }
@@ -56,8 +58,11 @@ public class T8401 extends JTMessage {
     }
 
     public static class Item {
+        @Field(index = 0, type = DataType.BYTE, desc = "标志")
         private int sign;
+        @Field(index = 1, type = DataType.STRING, lengthSize = 1, desc = "电话号码")
         private String phone;
+        @Field(index = 2, type = DataType.STRING, lengthSize = 1, desc = "联系人")
         private String name;
 
         public Item() {
@@ -69,7 +74,6 @@ public class T8401 extends JTMessage {
             this.name = name;
         }
 
-        @Field(index = 0, type = DataType.BYTE, desc = "标志")
         public int getSign() {
             return sign;
         }
@@ -78,7 +82,6 @@ public class T8401 extends JTMessage {
             this.sign = sign;
         }
 
-        @Field(index = 2, type = DataType.STRING, lengthSize = 1, desc = "电话号码")
         public String getPhone() {
             return phone;
         }
@@ -87,13 +90,22 @@ public class T8401 extends JTMessage {
             this.phone = phone;
         }
 
-        @Field(index = 3, type = DataType.STRING, lengthSize = 1, desc = "联系人")
         public String getName() {
             return name;
         }
 
         public void setName(String name) {
             this.name = name;
+        }
+
+        @Override
+        public String toString() {
+            final StringBuilder sb = new StringBuilder(50);
+            sb.append("{sign=").append(sign);
+            sb.append(",phone=").append(phone);
+            sb.append(",name=").append(name);
+            sb.append('}');
+            return sb.toString();
         }
     }
 }

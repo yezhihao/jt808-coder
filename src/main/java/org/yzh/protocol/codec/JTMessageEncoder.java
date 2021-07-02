@@ -2,11 +2,9 @@ package org.yzh.protocol.codec;
 
 import io.github.yezhihao.protostar.ProtostarUtil;
 import io.github.yezhihao.protostar.Schema;
+import io.github.yezhihao.protostar.schema.RuntimeSchema;
 import io.netty.buffer.*;
 import io.netty.util.ByteProcessor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.yzh.protocol.basics.Header;
 import org.yzh.protocol.basics.JTMessage;
 import org.yzh.protocol.commons.JTUtils;
 
@@ -20,73 +18,69 @@ import java.util.Map;
  */
 public class JTMessageEncoder {
 
-    private static final Logger log = LoggerFactory.getLogger(JTMessageEncoder.class.getSimpleName());
-
     private static final ByteBufAllocator ALLOC = PooledByteBufAllocator.DEFAULT;
 
-    private Map<Integer, Schema<Header>> headerSchemaMap;
+    private Map<Integer, RuntimeSchema<JTMessage>> headerSchemaMap;
 
     public JTMessageEncoder(String basePackage) {
         ProtostarUtil.initial(basePackage);
-        this.headerSchemaMap = ProtostarUtil.getSchema(Header.class);
+        this.headerSchemaMap = ProtostarUtil.getRuntimeSchema(JTMessage.class);
     }
 
     public ByteBuf encode(JTMessage message) {
-        Header header = message.getHeader();
-        int version = header.getVersionNo();
+        int version = message.getVersionNo();
         int headLength = JTUtils.headerLength(version, false);
         int bodyLength = 0;
 
-        Schema bodySchema = ProtostarUtil.getSchema(message.getClass(), version);
-        ByteBuf allBuf;
+        Schema headSchema = headerSchemaMap.get(version);
+        Schema bodySchema = ProtostarUtil.getRuntimeSchema(message.getMessageId(), version);
+
+        ByteBuf output;
         if (bodySchema != null) {
-            allBuf = ALLOC.buffer(headLength + bodySchema.length());
-            allBuf.writerIndex(headLength);
-            bodySchema.writeTo(allBuf, message);
-            bodyLength = allBuf.writerIndex() - headLength;
+            output = ALLOC.buffer(headLength + bodySchema.length());
+            output.writerIndex(headLength);
+            bodySchema.writeTo(output, message);
+            bodyLength = output.writerIndex() - headLength;
         } else {
-            allBuf = ALLOC.buffer(headLength, 21);
-            log.debug("未找到对应的Schema[{}]", message.getClass());
+            output = ALLOC.buffer(headLength, 21);
         }
 
-        Schema headerSchema = headerSchemaMap.get(version);
-
         if (bodyLength <= 1023) {
-            header.setBodyLength(bodyLength);
+            message.setBodyLength(bodyLength);
 
-            int writerIndex = allBuf.writerIndex();
+            int writerIndex = output.writerIndex();
             if (writerIndex > 0) {
-                allBuf.writerIndex(0);
-                headerSchema.writeTo(allBuf, header);
-                allBuf.writerIndex(writerIndex);
+                output.writerIndex(0);
+                headSchema.writeTo(output, message);
+                output.writerIndex(writerIndex);
             } else {
-                headerSchema.writeTo(allBuf, header);
+                headSchema.writeTo(output, message);
             }
 
-            allBuf = sign(allBuf);
-            allBuf = escape(allBuf);
+            output = sign(output);
+            output = escape(output);
 
         } else {
 
             headLength = JTUtils.headerLength(version, true);
 
-            ByteBuf[] slices = slices(allBuf, headLength, 1023);
+            ByteBuf[] slices = slices(output, headLength, 1023);
             int total = slices.length;
 
             CompositeByteBuf _allBuf = new CompositeByteBuf(UnpooledByteBufAllocator.DEFAULT, false, total);
-            allBuf = _allBuf;
+            output = _allBuf;
 
-            header.setSubpackage(true);
-            header.setPackageTotal(total);
+            message.setSubpackage(true);
+            message.setPackageTotal(total);
 
             for (int i = 0; i < total; i++) {
                 ByteBuf slice = slices[i];
 
-                header.setPackageNo(i + 1);
-                header.setBodyLength(slice.readableBytes());
+                message.setPackageNo(i + 1);
+                message.setBodyLength(slice.readableBytes());
 
                 ByteBuf headBuf = ALLOC.buffer(headLength, headLength);
-                headerSchema.writeTo(headBuf, header);
+                headSchema.writeTo(headBuf, message);
                 ByteBuf msgBuf = new CompositeByteBuf(UnpooledByteBufAllocator.DEFAULT, false, 2)
                         .addComponent(true, 0, headBuf)
                         .addComponent(true, 1, slice);
@@ -95,7 +89,7 @@ public class JTMessageEncoder {
                 _allBuf.addComponent(true, i, msgBuf);
             }
         }
-        return allBuf;
+        return output;
     }
 
     public static ByteBuf[] slices(ByteBuf output, int start, int unitSize) {

@@ -13,22 +13,38 @@ import org.yzh.protocol.commons.JT808;
 @Message(JT808.摄像头立即拍摄命令)
 public class T8801 extends JTMessage {
 
+    @Field(index = 0, type = DataType.BYTE, desc = "通道ID(大于0)")
     private int channelId;
+    @Field(index = 1, type = DataType.WORD, desc = "拍摄命令：0表示停止拍摄；65535表示录像；其它表示拍照张数")
     private int command;
+    @Field(index = 3, type = DataType.WORD, desc = "拍照间隔/录像时间(秒) 0表示按最小间隔拍照或一直录像")
     private int time;
+    @Field(index = 5, type = DataType.BYTE, desc = "保存标志：1.保存 0.实时上传")
     private int save;
+    @Field(index = 6, type = DataType.BYTE, desc = "分辨率：" +
+            " 1.320*240" +
+            " 2.640*480" +
+            " 3.800*600" +
+            " 4.1024*768" +
+            " 5.176*144 [QCIF]" +
+            " 6.352*288 [CIF]" +
+            " 7.704*288 [HALF D1]" +
+            " 8.704*576 [D1]")
     private int resolution;
+    @Field(index = 7, type = DataType.BYTE, desc = "图像/视频质量(1~10)：1.代表质量损失最小 10.表示压缩比最大")
     private int quality;
+    @Field(index = 8, type = DataType.BYTE, desc = "亮度(0~255)")
     private int brightness;
+    @Field(index = 9, type = DataType.BYTE, desc = "对比度(0~127)")
     private int contrast;
+    @Field(index = 10, type = DataType.BYTE, desc = "饱和度(0~127)")
     private int saturation;
+    @Field(index = 11, type = DataType.BYTE, desc = "色度(0~255)")
     private int chroma;
 
     public T8801() {
     }
 
-    /** 大于0 */
-    @Field(index = 0, type = DataType.BYTE, desc = "通道ID")
     public int getChannelId() {
         return channelId;
     }
@@ -37,8 +53,6 @@ public class T8801 extends JTMessage {
         this.channelId = channelId;
     }
 
-    /** 0表示停止拍摄 0xFFFF表示录像;其它表示拍照张数 */
-    @Field(index = 1, type = DataType.WORD, desc = "拍摄命令")
     public int getCommand() {
         return command;
     }
@@ -47,8 +61,6 @@ public class T8801 extends JTMessage {
         this.command = command;
     }
 
-    /** 秒，0表示按最小间隔拍照或一直录像 */
-    @Field(index = 3, type = DataType.WORD, desc = "拍照间隔/录像时间")
     public int getTime() {
         return time;
     }
@@ -57,8 +69,6 @@ public class T8801 extends JTMessage {
         this.time = time;
     }
 
-    /** 1:保存 0:实时上传 */
-    @Field(index = 5, type = DataType.BYTE, desc = "保存标志")
     public int getSave() {
         return save;
     }
@@ -67,17 +77,6 @@ public class T8801 extends JTMessage {
         this.save = save;
     }
 
-    /**
-     * 0x01: 320*240；
-     * 0x02: 640*480；
-     * 0x03: 800*600；
-     * 0x04: 1024*768；
-     * 0x05: 176*144；[Qcif]；
-     * 0x06: 352*288；[Cif]；
-     * 0x07: 704*288；[HALF D1]；
-     * 0x08: 704*576；[D1]；
-     */
-    @Field(index = 6, type = DataType.BYTE, desc = "分辨率")
     public int getResolution() {
         return resolution;
     }
@@ -86,8 +85,6 @@ public class T8801 extends JTMessage {
         this.resolution = resolution;
     }
 
-    /** 1:代表质量损失最小 10:表示压缩比最大 */
-    @Field(index = 7, type = DataType.BYTE, desc = "质量")
     public int getQuality() {
         return quality;
     }
@@ -96,7 +93,6 @@ public class T8801 extends JTMessage {
         this.quality = quality;
     }
 
-    @Field(index = 8, type = DataType.BYTE, desc = "亮度")
     public int getBrightness() {
         return brightness;
     }
@@ -105,7 +101,6 @@ public class T8801 extends JTMessage {
         this.brightness = brightness;
     }
 
-    @Field(index = 9, type = DataType.BYTE, desc = "对比度")
     public int getContrast() {
         return contrast;
     }
@@ -114,7 +109,6 @@ public class T8801 extends JTMessage {
         this.contrast = contrast;
     }
 
-    @Field(index = 10, type = DataType.BYTE, desc = "饱和度")
     public int getSaturation() {
         return saturation;
     }
@@ -123,7 +117,6 @@ public class T8801 extends JTMessage {
         this.saturation = saturation;
     }
 
-    @Field(index = 11, type = DataType.BYTE, desc = "色度")
     public int getChroma() {
         return chroma;
     }

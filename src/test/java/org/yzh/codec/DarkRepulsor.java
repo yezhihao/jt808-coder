@@ -3,7 +3,9 @@ package org.yzh.codec;
 import io.github.yezhihao.protostar.FieldFactory;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufUtil;
+import org.yzh.protocol.BeanTest;
 import org.yzh.protocol.JT808Beans;
+import org.yzh.protocol.basics.JTMessage;
 import org.yzh.protocol.codec.JTMessageEncoder;
 
 /**
@@ -13,16 +15,20 @@ import org.yzh.protocol.codec.JTMessageEncoder;
  */
 public class DarkRepulsor {
 
-    private static JTMessageEncoder darkRepulsor;
+    public static final JTMessageEncoder encoder;
 
     static {
         FieldFactory.EXPLAIN = true;
-        darkRepulsor = new JTMessageEncoder("org.yzh.protocol");
+        encoder = new JTMessageEncoder("org.yzh.protocol");
     }
 
     public static void main(String[] args) {
-        ByteBuf byteBuf = darkRepulsor.encode(JT808Beans.H2013(JT808Beans.T0200JSATL12()));
+        JTMessage message = JT808Beans.T0100();
+        BeanTest.H2013(message);
+
+        ByteBuf byteBuf = encoder.encode(message);
         System.out.println();
         System.out.println(ByteBufUtil.hexDump(byteBuf));
+        System.out.println(message);
     }
 }

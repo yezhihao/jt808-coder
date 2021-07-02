@@ -8,29 +8,31 @@ import java.util.TreeMap;
 
 public class Parameters {
 
-    @Schema(description = "数值型参数列表")
+    @Schema(description = "数值型参数列表(BYTE、WORD)")
     private Map<Integer, Integer> parametersInt;
+    @Schema(description = "数值型参数列表(DWORD、QWORD)")
+    private Map<Integer, Long> parametersLong;
     @Schema(description = "字符型参数列表")
     private Map<Integer, String> parametersStr;
-    @Schema(description = "图像分析报警参数设置")
+    @Schema(description = "图像分析报警参数设置(1078)")
     private ParamImageIdentifyAlarm paramImageIdentifyAlarm;
-    @Schema(description = "特殊报警录像参数设置")
+    @Schema(description = "特殊报警录像参数设置(1078)")
     private ParamVideoSpecialAlarm paramVideoSpecialAlarm;
-    @Schema(description = "音视频通道列表设置")
+    @Schema(description = "音视频通道列表设置(1078)")
     private ParamChannels paramChannels;
-    @Schema(description = "终端休眠唤醒模式设置数据格式")
+    @Schema(description = "终端休眠唤醒模式设置数据格式(1078)")
     private ParamSleepWake paramSleepWake;
-    @Schema(description = "音视频参数设置")
+    @Schema(description = "音视频参数设置(1078)")
     private ParamVideo paramVideo;
-    @Schema(description = "单独视频通道参数设置")
+    @Schema(description = "单独视频通道参数设置(1078)")
     private ParamVideoSingle paramVideoSingle;
-    @Schema(description = "盲区监测系统参数")
+    @Schema(description = "盲区监测系统参数(苏标)")
     private ParamBSD paramBSD;
-    @Schema(description = "胎压监测系统参数")
+    @Schema(description = "胎压监测系统参数(苏标)")
     private ParamTPMS paramTPMS;
-    @Schema(description = "驾驶员状态监测系统参数")
+    @Schema(description = "驾驶员状态监测系统参数(苏标)")
     private ParamDSM paramDSM;
-    @Schema(description = "高级驾驶辅助系统参数")
+    @Schema(description = "高级驾驶辅助系统参数(苏标)")
     private ParamADAS paramADAS;
 
     public Map<Integer, Integer> getParametersInt() {
@@ -39,6 +41,14 @@ public class Parameters {
 
     public void setParametersInt(Map<Integer, Integer> parametersInt) {
         this.parametersInt = parametersInt;
+    }
+
+    public Map<Integer, Long> getParametersLong() {
+        return parametersLong;
+    }
+
+    public void setParametersLong(Map<Integer, Long> parametersLong) {
+        this.parametersLong = parametersLong;
     }
 
     public Map<Integer, String> getParametersStr() {
@@ -132,10 +142,13 @@ public class Parameters {
     public Map<Integer, Object> toMap() {
         Map<Integer, Object> map = new TreeMap<>();
 
-        if (parametersInt != null)
+        if (parametersInt != null && !parametersInt.isEmpty())
             map.putAll(parametersInt);
 
-        if (parametersStr != null)
+        if (parametersLong != null && !parametersLong.isEmpty())
+            map.putAll(parametersLong);
+
+        if (parametersStr != null && !parametersStr.isEmpty())
             map.putAll(parametersStr);
 
         if (paramADAS != null)

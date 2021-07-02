@@ -3,7 +3,6 @@ package org.yzh.protocol.t808;
 import io.github.yezhihao.protostar.DataType;
 import io.github.yezhihao.protostar.annotation.Field;
 import io.github.yezhihao.protostar.annotation.Message;
-import org.yzh.protocol.basics.Header;
 import org.yzh.protocol.basics.JTMessage;
 import org.yzh.protocol.commons.JT808;
 
@@ -14,19 +13,19 @@ import org.yzh.protocol.commons.JT808;
 @Message(JT808.查询指定终端参数)
 public class T8106 extends JTMessage {
 
+    @Field(index = 0, type = DataType.BYTE, desc = "参数总数")
     private int total;
-    private byte[] id;
+    @Field(index = 1, type = DataType.DWORD, desc = "参数ID列表")
+    private int[] id;
 
     public T8106() {
     }
 
-    public T8106(String mobileNo, byte... id) {
-        super(new Header(mobileNo, JT808.查询指定终端参数));
+    public T8106(int... id) {
         this.id = id;
         this.total = id.length;
     }
 
-    @Field(index = 0, type = DataType.BYTE, desc = "参数总数")
     public int getTotal() {
         return total;
     }
@@ -35,12 +34,11 @@ public class T8106 extends JTMessage {
         this.total = total;
     }
 
-    @Field(index = 1, type = DataType.BYTES, desc = "参数ID列表")
-    public byte[] getId() {
+    public int[] getId() {
         return id;
     }
 
-    public void setId(byte[] id) {
+    public void setId(int[] id) {
         this.id = id;
         this.total = id.length;
     }

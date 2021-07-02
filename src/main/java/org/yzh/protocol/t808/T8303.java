@@ -18,11 +18,13 @@ import java.util.List;
 public class T8303 extends JTMessage {
 
     /** @see org.yzh.protocol.commons.Action */
+    @Field(index = 0, type = DataType.BYTE, desc = "设置类型")
     private int type;
+    @Field(index = 1, type = DataType.BYTE, desc = "设置总数")
     private int total;
+    @Field(index = 2, type = DataType.LIST, desc = "事件项列表")
     private List<Item> items;
 
-    @Field(index = 0, type = DataType.BYTE, desc = "设置类型")
     public int getType() {
         return type;
     }
@@ -31,8 +33,9 @@ public class T8303 extends JTMessage {
         this.type = type;
     }
 
-    @Field(index = 1, type = DataType.BYTE, desc = "设置总数")
     public int getTotal() {
+        if (items != null)
+            return items.size();
         return total;
     }
 
@@ -40,24 +43,26 @@ public class T8303 extends JTMessage {
         this.total = total;
     }
 
-    @Field(index = 2, type = DataType.LIST, desc = "事件项列表")
     public List<Item> getItems() {
         return items;
     }
 
     public void setItems(List<Item> items) {
         this.items = items;
-    }
-
-    public void addItem(int id, String content) {
-        if (this.items == null)
-            this.items = new ArrayList();
-        this.items.add(new Item(id, content));
         this.total = items.size();
     }
 
+    public void addItem(int id, String content) {
+        if (items == null)
+            items = new ArrayList();
+        items.add(new Item(id, content));
+        total = items.size();
+    }
+
     public static class Item {
+        @Field(index = 0, type = DataType.BYTE, desc = "事件ID")
         private int id;
+        @Field(index = 1, type = DataType.STRING, lengthSize = 2, desc = "信息名称")
         private String content;
 
         public Item() {
@@ -68,7 +73,6 @@ public class T8303 extends JTMessage {
             this.content = content;
         }
 
-        @Field(index = 0, type = DataType.BYTE, desc = "事件ID")
         public int getId() {
             return id;
         }
@@ -77,13 +81,21 @@ public class T8303 extends JTMessage {
             this.id = id;
         }
 
-        @Field(index = 3, type = DataType.STRING, lengthSize = 2, desc = "信息名称")
         public String getContent() {
             return content;
         }
 
         public void setContent(String content) {
             this.content = content;
+        }
+
+        @Override
+        public String toString() {
+            final StringBuilder sb = new StringBuilder(40);
+            sb.append("{id=").append(id);
+            sb.append(",content=").append(content);
+            sb.append('}');
+            return sb.toString();
         }
     }
 }

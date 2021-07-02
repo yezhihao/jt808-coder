@@ -15,23 +15,27 @@ import java.util.List;
 @Message(JSATL12.报警附件信息消息)
 public class T1210 extends JTMessage {
 
-    private String terminalId;
+    @Field(index = 0, type = DataType.STRING, length = 7, desc = "终端ID")
+    private String deviceId;
+    @Field(index = 7, type = DataType.OBJ, length = 16, desc = "报警标识号")
     private AlarmId alarmId;
+    @Field(index = 23, type = DataType.STRING, length = 32, desc = "报警编号")
     private String alarmNo;
+    @Field(index = 55, type = DataType.BYTE, desc = "信息类型：0.正常报警文件信息 1.补传报警文件信息")
     private int type;
+    @Field(index = 56, type = DataType.BYTE, desc = "附件数量")
     private int total;
+    @Field(index = 57, type = DataType.LIST, desc = "附件信息列表")
     private List<Item> items;
 
-    @Field(index = 0, type = DataType.STRING, length = 7, desc = "终端ID")
-    public String getTerminalId() {
-        return terminalId;
+    public String getDeviceId() {
+        return deviceId;
     }
 
-    public void setTerminalId(String terminalId) {
-        this.terminalId = terminalId;
+    public void setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
     }
 
-    @Field(index = 7, type = DataType.OBJ, length = 16, desc = "报警标识号")
     public AlarmId getAlarmId() {
         return alarmId;
     }
@@ -40,7 +44,6 @@ public class T1210 extends JTMessage {
         this.alarmId = alarmId;
     }
 
-    @Field(index = 23, type = DataType.STRING, length = 32, desc = "报警编号")
     public String getAlarmNo() {
         return alarmNo;
     }
@@ -49,11 +52,6 @@ public class T1210 extends JTMessage {
         this.alarmNo = alarmNo;
     }
 
-    /**
-     * 0x00：正常报警文件信息
-     * 0x01：补传报警文件信息
-     */
-    @Field(index = 55, type = DataType.BYTE, desc = "信息类型")
     public int getType() {
         return type;
     }
@@ -62,7 +60,6 @@ public class T1210 extends JTMessage {
         this.type = type;
     }
 
-    @Field(index = 56, type = DataType.BYTE, desc = "附件数量")
     public int getTotal() {
         return total;
     }
@@ -71,7 +68,6 @@ public class T1210 extends JTMessage {
         this.total = total;
     }
 
-    @Field(index = 57, type = DataType.LIST, desc = "附件信息列表")
     public List<Item> getItems() {
         return items;
     }
@@ -81,10 +77,11 @@ public class T1210 extends JTMessage {
     }
 
     public static class Item {
+        @Field(index = 0, type = DataType.STRING, lengthSize = 1, desc = "文件名称")
         private String name;
+        @Field(index = 1, type = DataType.DWORD, desc = "文件大小")
         private long size;
 
-        @Field(index = 1, type = DataType.STRING, lengthSize = 1, desc = "文件名称")
         public String getName() {
             return name;
         }
@@ -93,13 +90,21 @@ public class T1210 extends JTMessage {
             this.name = name;
         }
 
-        @Field(index = 1, type = DataType.DWORD, desc = "文件大小")
         public long getSize() {
             return size;
         }
 
         public void setSize(long size) {
             this.size = size;
+        }
+
+        @Override
+        public String toString() {
+            final StringBuilder sb = new StringBuilder(80);
+            sb.append("{name=").append(name);
+            sb.append(",size=").append(size);
+            sb.append('}');
+            return sb.toString();
         }
     }
 }

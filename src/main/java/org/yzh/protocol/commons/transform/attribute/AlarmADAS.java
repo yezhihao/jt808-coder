@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 /**
  * 高级驾驶辅助系统报警
  */
-public class AlarmADAS {
+public class AlarmADAS implements Alarm {
 
     public static final int id = 0x64;
 
@@ -17,24 +17,50 @@ public class AlarmADAS {
         return id;
     }
 
+    @Field(index = 0, type = DataType.DWORD, desc = "报警ID")
     private long serialNo;
+    @Field(index = 4, type = DataType.BYTE, desc = "标志状态：0.不可用 1.开始标志 2.结束标志")
     private int state;
+    @Field(index = 5, type = DataType.BYTE, desc = "报警/事件类型：" +
+            " 1.前向碰撞报警" +
+            " 2.车道偏离报警" +
+            " 3.车距过近报警" +
+            " 4.行人碰撞报警" +
+            " 5.频繁变道报警" +
+            " 6.道路标识超限报警" +
+            " 7.障碍物报警" +
+            " 8~15.用户自定义" +
+            " 16.道路标志识别事件" +
+            " 17.主动抓拍事件" +
+            " 18~31.用户自定义")
     private int type;
+    @Field(index = 6, type = DataType.BYTE, desc = "报警级别")
     private int level;
+    @Field(index = 7, type = DataType.BYTE, desc = "前车车速(Km/h)范围0~250,仅报警类型为1和2时有效")
     private int frontSpeed;
+    @Field(index = 8, type = DataType.BYTE, desc = "前车/行人距离(100ms),范围0~100,仅报警类型为1、2和4时有效")
     private int frontDistance;
+    @Field(index = 9, type = DataType.BYTE, desc = "偏离类型：1.左侧偏离 2.右侧偏离(报警类型为2时有效)")
     private int deviateType;
+    @Field(index = 10, type = DataType.BYTE, desc = "道路标志识别类型：1.限速标志 2.限高标志 3.限重标志(报警类型为6和10时有效)")
     private int roadSign;
+    @Field(index = 11, type = DataType.BYTE, desc = "道路标志识别数据")
     private int roadSignValue;
+    @Field(index = 12, type = DataType.BYTE, desc = "车速")
     private int speed;
+    @Field(index = 13, type = DataType.WORD, desc = "高程")
     private int altitude;
+    @Field(index = 15, type = DataType.DWORD, desc = "纬度")
     private int latitude;
+    @Field(index = 19, type = DataType.DWORD, desc = "经度")
     private int longitude;
+    @Field(index = 23, type = DataType.BCD8421, length = 6, desc = "日期时间")
     private LocalDateTime dateTime;
+    @Field(index = 29, type = DataType.WORD, desc = "车辆状态")
     private int status;
+    @Field(index = 31, type = DataType.OBJ, length = 16, desc = "报警标识号")
     private AlarmId alarmId;
 
-    @Field(index = 0, type = DataType.DWORD, desc = "报警ID")
     public long getSerialNo() {
         return serialNo;
     }
@@ -43,7 +69,6 @@ public class AlarmADAS {
         this.serialNo = serialNo;
     }
 
-    @Field(index = 4, type = DataType.BYTE, desc = "标志状态")
     public int getState() {
         return state;
     }
@@ -52,7 +77,6 @@ public class AlarmADAS {
         this.state = state;
     }
 
-    @Field(index = 5, type = DataType.BYTE, desc = "报警/事件类型")
     public int getType() {
         return type;
     }
@@ -61,7 +85,6 @@ public class AlarmADAS {
         this.type = type;
     }
 
-    @Field(index = 6, type = DataType.BYTE, desc = "报警级别")
     public int getLevel() {
         return level;
     }
@@ -70,7 +93,6 @@ public class AlarmADAS {
         this.level = level;
     }
 
-    @Field(index = 7, type = DataType.BYTE, desc = "前车车速")
     public int getFrontSpeed() {
         return frontSpeed;
     }
@@ -79,7 +101,6 @@ public class AlarmADAS {
         this.frontSpeed = frontSpeed;
     }
 
-    @Field(index = 8, type = DataType.BYTE, desc = "前车/行人距离")
     public int getFrontDistance() {
         return frontDistance;
     }
@@ -88,7 +109,6 @@ public class AlarmADAS {
         this.frontDistance = frontDistance;
     }
 
-    @Field(index = 9, type = DataType.BYTE, desc = "偏离类型")
     public int getDeviateType() {
         return deviateType;
     }
@@ -97,7 +117,6 @@ public class AlarmADAS {
         this.deviateType = deviateType;
     }
 
-    @Field(index = 10, type = DataType.BYTE, desc = "道路标志识别类型")
     public int getRoadSign() {
         return roadSign;
     }
@@ -106,7 +125,6 @@ public class AlarmADAS {
         this.roadSign = roadSign;
     }
 
-    @Field(index = 11, type = DataType.BYTE, desc = "道路标志识别数据")
     public int getRoadSignValue() {
         return roadSignValue;
     }
@@ -115,7 +133,6 @@ public class AlarmADAS {
         this.roadSignValue = roadSignValue;
     }
 
-    @Field(index = 12, type = DataType.BYTE, desc = "车速")
     public int getSpeed() {
         return speed;
     }
@@ -124,7 +141,6 @@ public class AlarmADAS {
         this.speed = speed;
     }
 
-    @Field(index = 13, type = DataType.WORD, desc = "高程")
     public int getAltitude() {
         return altitude;
     }
@@ -133,7 +149,6 @@ public class AlarmADAS {
         this.altitude = altitude;
     }
 
-    @Field(index = 15, type = DataType.DWORD, desc = "纬度")
     public int getLatitude() {
         return latitude;
     }
@@ -142,7 +157,6 @@ public class AlarmADAS {
         this.latitude = latitude;
     }
 
-    @Field(index = 19, type = DataType.DWORD, desc = "经度")
     public int getLongitude() {
         return longitude;
     }
@@ -151,7 +165,6 @@ public class AlarmADAS {
         this.longitude = longitude;
     }
 
-    @Field(index = 23, type = DataType.BCD8421, length = 6, desc = "日期时间")
     public LocalDateTime getDateTime() {
         return dateTime;
     }
@@ -160,7 +173,6 @@ public class AlarmADAS {
         this.dateTime = dateTime;
     }
 
-    @Field(index = 29, type = DataType.WORD, desc = "车辆状态")
     public int getStatus() {
         return status;
     }
@@ -169,12 +181,34 @@ public class AlarmADAS {
         this.status = status;
     }
 
-    @Field(index = 31, type = DataType.OBJ, length = 16, desc = "报警标识号")
     public AlarmId getAlarmId() {
         return alarmId;
     }
 
     public void setAlarmId(AlarmId alarmId) {
         this.alarmId = alarmId;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder(512);
+        sb.append("AlarmADAS{serialNo=").append(serialNo);
+        sb.append(", state=").append(state);
+        sb.append(", type=").append(type);
+        sb.append(", level=").append(level);
+        sb.append(", frontSpeed=").append(frontSpeed);
+        sb.append(", frontDistance=").append(frontDistance);
+        sb.append(", deviateType=").append(deviateType);
+        sb.append(", roadSign=").append(roadSign);
+        sb.append(", roadSignValue=").append(roadSignValue);
+        sb.append(", speed=").append(speed);
+        sb.append(", altitude=").append(altitude);
+        sb.append(", longitude=").append(longitude);
+        sb.append(", latitude=").append(latitude);
+        sb.append(", dateTime=").append(dateTime);
+        sb.append(", status=").append(status);
+        sb.append(", alarmId=").append(alarmId);
+        sb.append('}');
+        return sb.toString();
     }
 }

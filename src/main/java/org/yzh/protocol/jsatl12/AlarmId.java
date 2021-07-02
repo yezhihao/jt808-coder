@@ -10,24 +10,28 @@ import io.github.yezhihao.protostar.annotation.Field;
  */
 public class AlarmId {
 
+    @Field(index = 0, type = DataType.STRING, length = 7, desc = "终端ID")
     private String deviceId;
+    @Field(index = 7, type = DataType.BCD8421, length = 6, desc = "时间(YYMMDDHHMMSS)")
     private String dateTime;
-    private int order;
-    private int total;
+    @Field(index = 13, type = DataType.BYTE, desc = "序号")
+    private int serialNo;
+    @Field(index = 14, type = DataType.BYTE, desc = "附件数量")
+    private int fileTotal;
+    @Field(index = 15, type = DataType.BYTE, desc = "预留")
     private int reserved;
 
     public AlarmId() {
     }
 
-    public AlarmId(String deviceId, String dateTime, int order, int total, int reserved) {
+    public AlarmId(String deviceId, String dateTime, int serialNo, int fileTotal, int reserved) {
         this.deviceId = deviceId;
         this.dateTime = dateTime;
-        this.order = order;
-        this.total = total;
+        this.serialNo = serialNo;
+        this.fileTotal = fileTotal;
         this.reserved = reserved;
     }
 
-    @Field(index = 0, type = DataType.STRING, length = 7, desc = "终端ID")
     public String getDeviceId() {
         return deviceId;
     }
@@ -36,7 +40,6 @@ public class AlarmId {
         this.deviceId = deviceId;
     }
 
-    @Field(index = 7, type = DataType.BCD8421, length = 6, desc = "时间")
     public String getDateTime() {
         return dateTime;
     }
@@ -45,25 +48,22 @@ public class AlarmId {
         this.dateTime = dateTime;
     }
 
-    @Field(index = 13, type = DataType.BYTE, desc = "序号")
-    public int getOrder() {
-        return order;
+    public int getSerialNo() {
+        return serialNo;
     }
 
-    public void setOrder(int order) {
-        this.order = order;
+    public void setSerialNo(int serialNo) {
+        this.serialNo = serialNo;
     }
 
-    @Field(index = 14, type = DataType.BYTE, desc = "附件数量")
-    public int getTotal() {
-        return total;
+    public int getFileTotal() {
+        return fileTotal;
     }
 
-    public void setTotal(int total) {
-        this.total = total;
+    public void setFileTotal(int fileTotal) {
+        this.fileTotal = fileTotal;
     }
 
-    @Field(index = 15, type = DataType.BYTE, desc = "预留")
     public int getReserved() {
         return reserved;
     }
@@ -74,12 +74,12 @@ public class AlarmId {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("AlarmId{");
-        sb.append("deviceId='").append(deviceId).append('\'');
-        sb.append(", dateTime='").append(dateTime).append('\'');
-        sb.append(", order=").append(order);
-        sb.append(", total=").append(total);
-        sb.append(", reserved=").append(reserved);
+        final StringBuilder sb = new StringBuilder(100);
+        sb.append("AlarmId{deviceId=").append(deviceId);
+        sb.append(",dateTime=").append(dateTime);
+        sb.append(",serialNo=").append(serialNo);
+        sb.append(",fileTotal=").append(fileTotal);
+        sb.append(",reserved=").append(reserved);
         sb.append('}');
         return sb.toString();
     }

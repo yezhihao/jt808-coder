@@ -4,6 +4,7 @@ import io.github.yezhihao.protostar.DataType;
 import io.github.yezhihao.protostar.annotation.Field;
 import io.github.yezhihao.protostar.annotation.Message;
 import org.yzh.protocol.basics.JTMessage;
+import org.yzh.protocol.commons.Bit;
 import org.yzh.protocol.commons.JT808;
 
 import java.util.List;
@@ -16,18 +17,28 @@ import java.util.List;
 @Message(JT808.提问下发)
 public class T8302 extends JTMessage {
 
+    @Field(index = 0, type = DataType.BYTE, desc = "标志：" +
+            " [0]紧急" +
+            " [1]保留" +
+            " [2]终端显示器显示" +
+            " [3]终端 TTS 播读" +
+            " [4]广告屏显示" +
+            " [5]0.中心导航信息|1.CAN故障码信息" +
+            " [6~7]保留")
     private int sign;
+    @Field(index = 1, type = DataType.STRING, lengthSize = 1, desc = "问题")
     private String content;
+    @Field(index = 2, type = DataType.LIST, desc = "候选答案列表")
     private List<Option> options;
 
-    public void buildSign(int[] signs) {
-        int sign = 0;
-        for (int b : signs)
-            sign |= 1 << b;
-        this.sign = sign;
+    public T8302() {
     }
 
-    @Field(index = 0, type = DataType.BYTE, desc = "标志")
+    public T8302(String content, int... sign) {
+        this.content = content;
+        this.sign = Bit.writeInt(sign);
+    }
+
     public int getSign() {
         return sign;
     }
@@ -36,7 +47,6 @@ public class T8302 extends JTMessage {
         this.sign = sign;
     }
 
-    @Field(index = 2, type = DataType.STRING, lengthSize = 1, desc = "问题")
     public String getContent() {
         return content;
     }
@@ -45,7 +55,6 @@ public class T8302 extends JTMessage {
         this.content = content;
     }
 
-    @Field(index = 2, type = DataType.LIST, desc = "候选答案列表")
     public List<Option> getOptions() {
         return options;
     }
@@ -56,7 +65,9 @@ public class T8302 extends JTMessage {
 
     public static class Option {
 
+        @Field(index = 0, type = DataType.BYTE, desc = "答案ID")
         private int id;
+        @Field(index = 1, type = DataType.STRING, lengthSize = 2, desc = "答案内容")
         private String content;
 
         public Option() {
@@ -67,7 +78,6 @@ public class T8302 extends JTMessage {
             this.content = content;
         }
 
-        @Field(index = 0, type = DataType.BYTE, desc = "答案ID")
         public int getId() {
             return id;
         }
@@ -76,13 +86,21 @@ public class T8302 extends JTMessage {
             this.id = id;
         }
 
-        @Field(index = 3, type = DataType.STRING, lengthSize = 2, desc = "答案内容")
         public String getContent() {
             return content;
         }
 
         public void setContent(String content) {
             this.content = content;
+        }
+
+        @Override
+        public String toString() {
+            final StringBuilder sb = new StringBuilder(40);
+            sb.append("{id=").append(id);
+            sb.append(",content=").append(content);
+            sb.append('}');
+            return sb.toString();
         }
     }
 }

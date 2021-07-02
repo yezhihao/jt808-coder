@@ -16,13 +16,22 @@ import java.nio.ByteBuffer;
 @Message
 public class DataPacket extends JTMessage {
 
+    @Field(index = 0, type = DataType.DWORD, desc = "帧头标识")
     private int flag;
+    @Field(index = 4, type = DataType.STRING, length = 50, desc = "文件名称")
     private String name;
+    @Field(index = 54, type = DataType.DWORD, desc = "数据偏移量")
     private int offset;
+    @Field(index = 58, type = DataType.DWORD, desc = "数据长度")
     private int length;
+    @Field(index = 62, type = DataType.BYTES, desc = "数据体")
     private ByteBuffer data;
 
-    @Field(index = 0, type = DataType.DWORD, desc = "帧头标识")
+    @Override
+    public int getMessageId() {
+        return flag;
+    }
+
     public int getFlag() {
         return flag;
     }
@@ -31,7 +40,6 @@ public class DataPacket extends JTMessage {
         this.flag = flag;
     }
 
-    @Field(index = 4, type = DataType.STRING, length = 50, desc = "文件名称")
     public String getName() {
         return name;
     }
@@ -40,7 +48,6 @@ public class DataPacket extends JTMessage {
         this.name = name;
     }
 
-    @Field(index = 54, type = DataType.DWORD, desc = "数据偏移量")
     public int getOffset() {
         return offset;
     }
@@ -49,7 +56,6 @@ public class DataPacket extends JTMessage {
         this.offset = offset;
     }
 
-    @Field(index = 58, type = DataType.DWORD, desc = "数据长度")
     public int getLength() {
         return length;
     }
@@ -58,12 +64,22 @@ public class DataPacket extends JTMessage {
         this.length = length;
     }
 
-    @Field(index = 62, type = DataType.BYTES, desc = "数据体")
     public ByteBuffer getData() {
         return data;
     }
 
     public void setData(ByteBuffer data) {
         this.data = data;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder(120);
+        sb.append("DataPacket{name=").append(name);
+        sb.append(",offset=").append(offset);
+        sb.append(",length=").append(length);
+        sb.append(",data=").append(data.limit());
+        sb.append('}');
+        return sb.toString();
     }
 }

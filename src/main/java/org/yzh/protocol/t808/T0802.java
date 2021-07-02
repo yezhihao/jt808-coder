@@ -1,5 +1,6 @@
 package org.yzh.protocol.t808;
 
+
 import io.github.yezhihao.protostar.DataType;
 import io.github.yezhihao.protostar.annotation.Field;
 import io.github.yezhihao.protostar.annotation.Message;
@@ -15,20 +16,21 @@ import java.util.List;
 @Message(JT808.存储多媒体数据检索应答)
 public class T0802 extends JTMessage {
 
-    private int serialNo;
+    @Field(index = 0, type = DataType.WORD, desc = "应答流水号")
+    private int responseSerialNo;
+    @Field(index = 2, type = DataType.WORD, desc = "多媒体数据总项数")
     private int total;
+    @Field(index = 4, type = DataType.LIST, desc = "检索项")
     private List<Item> items;
 
-    @Field(index = 0, type = DataType.WORD, desc = "应答流水号")
-    public int getSerialNo() {
-        return serialNo;
+    public int getResponseSerialNo() {
+        return responseSerialNo;
     }
 
-    public void setSerialNo(int serialNo) {
-        this.serialNo = serialNo;
+    public void setResponseSerialNo(int responseSerialNo) {
+        this.responseSerialNo = responseSerialNo;
     }
 
-    @Field(index = 2, type = DataType.WORD, desc = "多媒体数据总项数")
     public int getTotal() {
         return total;
     }
@@ -37,7 +39,6 @@ public class T0802 extends JTMessage {
         this.total = total;
     }
 
-    @Field(index = 4, type = DataType.LIST, desc = "检索项")
     public List<Item> getItems() {
         return items;
     }
@@ -49,24 +50,28 @@ public class T0802 extends JTMessage {
 
     public static class Item {
 
+        @Field(index = 0, type = DataType.DWORD, desc = "多媒体数据ID")
         private int id;
+        @Field(index = 4, type = DataType.BYTE, desc = "多媒体类型：0.图像 1.音频 2.视频")
         private int type;
+        @Field(index = 5, type = DataType.BYTE, desc = "通道ID")
         private int channelId;
+        @Field(index = 6, type = DataType.BYTE, desc = "事件项编码")
         private int event;
-        private T0200 position;
+        @Field(index = 7, type = DataType.OBJ, length = 28, desc = "位置信息")
+        private T0200 location;
 
         public Item() {
         }
 
-        public Item(int id, int type, int channelId, int event, T0200 position) {
+        public Item(int id, int type, int channelId, int event, T0200 location) {
             this.id = id;
             this.type = type;
             this.channelId = channelId;
             this.event = event;
-            this.position = position;
+            this.location = location;
         }
 
-        @Field(index = 0, type = DataType.DWORD, desc = "多媒体数据ID")
         public int getId() {
             return id;
         }
@@ -75,7 +80,6 @@ public class T0802 extends JTMessage {
             this.id = id;
         }
 
-        @Field(index = 4, type = DataType.BYTE, desc = "多媒体类型 0：图像；1：音频；2：视频")
         public int getType() {
             return type;
         }
@@ -84,7 +88,6 @@ public class T0802 extends JTMessage {
             this.type = type;
         }
 
-        @Field(index = 5, type = DataType.BYTE, desc = "通道ID")
         public int getChannelId() {
             return channelId;
         }
@@ -93,7 +96,6 @@ public class T0802 extends JTMessage {
             this.channelId = channelId;
         }
 
-        @Field(index = 6, type = DataType.BYTE, desc = "事件项编码")
         public int getEvent() {
             return event;
         }
@@ -102,13 +104,24 @@ public class T0802 extends JTMessage {
             this.event = event;
         }
 
-        @Field(index = 7, type = DataType.OBJ, length = 28, desc = "位置信息")
-        public T0200 getPosition() {
-            return position;
+        public T0200 getLocation() {
+            return location;
         }
 
-        public void setPosition(T0200 position) {
-            this.position = position;
+        public void setLocation(T0200 location) {
+            this.location = location;
+        }
+
+        @Override
+        public String toString() {
+            final StringBuilder sb = new StringBuilder(768);
+            sb.append("{id=").append(id);
+            sb.append(",type=").append(type);
+            sb.append(",channelId=").append(channelId);
+            sb.append(",event=").append(event);
+            sb.append(",location=").append(location);
+            sb.append('}');
+            return sb.toString();
         }
     }
 }

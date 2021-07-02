@@ -1,8 +1,10 @@
 package org.yzh.protocol;
 
 import org.junit.Test;
+import org.yzh.protocol.basics.JTMessage;
+import org.yzh.protocol.commons.JT808;
 
-import static org.yzh.protocol.BeanTest.selfCheck;
+import static org.yzh.protocol.BeanTest.*;
 import static org.yzh.protocol.JT808Beans.*;
 
 /**
@@ -50,8 +52,10 @@ public class JT808BeansTest {
 
     @Test
     public void testT0002() {
-        selfCheck(H2013(T0002()));
-        selfCheck(H2019(T0002()));
+        JTMessage message = new JTMessage();
+        message.setMessageId(JT808.终端心跳);
+        selfCheck(H2013(message));
+        selfCheck(H2019(message));
     }
 
     @Test
@@ -232,6 +236,12 @@ public class JT808BeansTest {
     public void testT8900_0900() {
         selfCheck(H2013(T0900()));
         selfCheck(H2019(T0900()));
+    }
+
+    @Test
+    public void testT8608() {
+        selfCheck(H2013(T8608()));
+        selfCheck(H2019(T8608()));
     }
 
     @Test

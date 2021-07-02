@@ -1,5 +1,6 @@
 package org.yzh.protocol.t808;
 
+
 import io.github.yezhihao.protostar.DataType;
 import io.github.yezhihao.protostar.annotation.Field;
 import io.github.yezhihao.protostar.annotation.Message;
@@ -13,24 +14,23 @@ import org.yzh.protocol.commons.JT808;
 @Message(JT808.摄像头立即拍摄命令应答)
 public class T0805 extends JTMessage {
 
-    private int serialNo;
-    private int result;
-    private int total;
-    private int[] items;
-
-    public T0805() {
-    }
-
     @Field(index = 0, type = DataType.WORD, desc = "应答流水号")
-    public int getSerialNo() {
-        return serialNo;
+    private int responseSerialNo;
+    @Field(index = 2, type = DataType.BYTE, desc = "结果：0.成功 1.失败 2.通道不支持")
+    private int result;
+    @Field(index = 2, type = DataType.WORD, desc = "多媒体ID个数")
+    private int total;
+    @Field(index = 4, type = DataType.DWORD, desc = "多媒体ID列表")
+    private int[] id;
+
+    public int getResponseSerialNo() {
+        return responseSerialNo;
     }
 
-    public void setSerialNo(int serialNo) {
-        this.serialNo = serialNo;
+    public void setResponseSerialNo(int responseSerialNo) {
+        this.responseSerialNo = responseSerialNo;
     }
 
-    @Field(index = 2, type = DataType.BYTE, desc = "结果")
     public int getResult() {
         return result;
     }
@@ -39,7 +39,6 @@ public class T0805 extends JTMessage {
         this.result = result;
     }
 
-    @Field(index = 2, type = DataType.WORD, desc = "多媒体ID个数")
     public int getTotal() {
         return total;
     }
@@ -48,13 +47,12 @@ public class T0805 extends JTMessage {
         this.total = total;
     }
 
-    @Field(index = 4, type = DataType.DWORD, desc = "多媒体ID列表")
-    public int[] getItems() {
-        return items;
+    public int[] getId() {
+        return id;
     }
 
-    public void setItems(int[] items) {
-        this.items = items;
-        this.total = items.length;
+    public void setId(int[] id) {
+        this.id = id;
+        this.total = id.length;
     }
 }

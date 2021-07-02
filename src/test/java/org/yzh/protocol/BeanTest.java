@@ -41,6 +41,33 @@ public class BeanTest {
             .setPrettyPrinting()
             .create();
 
+
+    /** 2013版消息头 */
+    public static JTMessage H2013(JTMessage message) {
+        int messageId = message.reflectMessageId();
+        if (messageId != 0)
+            message.setMessageId(messageId);
+        message.setClientId("123456789012");
+        message.setSerialNo((int) Short.MAX_VALUE);
+        message.setEncryption(0);
+        message.setReserved(false);
+        return message;
+    }
+
+    /** 2019版消息头 */
+    public static JTMessage H2019(JTMessage message) {
+        int messageId = message.reflectMessageId();
+        if (messageId != 0)
+            message.setMessageId(messageId);
+        message.setVersionNo(1);
+        message.setClientId("12345678901234567890");
+        message.setSerialNo(65535);
+        message.setEncryption(0);
+        message.setVersion(true);
+        message.setReserved(false);
+        return message;
+    }
+
     public static void selfCheck(String hex1) {
         println(hex1);
 

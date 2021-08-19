@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.yzh</groupId>
-    <artifactId>jt808-coder</artifactId>
+    <artifactId>jt808-client</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -50,13 +50,19 @@
         </dependency>
         <dependency>
             <groupId>io.netty</groupId>
+            <artifactId>netty-handler</artifactId>
+            <version>4.1.66.Final</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
             <artifactId>netty-buffer</artifactId>
-            <version>4.1.65.Final</version>
+            <version>4.1.66.Final</version>
         </dependency>
         <dependency>
             <groupId>io.github.yezhihao</groupId>
             <artifactId>protostar</artifactId>
-            <version>2.0.1.RELEASE</version>
+            <version>2.0.3.RELEASE</version>
         </dependency>
     </dependencies>
 

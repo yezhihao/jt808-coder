@@ -35,16 +35,12 @@ public class JTMessageDecoder {
         int messageId = buf.getUnsignedShort(0);
         int properties = buf.getUnsignedShort(2);
 
-        //缺省值为2013版本
-        Integer version = 0;
-        //识别2019版本
-        if (Bit.get(properties, 14)) {
+        int version = 0;//缺省值为2013版本
+        if (Bit.get(properties, 14))//识别2019及后续版本
             version = (int) buf.getUnsignedByte(4);
-        }
 
-        int headLen;
         boolean isSubpackage = Bit.get(properties, 13);
-        headLen = JTUtils.headerLength(version, isSubpackage);
+        int headLen = JTUtils.headerLength(version, isSubpackage);
 
         RuntimeSchema<JTMessage> headSchema = headerSchemaMap.get(version);
         RuntimeSchema<JTMessage> bodySchema = ProtostarUtil.getRuntimeSchema(messageId, version);
@@ -59,6 +55,10 @@ public class JTMessageDecoder {
 
         headSchema.mergeFrom(buf.slice(0, headLen), message);
 
+        int realVersion = message.getProtocolVersion();
+        if (realVersion != version)
+            bodySchema = ProtostarUtil.getRuntimeSchema(messageId, realVersion);
+
         if (bodySchema != null) {
             int bodyLen = message.getBodyLength();
 
@@ -69,7 +69,7 @@ public class JTMessageDecoder {
 
                 byte[][] packages = addAndGet(message, bytes);
                 if (packages == null)
-                    return null;
+                    return message;
 
                 ByteBuf bodyBuf = Unpooled.wrappedBuffer(packages);
                 bodySchema.mergeFrom(bodyBuf, message);

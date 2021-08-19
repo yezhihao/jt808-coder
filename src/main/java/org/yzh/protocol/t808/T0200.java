@@ -1,13 +1,13 @@
 package org.yzh.protocol.t808;
 
 import io.github.yezhihao.protostar.DataType;
-import io.github.yezhihao.protostar.annotation.Convert;
 import io.github.yezhihao.protostar.annotation.Field;
 import io.github.yezhihao.protostar.annotation.Message;
 import org.yzh.protocol.basics.JTMessage;
 import org.yzh.protocol.commons.JT808;
 import org.yzh.protocol.commons.MessageId;
 import org.yzh.protocol.commons.transform.AttributeConverter;
+import org.yzh.protocol.commons.transform.AttributeConverterYue;
 
 import java.util.Map;
 
@@ -34,8 +34,8 @@ public class T0200 extends JTMessage {
     private int direction;
     @Field(index = 22, type = DataType.BCD8421, length = 6, desc = "时间(YYMMDDHHMMSS)")
     private String dateTime;
-    @Convert(converter = AttributeConverter.class)
-    @Field(index = 28, type = DataType.MAP, desc = "位置附加信息")
+    @Field(index = 28, type = DataType.MAP, desc = "位置附加信息", converter = AttributeConverter.class, version = {-1, 0})
+    @Field(index = 28, type = DataType.MAP, desc = "位置附加信息(粤标)", converter = AttributeConverterYue.class, version = 1)
     private Map<Integer, Object> attributes;
 
     public int getWarnBit() {
@@ -118,7 +118,7 @@ public class T0200 extends JTMessage {
             sb.append('[');
             sb.append("cid=").append(clientId);
             sb.append(",msg=").append(messageId);
-            sb.append(",ver=").append(versionNo);
+            sb.append(",ver=").append(protocolVersion);
             sb.append(",ser=").append(serialNo);
             sb.append(",prop=").append(properties);
             if (isSubpackage()) {

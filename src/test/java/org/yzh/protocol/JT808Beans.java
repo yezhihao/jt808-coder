@@ -69,7 +69,7 @@ public class JT808Beans {
         T0102 bean = new T0102();
         bean.setToken("pmYGzGukO8K4Z5lpIOTg8dqb3eprYaHBbXSPLtdbyG8=");
         bean.setImei("123456789012345");
-        bean.setVersion("3.7.15");
+        bean.setSoftwareVersion("3.7.15");
         return bean;
     }
 
@@ -110,7 +110,7 @@ public class JT808Beans {
         bean.setMakerId("2D_AN");
         bean.setDeviceModel("BSJ-GF-06");
         bean.setDeviceId("5kw3noL");
-        bean.setSimNo("12345678901234567890");
+        bean.setIccid("12345678901234567890");
         bean.setFirmwareVersion("1.1.25");
         bean.setHardwareVersion("3.0.0");
         bean.setGnssAttribute(127);

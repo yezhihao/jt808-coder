@@ -1,6 +1,5 @@
 package org.yzh.protocol.t808;
 
-
 import io.github.yezhihao.protostar.DataType;
 import io.github.yezhihao.protostar.annotation.Field;
 import io.github.yezhihao.protostar.annotation.Message;

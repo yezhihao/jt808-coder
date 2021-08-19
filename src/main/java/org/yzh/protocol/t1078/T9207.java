@@ -1,6 +1,5 @@
 package org.yzh.protocol.t1078;
 
-
 import io.github.yezhihao.protostar.DataType;
 import io.github.yezhihao.protostar.annotation.Field;
 import io.github.yezhihao.protostar.annotation.Message;

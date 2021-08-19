@@ -1,13 +1,28 @@
-部标JT808协议解码包
+部标JT808 JT/T808协议客户端
 ====================
+
+<p align="center">
+    <img src="https://img.shields.io/badge/JDK-1.8+-green.svg"></img>
+    <img src="https://img.shields.io/badge/License-Apache 2.0-green.svg"></img>
+    <img src="https://img.shields.io/badge/QQ群-906230542-blue"></img>
+</p>
+
 ## 项目介绍
-* 基于Netty-buffer，实现JT/T808部标协议的编码解码
+* 基于Netty-buffer，实现JT/T808部标协议的编码解码；
+* 基于Netty-handler，实现客户端消息发送与接收；
+* 最简洁、清爽、易用的部标开发框架。
 
 问题交流群：[906230542]
 
-## 主要特性
-* 兼容2011、2013、2019部标协议版本，支持分包请求；
-* 支持JT/T1078音视频协议，T/JSATL12苏标主动安防协议；
+# 协议支持
+|协议名称|版本|是否支持|备注|
+|---|---|---|---|
+|JT/T 808|2011|支持|
+|JT/T 808|2013|支持|
+|JT/T 808|2019|支持|
+|JT/T 1078|2016|支持|
+|T/JSATL 12(主动安全-苏标)|2017|支持|基于JT/T808-2013|
+|T/GDRTA 002(主动安全-粤标)|2019|支持|基于JT/T808-2019|
 
 ## 代码仓库
  * Gitee仓库地址：[https://gitee.com/yezhihao/jt808-coder/tree/master](https://gitee.com/yezhihao/jt808-coder/tree/master)
@@ -131,8 +146,44 @@ Elucidator 运行效果如下：
 
 JT/T808服务端：https://gitee.com/yezhihao/jt808-server
 
+目录结构
+```sh
+src
+│      
+├──main
+│     └── protocol
+│         ├── t808 消息定义
+│         └── codec 消息编码解码
+│         
+└──test
+      ├── java
+      │   ├── client 客户端代码
+      │   ├── codec 解析工具
+      │   └── protocol 单元测试
+      └── resources
+          ├── 协议文档.pdf
+          └── 发包工具.exe
+ ```
+
 项目会不定期进行更新，建议star和watch一份，您的支持是我最大的动力。
 
 如有任何疑问或者BUG，请联系我，非常感谢。
 
+另提供技术支持、协议扩展、数据入库、二次开发等服务。
+
+项目负责人QQ：[1527621790]
+
 技术交流QQ群：[906230542]
+
+- JT808泛指JT/T808协议，是指交通部制定的运输行业通信标准，全称《交通运输行业标准 - 道路运输车辆卫星定位系统终端通信协议及数据格式》
+
+
+项目创立于2017年9月，至今，jt808-server已接入多家公司的线上产品线，接入场景如车辆管理平台，IOT业务和大数据作业等，截止最新统计时间为止，jt808-server已接入的公司包括不限于：
+    
+	- 1.福建九桃贸易有限公司
+	- 2.深圳市特维视科技有限公司
+	- 3.厦门河联信息科技有限公司
+	- 4.北京华盾互联科技有限公司
+    - ……
+    
+> 更多接入的公司，欢迎在 [登记地址](https://gitee.com/yezhihao/jt808-server/issues/I36WKD ) 登记，登记仅仅为了项目推广。

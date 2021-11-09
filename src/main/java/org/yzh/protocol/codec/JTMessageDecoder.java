@@ -53,7 +53,9 @@ public class JTMessageDecoder {
         message.setVerified(verified);
         message.setPayload(input);
 
-        headSchema.mergeFrom(buf.slice(0, headLen), message);
+        int writerIndex = buf.writerIndex();
+        buf.writerIndex(headLen);
+        headSchema.mergeFrom(buf, message);
 
         int realVersion = message.getProtocolVersion();
         if (realVersion != version)
@@ -75,7 +77,9 @@ public class JTMessageDecoder {
                 bodySchema.mergeFrom(bodyBuf, message);
 
             } else {
-                bodySchema.mergeFrom(buf.slice(headLen, bodyLen), message);
+                buf.readerIndex(headLen);
+                buf.writerIndex(writerIndex - 1);
+                bodySchema.mergeFrom(buf, message);
             }
         }
         return message;

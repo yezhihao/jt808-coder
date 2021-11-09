@@ -26,10 +26,10 @@ public class JTMessage {
     @Field(index = 10, type = DataType.WORD, desc = "流水号", version = {-1, 0})
     @Field(index = 15, type = DataType.WORD, desc = "流水号", version = 1)
     protected int serialNo;
-    @Field(index = 12, type = DataType.WORD, desc = "消息包总数", version = 0)
+    @Field(index = 12, type = DataType.WORD, desc = "消息包总数", version = {-1, 0})
     @Field(index = 17, type = DataType.WORD, desc = "消息包总数", version = 1)
     protected Integer packageTotal;
-    @Field(index = 14, type = DataType.WORD, desc = "包序号", version = 0)
+    @Field(index = 14, type = DataType.WORD, desc = "包序号", version = {-1, 0})
     @Field(index = 19, type = DataType.WORD, desc = "包序号", version = 1)
     protected Integer packageNo;
     /** bcc校验 */
@@ -136,7 +136,8 @@ public class JTMessage {
         return 0;
     }
 
-    public void transform() {
+    public boolean transform() {
+        return true;
     }
 
     private static final int BODY_LENGTH = 0b0000_0011_1111_1111;

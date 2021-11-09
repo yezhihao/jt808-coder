@@ -14,9 +14,7 @@ public class T1205 extends JTMessage {
 
     @Field(index = 0, type = DataType.WORD, desc = "应答流水号")
     private int responseSerialNo;
-    @Field(index = 2, type = DataType.DWORD, desc = "音视频资源总数")
-    private int count;
-    @Field(index = 6, type = DataType.LIST, desc = "参数项列表")
+    @Field(index = 2, type = DataType.LIST, lengthSize = 4, desc = "音视频资源列表")
     private List<Item> items;
 
     public int getResponseSerialNo() {
@@ -25,14 +23,6 @@ public class T1205 extends JTMessage {
 
     public void setResponseSerialNo(int responseSerialNo) {
         this.responseSerialNo = responseSerialNo;
-    }
-
-    public int getCount() {
-        return count;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
     }
 
     public List<Item> getItems() {

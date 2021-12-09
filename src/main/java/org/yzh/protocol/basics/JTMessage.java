@@ -1,5 +1,6 @@
 package org.yzh.protocol.basics;
 
+import io.github.yezhihao.netmc.core.model.Message;
 import io.github.yezhihao.protostar.DataType;
 import io.github.yezhihao.protostar.annotation.Field;
 import io.github.yezhihao.protostar.util.ToStringBuilder;
@@ -12,7 +13,7 @@ import java.beans.Transient;
  * @author yezhihao
  * https://gitee.com/yezhihao/jt808-server
  */
-public class JTMessage {
+public class JTMessage implements Message {
 
     @Field(index = 0, type = DataType.WORD, desc = "消息ID")
     protected int messageId;
@@ -127,6 +128,11 @@ public class JTMessage {
 
     public void setPayload(ByteBuf payload) {
         this.payload = payload;
+    }
+
+    @Transient
+    public String getMessageName() {
+        return MessageId.get(messageId);
     }
 
     public int reflectMessageId() {

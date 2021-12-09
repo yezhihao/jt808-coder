@@ -1,7 +1,6 @@
 package org.yzh.protocol.commons.transform;
 
 import io.github.yezhihao.protostar.DataType;
-import io.github.yezhihao.protostar.IdStrategy;
 import io.github.yezhihao.protostar.PrepareLoadStrategy;
 import org.yzh.protocol.commons.transform.attribute.*;
 
@@ -11,8 +10,6 @@ import org.yzh.protocol.commons.transform.attribute.*;
  * https://gitee.com/yezhihao/jt808-server
  */
 public class AttributeType extends PrepareLoadStrategy {
-
-    public static final IdStrategy INSTANCE = new AttributeType();
 
     @Override
     protected void addSchemas(PrepareLoadStrategy schemaRegistry) {

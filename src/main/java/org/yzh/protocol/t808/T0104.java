@@ -1,5 +1,6 @@
 package org.yzh.protocol.t808;
 
+import io.github.yezhihao.netmc.core.model.Response;
 import io.github.yezhihao.protostar.DataType;
 import io.github.yezhihao.protostar.annotation.Field;
 import io.github.yezhihao.protostar.annotation.Message;
@@ -15,7 +16,7 @@ import java.util.TreeMap;
  * https://gitee.com/yezhihao/jt808-server
  */
 @Message(JT808.查询终端参数应答)
-public class T0104 extends JTMessage {
+public class T0104 extends JTMessage implements Response {
 
     @Field(index = 0, type = DataType.WORD, desc = "应答流水号")
     private int responseSerialNo;

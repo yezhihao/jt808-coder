@@ -30,7 +30,7 @@ public final class Shape {
             case Shape.Route:
                 return JT808.删除路线;
             default:
-                throw new RuntimeException();
+                throw new IllegalArgumentException(String.valueOf(type));
         }
     }
 }

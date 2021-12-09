@@ -4,10 +4,12 @@ import io.netty.buffer.ByteBufUtil;
 import io.netty.buffer.Unpooled;
 import org.junit.Test;
 import org.yzh.protocol.basics.JTMessage;
-import org.yzh.protocol.commons.IOUtils;
-import org.yzh.protocol.commons.StrUtils;
 
-import java.io.File;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 
 /**
  * JT/T HEX单元测试类
@@ -17,24 +19,24 @@ import java.io.File;
 public class TestHex {
 
     @Test
-    public void testHex() {
-        IOUtils.foreach(new File("target/test-classes/test_data/JT808.txt"), hex -> {
-            if (StrUtils.isNotBlank(hex)) {
-                BeanTest.selfCheck(hex);
-            }
-            return true;
-        });
+    public void testHex() throws Exception {
+        try (BufferedReader reader = reader("target/test-classes/JT808.txt")) {
+            reader.lines().filter(hex -> !hex.isEmpty()).forEach(hex -> BeanTest.selfCheck(hex));
+        }
     }
 
     @Test
-    public void testSubpackage() {
-        IOUtils.foreach(new File("target/test-classes/test_data/JT1078.txt"), hex -> {
-            if (StrUtils.isNotBlank(hex)) {
+    public void testSubpackage() throws Exception {
+        try (BufferedReader reader = reader("target/test-classes/JT1078.txt")) {
+            reader.lines().filter(hex -> !hex.isEmpty()).forEach(hex -> {
                 JTMessage message = BeanTest.decoder.decode(Unpooled.wrappedBuffer(ByteBufUtil.decodeHexDump(hex)));
                 if (message != null)
                     System.out.println(BeanTest.gson.toJson(message));
-            }
-            return true;
-        });
+            });
+        }
+    }
+
+    public static BufferedReader reader(String path) throws FileNotFoundException {
+        return new BufferedReader(new InputStreamReader(new FileInputStream(path), StandardCharsets.UTF_8));
     }
 }

@@ -20,7 +20,7 @@ public class MessageId {
                     if (!Integer.TYPE.isAssignableFrom(field.getType()))
                         continue;
                     int id = field.getInt(null);
-                    String hexId = StrUtils.leftPad(Integer.toHexString(id), 4, '0');
+                    String hexId = leftPad(Integer.toHexString(id), 4, '0');
                     String name = field.getName();
                     messageId.put(id, "[" + hexId + "]" + name);
                 } catch (Exception e) {
@@ -34,6 +34,19 @@ public class MessageId {
         String name = messageId.get(id);
         if (name != null)
             return name;
-        return StrUtils.leftPad(Integer.toHexString(id), 4, '0');
+        return leftPad(Integer.toHexString(id), 4, '0');
+    }
+
+    public static String leftPad(String str, int size, char ch) {
+        int length = str.length();
+        int pads = size - length;
+        if (pads > 0) {
+            char[] result = new char[size];
+            str.getChars(0, length, result, pads);
+            while (pads > 0)
+                result[--pads] = ch;
+            return new String(result);
+        }
+        return str;
     }
 }

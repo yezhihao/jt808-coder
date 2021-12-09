@@ -1,6 +1,6 @@
 package org.yzh.protocol.t808;
 
-
+import io.github.yezhihao.netmc.core.model.Response;
 import io.github.yezhihao.protostar.DataType;
 import io.github.yezhihao.protostar.annotation.Field;
 import io.github.yezhihao.protostar.annotation.Message;
@@ -12,7 +12,7 @@ import org.yzh.protocol.commons.JT808;
  * https://gitee.com/yezhihao/jt808-server
  */
 @Message({JT808.平台通用应答, JT808.终端通用应答})
-public class T0001 extends JTMessage {
+public class T0001 extends JTMessage implements Response {
 
     public static final int Success = 0; //成功、确认
     public static final int Failure = 1;//失败

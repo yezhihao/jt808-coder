@@ -1,7 +1,7 @@
 package org.yzh.protocol.commons.transform.parameter;
 
+import io.github.yezhihao.protostar.annotation.Field;
 import io.netty.buffer.ByteBuf;
-import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * 盲区监测系统参数
@@ -16,9 +16,9 @@ public class ParamBSD {
         return id;
     }
 
-    @Schema(description = "后方接近报警时间阈值")
+    @Field(desc = "后方接近报警时间阈值")
     private byte p0;
-    @Schema(description = "侧后方接近报警时间阈值")
+    @Field(desc = "侧后方接近报警时间阈值")
     private byte p1;
 
     public ParamBSD() {

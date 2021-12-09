@@ -9,7 +9,7 @@ import org.yzh.protocol.commons.transform.parameter.*;
 /**
  * 终端参数注册
  * @author yezhihao
- * @home https://gitee.com/yezhihao/jt808-server
+ * https://gitee.com/yezhihao/jt808-server
  */
 public class ParameterType extends PrepareLoadStrategy {
 

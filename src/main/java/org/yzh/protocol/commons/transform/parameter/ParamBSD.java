@@ -6,7 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * 盲区监测系统参数
  * @author yezhihao
- * @home https://gitee.com/yezhihao/jt808-server
+ * https://gitee.com/yezhihao/jt808-server
  */
 public class ParamBSD {
 

@@ -12,7 +12,7 @@ import java.io.File;
 /**
  * JT/T HEX单元测试类
  * @author yezhihao
- * @home https://gitee.com/yezhihao/jt808-server
+ * https://gitee.com/yezhihao/jt808-server
  */
 public class TestHex {
 

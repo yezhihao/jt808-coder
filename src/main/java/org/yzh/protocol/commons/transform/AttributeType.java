@@ -8,7 +8,7 @@ import org.yzh.protocol.commons.transform.attribute.*;
 /**
  * 位置附加信息注册
  * @author yezhihao
- * @home https://gitee.com/yezhihao/jt808-server
+ * https://gitee.com/yezhihao/jt808-server
  */
 public class AttributeType extends PrepareLoadStrategy {
 

@@ -8,7 +8,7 @@ import org.yzh.protocol.commons.transform.passthrough.PeripheralSystem;
 /**
  * 透传消息注册
  * @author yezhihao
- * @home https://gitee.com/yezhihao/jt808-server
+ * https://gitee.com/yezhihao/jt808-server
  */
 public class PassthroughType extends PrepareLoadStrategy {
 

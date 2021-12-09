@@ -18,7 +18,7 @@ import static org.junit.Assert.assertEquals;
 /**
  * JT/T *协议单元测试类
  * @author yezhihao
- * @home https://gitee.com/yezhihao/jt808-server
+ * https://gitee.com/yezhihao/jt808-server
  */
 public class BeanTest {
 

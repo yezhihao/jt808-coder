@@ -3,7 +3,7 @@ package org.yzh.protocol.commons;
 /**
  * 32位整型的二进制读写
  * @author yezhihao
- * @home https://gitee.com/yezhihao/jt808-server
+ * https://gitee.com/yezhihao/jt808-server
  */
 public class Bit {
 

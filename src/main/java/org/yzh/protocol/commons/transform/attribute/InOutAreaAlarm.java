@@ -1,18 +1,17 @@
 package org.yzh.protocol.commons.transform.attribute;
 
+import io.github.yezhihao.protostar.Schema;
 import io.netty.buffer.ByteBuf;
 
 /**
- * 进出区域/路线报警附加信息见表 29
+ * 进出区域/路线报警 0x12
  * length 6
  */
 public class InOutAreaAlarm {
 
-    public static final int id = 0x12;
+    public static final int key = 18;
 
-    public static int id() {
-        return id;
-    }
+    public static final Schema<InOutAreaAlarm> SCHEMA = new InOutAreaAlarmSchema();
 
     /** 位置类型：1.圆形区域 2.矩形区域 3.多边形区域 4.路线 */
     private byte areaType;
@@ -64,11 +63,9 @@ public class InOutAreaAlarm {
         return sb.toString();
     }
 
-    public static class Schema implements io.github.yezhihao.protostar.Schema<InOutAreaAlarm> {
+    private static class InOutAreaAlarmSchema implements Schema<InOutAreaAlarm> {
 
-        public static final Schema INSTANCE = new Schema();
-
-        private Schema() {
+        private InOutAreaAlarmSchema() {
         }
 
         @Override

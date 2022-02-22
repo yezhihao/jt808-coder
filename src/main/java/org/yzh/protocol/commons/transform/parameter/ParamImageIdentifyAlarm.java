@@ -1,5 +1,6 @@
 package org.yzh.protocol.commons.transform.parameter;
 
+import io.github.yezhihao.protostar.Schema;
 import io.github.yezhihao.protostar.annotation.Field;
 import io.netty.buffer.ByteBuf;
 
@@ -10,11 +11,9 @@ import io.netty.buffer.ByteBuf;
  */
 public class ParamImageIdentifyAlarm {
 
-    public static final int id = 0x007B;
+    public static final int key = 0x007B;
 
-    public static int id() {
-        return id;
-    }
+    public static final Schema<ParamImageIdentifyAlarm> SCHEMA = new ParamImageIdentifyAlarmSchema();
 
     @Field(desc = "车辆核载人数,客运车辆核定载客人数,视频分析结果超过时产生报警")
     private byte overloadThreshold;
@@ -40,11 +39,9 @@ public class ParamImageIdentifyAlarm {
         this.fatigueThreshold = fatigueThreshold;
     }
 
-    public static class S implements io.github.yezhihao.protostar.Schema<ParamImageIdentifyAlarm> {
+    private static class ParamImageIdentifyAlarmSchema implements Schema<ParamImageIdentifyAlarm> {
 
-        public static final S INSTANCE = new S();
-
-        private S() {
+        private ParamImageIdentifyAlarmSchema() {
         }
 
         @Override

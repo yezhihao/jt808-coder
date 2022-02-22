@@ -2,7 +2,7 @@ package org.yzh.protocol;
 
 import io.netty.buffer.ByteBufUtil;
 import io.netty.buffer.Unpooled;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.yzh.protocol.basics.JTMessage;
 
 import java.io.BufferedReader;
@@ -29,7 +29,7 @@ public class TestHex {
     public void testSubpackage() throws Exception {
         try (BufferedReader reader = reader("target/test-classes/JT1078.txt")) {
             reader.lines().filter(hex -> !hex.isEmpty()).forEach(hex -> {
-                JTMessage message = BeanTest.decoder.decode(Unpooled.wrappedBuffer(ByteBufUtil.decodeHexDump(hex)));
+                JTMessage message = BeanTest.coder.decode(Unpooled.wrappedBuffer(ByteBufUtil.decodeHexDump(hex)));
                 if (message != null)
                     System.out.println(BeanTest.gson.toJson(message));
             });

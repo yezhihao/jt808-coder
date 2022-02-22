@@ -1,6 +1,8 @@
 package org.yzh.protocol.codec;
 
+import io.netty.buffer.ByteBuf;
 import org.yzh.protocol.basics.JTMessage;
+import org.yzh.protocol.commons.MessageId;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,17 +23,17 @@ public class MultiPacket {
     private long lastAccessedTime;
 
     private int count = 0;
-    private final byte[][] packets;
+    private final ByteBuf[] packets;
 
     public MultiPacket(JTMessage firstPacket) {
         this.firstPacket = firstPacket;
         this.creationTime = System.currentTimeMillis();
         this.lastAccessedTime = creationTime;
 
-        this.packets = new byte[firstPacket.getPackageTotal()][];
+        this.packets = new ByteBuf[firstPacket.getPackageTotal()];
     }
 
-    public byte[][] addAndGet(int packetNo, byte[] packetData) {
+    public ByteBuf[] addAndGet(int packetNo, ByteBuf packetData) {
         lastAccessedTime = System.currentTimeMillis();
 
         packetNo = packetNo - 1;
@@ -56,6 +58,13 @@ public class MultiPacket {
                 result.add(i + 1);
         }
         return result;
+    }
+
+    public void release() {
+        for (ByteBuf packet : packets) {
+            if (packet != null)
+                packet.release();
+        }
     }
 
     public void addRetryCount(int retryCount) {
@@ -96,9 +105,8 @@ public class MultiPacket {
     public String toString() {
         int total = packets.length;
         final StringBuilder sb = new StringBuilder(82 + (total * 3));
-        sb.append('[');
-        sb.append("cid=").append(firstPacket.getClientId());
-        sb.append(", msg=").append(Integer.toHexString(firstPacket.getMessageId()));
+        sb.append(MessageId.getName(firstPacket.getMessageId()));
+        sb.append(", cid=").append(firstPacket.getClientId());
         sb.append(", total=").append(total);
         sb.append(", count=").append(count);
         sb.append(", retryCount=").append(retryCount);
@@ -111,7 +119,6 @@ public class MultiPacket {
             sb.append(',');
         }
         sb.setCharAt(sb.length() - 1, '}');
-        sb.append(']');
         return sb.toString();
     }
 }

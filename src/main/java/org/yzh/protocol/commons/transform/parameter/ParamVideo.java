@@ -1,5 +1,6 @@
 package org.yzh.protocol.commons.transform.parameter;
 
+import io.github.yezhihao.protostar.Schema;
 import io.github.yezhihao.protostar.annotation.Field;
 import io.netty.buffer.ByteBuf;
 
@@ -10,11 +11,11 @@ import io.netty.buffer.ByteBuf;
  */
 public class ParamVideo {
 
-    public static final int id = 0x0075;
+    public static final int key = 0x0075;
 
-    public static int id() {
-        return id;
-    }
+    public static final Schema<ParamVideo> SCHEMA = new ParamVideoSchema();
+
+    protected static final Schema<ParamVideo> SCHEMA_2 = new ParamVideoSchema2();
 
     @Field(desc = "实时流编码模式：0.CBR(固定码率) 1.VBR(可变码率) 2.ABR(平均码率) 100~ 127.自定义")
     private byte realtimeEncode;
@@ -151,11 +152,9 @@ public class ParamVideo {
         this.audioEnable = audioEnable;
     }
 
-    public static class S implements io.github.yezhihao.protostar.Schema<ParamVideo> {
+    private static class ParamVideoSchema implements Schema<ParamVideo> {
 
-        public static final S INSTANCE = new S();
-
-        private S() {
+        private ParamVideoSchema() {
         }
 
         @Override
@@ -197,11 +196,9 @@ public class ParamVideo {
         }
     }
 
-    public static class Schema2 implements io.github.yezhihao.protostar.Schema<ParamVideo> {
+    public static class ParamVideoSchema2 implements Schema<ParamVideo> {
 
-        public static final Schema2 INSTANCE = new Schema2();
-
-        private Schema2() {
+        private ParamVideoSchema2() {
         }
 
         @Override

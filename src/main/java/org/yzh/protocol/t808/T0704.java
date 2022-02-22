@@ -1,6 +1,5 @@
 package org.yzh.protocol.t808;
 
-import io.github.yezhihao.protostar.DataType;
 import io.github.yezhihao.protostar.annotation.Field;
 import io.github.yezhihao.protostar.annotation.Message;
 import org.yzh.protocol.basics.JTMessage;
@@ -15,12 +14,12 @@ import java.util.List;
 @Message(JT808.定位数据批量上传)
 public class T0704 extends JTMessage {
 
-    @Field(index = 0, type = DataType.WORD, desc = "数据项个数")
+    @Field(length = 2, desc = "数据项个数")
     private int total;
-    @Field(index = 2, type = DataType.BYTE, desc = "位置数据类型：0.正常位置批量汇报 1.盲区补报")
+    @Field(length = 1, desc = "位置数据类型：0.正常位置批量汇报 1.盲区补报")
     private int type;
-    @Field(index = 3, type = DataType.LIST, desc = "位置汇报数据项")
-    private List<Item> items;
+    @Field(lengthUnit = 2, desc = "位置汇报数据项")
+    private List<T0200> items;
 
     public int getTotal() {
         return total;
@@ -38,37 +37,12 @@ public class T0704 extends JTMessage {
         this.type = type;
     }
 
-    public List<Item> getItems() {
+    public List<T0200> getItems() {
         return items;
     }
 
-    public void setItems(List<Item> items) {
+    public void setItems(List<T0200> items) {
         this.items = items;
         this.total = items.size();
-    }
-
-    public static class Item {
-        @Field(index = 2, type = DataType.OBJ, lengthSize = 2, desc = "位置汇报数据体")
-        private T0200 location;
-
-        public Item() {
-        }
-
-        public Item(T0200 location) {
-            this.location = location;
-        }
-
-        public T0200 getLocation() {
-            return location;
-        }
-
-        public void setLocation(T0200 location) {
-            this.location = location;
-        }
-
-        @Override
-        public String toString() {
-            return location.toString();
-        }
     }
 }

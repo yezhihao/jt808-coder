@@ -1,7 +1,6 @@
 package org.yzh.protocol.basics;
 
 import io.github.yezhihao.netmc.core.model.Message;
-import io.github.yezhihao.protostar.DataType;
 import io.github.yezhihao.protostar.annotation.Field;
 import io.github.yezhihao.protostar.util.ToStringBuilder;
 import io.netty.buffer.ByteBuf;
@@ -15,23 +14,20 @@ import java.beans.Transient;
  */
 public class JTMessage implements Message {
 
-    @Field(index = 0, type = DataType.WORD, desc = "消息ID")
+    @Field(length = 2, desc = "消息ID")
     protected int messageId;
-    @Field(index = 2, type = DataType.WORD, desc = "消息体属性")
+    @Field(length = 2, desc = "消息体属性")
     protected int properties;
-    @Field(index = 4, type = DataType.BYTE, desc = "协议版本号", version = 1)
+    @Field(length = 1, desc = "协议版本号", version = 1)
     protected int protocolVersion;
-    @Field(index = 4, type = DataType.BCD8421, length = 6, desc = "终端手机号", version = {-1, 0})
-    @Field(index = 5, type = DataType.BCD8421, length = 10, desc = "终端手机号", version = 1)
+    @Field(length = 6, charset = "BCD", desc = "终端手机号", version = {-1, 0})
+    @Field(length = 10, charset = "BCD", desc = "终端手机号", version = 1)
     protected String clientId;
-    @Field(index = 10, type = DataType.WORD, desc = "流水号", version = {-1, 0})
-    @Field(index = 15, type = DataType.WORD, desc = "流水号", version = 1)
+    @Field(length = 2, desc = "流水号")
     protected int serialNo;
-    @Field(index = 12, type = DataType.WORD, desc = "消息包总数", version = {-1, 0})
-    @Field(index = 17, type = DataType.WORD, desc = "消息包总数", version = 1)
+    @Field(length = 2, desc = "消息包总数")
     protected Integer packageTotal;
-    @Field(index = 14, type = DataType.WORD, desc = "包序号", version = {-1, 0})
-    @Field(index = 19, type = DataType.WORD, desc = "包序号", version = 1)
+    @Field(length = 2, desc = "包序号")
     protected Integer packageNo;
     /** bcc校验 */
     protected boolean verified = true;
@@ -130,13 +126,14 @@ public class JTMessage implements Message {
         this.payload = payload;
     }
 
-    @Transient
-    public String getMessageName() {
-        return MessageId.get(messageId);
+    public int reflectMessageId() {
+        if (messageId != 0)
+            return messageId;
+        return reflectMessageId(this.getClass());
     }
 
-    public int reflectMessageId() {
-        io.github.yezhihao.protostar.annotation.Message messageType = this.getClass().getAnnotation(io.github.yezhihao.protostar.annotation.Message.class);
+    public static int reflectMessageId(Class<?> clazz) {
+        io.github.yezhihao.protostar.annotation.Message messageType = clazz.getAnnotation(io.github.yezhihao.protostar.annotation.Message.class);
         if (messageType != null && messageType.value().length > 0)
             return messageType.value()[0];
         return 0;
@@ -208,23 +205,28 @@ public class JTMessage implements Message {
             this.properties ^= (properties & RESERVED);
     }
 
-    @Override
-    public String toString() {
+    protected StringBuilder toStringHead() {
         final StringBuilder sb = new StringBuilder(768);
-        sb.append(MessageId.get(messageId));
+        sb.append(MessageId.getName(messageId));
         sb.append('[');
         sb.append("cid=").append(clientId);
-        sb.append(",msg=").append(messageId);
-        sb.append(",ver=").append(protocolVersion);
-        sb.append(",ser=").append(serialNo);
-        sb.append(",prop=").append(properties);
+        sb.append(",msgId=").append(messageId);
+        sb.append(",version=").append(protocolVersion);
+        sb.append(",serialNo=").append(serialNo);
+        sb.append(",props=").append(properties);
+        sb.append(",verified=").append(verified);
         if (isSubpackage()) {
             sb.append(",pt=").append(packageTotal);
             sb.append(",pn=").append(packageNo);
         }
         sb.append(']');
         sb.append(',');
-        String result = ToStringBuilder.toString(sb, this, false, "messageId", "clientId", "protocolVersion", "serialNo", "properties", "packageTotal", "packageNo");
+        return sb;
+    }
+
+    @Override
+    public String toString() {
+        String result = ToStringBuilder.toString(toStringHead(), this, false, "messageId", "clientId", "protocolVersion", "serialNo", "properties", "packageTotal", "packageNo");
         return result;
     }
 }

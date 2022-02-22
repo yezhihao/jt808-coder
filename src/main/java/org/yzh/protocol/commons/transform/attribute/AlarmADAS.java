@@ -1,27 +1,22 @@
 package org.yzh.protocol.commons.transform.attribute;
 
-import io.github.yezhihao.protostar.DataType;
 import io.github.yezhihao.protostar.annotation.Field;
 import org.yzh.protocol.jsatl12.AlarmId;
 
 import java.time.LocalDateTime;
 
 /**
- * 高级驾驶辅助系统报警
+ * 高级驾驶辅助系统报警 0x64
  */
 public class AlarmADAS implements Alarm {
 
-    public static final int id = 0x64;
+    public static final int key = 100;
 
-    public static int id() {
-        return id;
-    }
-
-    @Field(index = 0, type = DataType.DWORD, desc = "报警ID")
-    private long serialNo;
-    @Field(index = 4, type = DataType.BYTE, desc = "标志状态：0.不可用 1.开始标志 2.结束标志")
+    @Field(length = 4, desc = "报警ID")
+    private long id;
+    @Field(length = 1, desc = "标志状态：0.不可用 1.开始标志 2.结束标志")
     private int state;
-    @Field(index = 5, type = DataType.BYTE, desc = "报警/事件类型：" +
+    @Field(length = 1, desc = "报警/事件类型：" +
             " 1.前向碰撞报警" +
             " 2.车道偏离报警" +
             " 3.车距过近报警" +
@@ -36,40 +31,82 @@ public class AlarmADAS implements Alarm {
             " 19.车厢过道行人检测报警(粤标)" +
             " 18~31.用户自定义")
     private int type;
-    @Field(index = 6, type = DataType.BYTE, desc = "报警级别")
+    @Field(length = 1, desc = "报警级别")
     private int level;
-    @Field(index = 7, type = DataType.BYTE, desc = "前车车速(Km/h)范围0~250,仅报警类型为1和2时有效")
+    @Field(length = 1, desc = "前车车速(Km/h)范围0~250,仅报警类型为1和2时有效")
     private int frontSpeed;
-    @Field(index = 8, type = DataType.BYTE, desc = "前车/行人距离(100ms),范围0~100,仅报警类型为1、2和4时有效")
+    @Field(length = 1, desc = "前车/行人距离(100ms),范围0~100,仅报警类型为1、2和4时有效")
     private int frontDistance;
-    @Field(index = 9, type = DataType.BYTE, desc = "偏离类型：1.左侧偏离 2.右侧偏离(报警类型为2时有效)")
+    @Field(length = 1, desc = "偏离类型：1.左侧偏离 2.右侧偏离(报警类型为2时有效)")
     private int deviateType;
-    @Field(index = 10, type = DataType.BYTE, desc = "道路标志识别类型：1.限速标志 2.限高标志 3.限重标志 4.禁行标志(粤标) 5.禁停标志(粤标)(报警类型为6和10时有效)")
+    @Field(length = 1, desc = "道路标志识别类型：1.限速标志 2.限高标志 3.限重标志 4.禁行标志(粤标) 5.禁停标志(粤标)(报警类型为6和10时有效)")
     private int roadSign;
-    @Field(index = 11, type = DataType.BYTE, desc = "道路标志识别数据")
+    @Field(length = 1, desc = "道路标志识别数据")
     private int roadSignValue;
-    @Field(index = 12, type = DataType.BYTE, desc = "车速")
+    @Field(length = 1, desc = "车速")
     private int speed;
-    @Field(index = 13, type = DataType.WORD, desc = "高程")
+    @Field(length = 2, desc = "高程")
     private int altitude;
-    @Field(index = 15, type = DataType.DWORD, desc = "纬度")
+    @Field(length = 4, desc = "纬度")
     private int latitude;
-    @Field(index = 19, type = DataType.DWORD, desc = "经度")
+    @Field(length = 4, desc = "经度")
     private int longitude;
-    @Field(index = 23, type = DataType.BCD8421, length = 6, desc = "日期时间")
+    @Field(length = 6, charset = "BCD", desc = "日期时间")
     private LocalDateTime dateTime;
-    @Field(index = 29, type = DataType.WORD, desc = "车辆状态")
-    private int status;
-    @Field(index = 31, type = DataType.OBJ, length = 16, desc = "报警标识号", version = {-1, 0})
-    @Field(index = 31, type = DataType.OBJ, length = 40, desc = "报警标识号(粤标)", version = 1)
+    @Field(length = 2, desc = "车辆状态")
+    private int statusBit;
+    @Field(length = 16, desc = "报警标识号", version = {-1, 0})
+    @Field(length = 40, desc = "报警标识号(粤标)", version = 1)
     private AlarmId alarmId;
 
-    public long getSerialNo() {
-        return serialNo;
+    @Override
+    public int getCategory() {
+        return key;
     }
 
-    public void setSerialNo(long serialNo) {
-        this.serialNo = serialNo;
+    @Override
+    public int getAlarmType() {
+        return Alarm.buildType(key, type);
+    }
+
+    @Override
+    public int getSerialNo() {
+        return alarmId.getSerialNo();
+    }
+
+    @Override
+    public int getFileTotal() {
+        return alarmId.getFileTotal();
+    }
+
+    @Override
+    public String getExtra() {
+        final StringBuilder sb = new StringBuilder(64);
+        if (type == 1 || type == 2) {
+            sb.append("frontSpeed:").append(frontSpeed).append(',');
+        }
+        if (type == 1 || type == 2 || type == 4) {
+            sb.append("frontDistance:").append(frontDistance).append(',');
+        }
+        if (type == 2) {
+            sb.append("deviateType:").append(deviateType).append(',');
+        }
+        if (type == 6 || type == 10) {
+            sb.append("roadSign:").append(roadSign).append(',');
+            sb.append("roadSignValue:").append(roadSignValue).append(',');
+        }
+        int length = sb.length();
+        if (length > 0)
+            return sb.substring(0, length - 1);
+        return null;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public int getState() {
@@ -176,12 +213,12 @@ public class AlarmADAS implements Alarm {
         this.dateTime = dateTime;
     }
 
-    public int getStatus() {
-        return status;
+    public int getStatusBit() {
+        return statusBit;
     }
 
-    public void setStatus(int status) {
-        this.status = status;
+    public void setStatusBit(int statusBit) {
+        this.statusBit = statusBit;
     }
 
     public AlarmId getAlarmId() {
@@ -195,7 +232,7 @@ public class AlarmADAS implements Alarm {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder(512);
-        sb.append("AlarmADAS{serialNo=").append(serialNo);
+        sb.append("AlarmADAS{id=").append(id);
         sb.append(", state=").append(state);
         sb.append(", type=").append(type);
         sb.append(", level=").append(level);
@@ -209,7 +246,7 @@ public class AlarmADAS implements Alarm {
         sb.append(", longitude=").append(longitude);
         sb.append(", latitude=").append(latitude);
         sb.append(", dateTime=").append(dateTime);
-        sb.append(", status=").append(status);
+        sb.append(", statusBit=").append(statusBit);
         sb.append(", alarmId=").append(alarmId);
         sb.append('}');
         return sb.toString();

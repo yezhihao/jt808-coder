@@ -1,11 +1,9 @@
 package org.yzh.protocol.jsatl12;
 
-import io.github.yezhihao.protostar.DataType;
 import io.github.yezhihao.protostar.annotation.Field;
 import io.github.yezhihao.protostar.annotation.Message;
+import io.netty.buffer.ByteBuf;
 import org.yzh.protocol.basics.JTMessage;
-
-import java.nio.ByteBuffer;
 
 /**
  * 文件数据上传
@@ -16,16 +14,16 @@ import java.nio.ByteBuffer;
 @Message
 public class DataPacket extends JTMessage {
 
-    @Field(index = 0, type = DataType.DWORD, desc = "帧头标识")
+    @Field(length = 4, desc = "帧头标识")
     private int flag;
-    @Field(index = 4, type = DataType.STRING, length = 50, desc = "文件名称")
+    @Field(length = 50, desc = "文件名称")
     private String name;
-    @Field(index = 54, type = DataType.DWORD, desc = "数据偏移量")
+    @Field(length = 4, desc = "数据偏移量")
     private int offset;
-    @Field(index = 58, type = DataType.DWORD, desc = "数据长度")
+    @Field(length = 4, desc = "数据长度")
     private int length;
-    @Field(index = 62, type = DataType.BYTES, desc = "数据体")
-    private ByteBuffer data;
+    @Field(desc = "数据体")
+    private ByteBuf data;
 
     @Override
     public int getMessageId() {
@@ -64,11 +62,11 @@ public class DataPacket extends JTMessage {
         this.length = length;
     }
 
-    public ByteBuffer getData() {
+    public ByteBuf getData() {
         return data;
     }
 
-    public void setData(ByteBuffer data) {
+    public void setData(ByteBuf data) {
         this.data = data;
     }
 
@@ -78,7 +76,7 @@ public class DataPacket extends JTMessage {
         sb.append("DataPacket{name=").append(name);
         sb.append(",offset=").append(offset);
         sb.append(",length=").append(length);
-        sb.append(",data=").append(data.limit());
+        sb.append(",data=").append(data);
         sb.append('}');
         return sb.toString();
     }

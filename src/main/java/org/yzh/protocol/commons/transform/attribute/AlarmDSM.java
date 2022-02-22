@@ -1,27 +1,22 @@
 package org.yzh.protocol.commons.transform.attribute;
 
-import io.github.yezhihao.protostar.DataType;
 import io.github.yezhihao.protostar.annotation.Field;
 import org.yzh.protocol.jsatl12.AlarmId;
 
 import java.time.LocalDateTime;
 
 /**
- * 驾驶员状态监测
+ * 驾驶员状态监测 0x65
  */
 public class AlarmDSM implements Alarm {
 
-    public static final int id = 0x65;
+    public static final int key = 101;
 
-    public static int id() {
-        return id;
-    }
-
-    @Field(index = 0, type = DataType.DWORD, desc = "报警ID")
-    private long serialNo;
-    @Field(index = 4, type = DataType.BYTE, desc = "标志状态：0.不可用 1.开始标志 2.结束标志")
+    @Field(length = 4, desc = "报警ID")
+    private long id;
+    @Field(length = 1, desc = "标志状态：0.不可用 1.开始标志 2.结束标志")
     private int state;
-    @Field(index = 5, type = DataType.BYTE, desc = "报警/事件类型：" +
+    @Field(length = 1, desc = "报警/事件类型：" +
             " 1.疲劳驾驶报警" +
             " 2.接打电话报警" +
             " 3.抽烟报警" +
@@ -41,34 +36,59 @@ public class AlarmDSM implements Alarm {
             " 17.驾驶员变更事件" +
             " 18~31.用户自定义")
     private int type;
-    @Field(index = 6, type = DataType.BYTE, desc = "报警级别")
+    @Field(length = 1, desc = "报警级别")
     private int level;
-    @Field(index = 7, type = DataType.BYTE, desc = "疲劳程度")
+    @Field(length = 1, desc = "疲劳程度")
     private int fatigueDegree;
-    @Field(index = 8, type = DataType.DWORD, desc = "预留")
+    @Field(length = 4, desc = "预留")
     private int reserved;
-    @Field(index = 12, type = DataType.BYTE, desc = "车速")
+    @Field(length = 1, desc = "车速")
     private int speed;
-    @Field(index = 13, type = DataType.WORD, desc = "高程")
+    @Field(length = 2, desc = "高程")
     private int altitude;
-    @Field(index = 15, type = DataType.DWORD, desc = "纬度")
+    @Field(length = 4, desc = "纬度")
     private int latitude;
-    @Field(index = 19, type = DataType.DWORD, desc = "经度")
+    @Field(length = 4, desc = "经度")
     private int longitude;
-    @Field(index = 23, type = DataType.BCD8421, length = 6, desc = "日期时间")
+    @Field(length = 6, charset = "BCD", desc = "日期时间")
     private LocalDateTime dateTime;
-    @Field(index = 29, type = DataType.WORD, desc = "车辆状态")
-    private int status;
-    @Field(index = 31, type = DataType.OBJ, length = 16, desc = "报警标识号", version = {-1, 0})
-    @Field(index = 31, type = DataType.OBJ, length = 40, desc = "报警标识号(粤标)", version = 1)
+    @Field(length = 2, desc = "车辆状态")
+    private int statusBit;
+    @Field(length = 16, desc = "报警标识号", version = {-1, 0})
+    @Field(length = 40, desc = "报警标识号(粤标)", version = 1)
     private AlarmId alarmId;
 
-    public long getSerialNo() {
-        return serialNo;
+    @Override
+    public int getCategory() {
+        return key;
     }
 
-    public void setSerialNo(long serialNo) {
-        this.serialNo = serialNo;
+    @Override
+    public int getAlarmType() {
+        return Alarm.buildType(key, type);
+    }
+
+    @Override
+    public int getSerialNo() {
+        return alarmId.getSerialNo();
+    }
+
+    @Override
+    public int getFileTotal() {
+        return alarmId.getFileTotal();
+    }
+
+    @Override
+    public String getExtra() {
+        return "fatigueDegree:" + fatigueDegree;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public int getState() {
@@ -151,12 +171,12 @@ public class AlarmDSM implements Alarm {
         this.dateTime = dateTime;
     }
 
-    public int getStatus() {
-        return status;
+    public int getStatusBit() {
+        return statusBit;
     }
 
-    public void setStatus(int status) {
-        this.status = status;
+    public void setStatusBit(int statusBit) {
+        this.statusBit = statusBit;
     }
 
     public AlarmId getAlarmId() {
@@ -170,7 +190,7 @@ public class AlarmDSM implements Alarm {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder(400);
-        sb.append("AlarmDSM{serialNo=").append(serialNo);
+        sb.append("AlarmDSM{id=").append(id);
         sb.append(", state=").append(state);
         sb.append(", type=").append(type);
         sb.append(", level=").append(level);
@@ -181,7 +201,7 @@ public class AlarmDSM implements Alarm {
         sb.append(", longitude=").append(longitude);
         sb.append(", latitude=").append(latitude);
         sb.append(", dateTime=").append(dateTime);
-        sb.append(", status=").append(status);
+        sb.append(", statusBit=").append(statusBit);
         sb.append(", alarmId=").append(alarmId);
         sb.append('}');
         return sb.toString();

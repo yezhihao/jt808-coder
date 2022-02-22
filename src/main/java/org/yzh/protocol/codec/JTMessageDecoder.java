@@ -1,18 +1,16 @@
 package org.yzh.protocol.codec;
 
-import io.github.yezhihao.protostar.MultiVersionSchemaManager;
+import io.github.yezhihao.protostar.SchemaManager;
 import io.github.yezhihao.protostar.schema.RuntimeSchema;
-import io.netty.buffer.ByteBuf;
-import io.netty.buffer.CompositeByteBuf;
-import io.netty.buffer.Unpooled;
-import io.netty.buffer.UnpooledByteBufAllocator;
+import io.github.yezhihao.protostar.util.ArrayMap;
+import io.github.yezhihao.protostar.util.Explain;
+import io.netty.buffer.*;
 import org.yzh.protocol.basics.JTMessage;
 import org.yzh.protocol.commons.Bit;
 import org.yzh.protocol.commons.JTUtils;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * JT协议解码器
@@ -21,21 +19,27 @@ import java.util.Map;
  */
 public class JTMessageDecoder {
 
-    private final MultiVersionSchemaManager schemaManager;
+    private static final ByteBufAllocator ALLOC = PooledByteBufAllocator.DEFAULT;
 
-    private final Map<Integer, RuntimeSchema> headerSchemaMap;
+    private final SchemaManager schemaManager;
+
+    private final ArrayMap<RuntimeSchema> headerSchemaMap;
 
     public JTMessageDecoder(String... basePackages) {
-        this.schemaManager = new MultiVersionSchemaManager(basePackages);
+        this.schemaManager = new SchemaManager(basePackages);
         this.headerSchemaMap = schemaManager.getRuntimeSchema(JTMessage.class);
     }
 
-    public JTMessageDecoder(MultiVersionSchemaManager schemaManager) {
+    public JTMessageDecoder(SchemaManager schemaManager) {
         this.schemaManager = schemaManager;
         this.headerSchemaMap = schemaManager.getRuntimeSchema(JTMessage.class);
     }
 
     public JTMessage decode(ByteBuf input) {
+        return decode(input, null);
+    }
+
+    public JTMessage decode(ByteBuf input, Explain explain) {
         ByteBuf buf = unescape(input);
 
         boolean verified = verify(buf);
@@ -62,7 +66,8 @@ public class JTMessageDecoder {
 
         int writerIndex = buf.writerIndex();
         buf.writerIndex(headLen);
-        headSchema.mergeFrom(buf, message);
+        headSchema.mergeFrom(buf, message, explain);
+        buf.writerIndex(writerIndex - 1);
 
         int realVersion = message.getProtocolVersion();
         if (realVersion != version)
@@ -73,36 +78,32 @@ public class JTMessageDecoder {
 
             if (isSubpackage) {
 
-                byte[] bytes = new byte[bodyLen];
+                ByteBuf bytes = ALLOC.buffer(bodyLen);
                 buf.getBytes(headLen, bytes);
 
-                byte[][] packages = addAndGet(message, bytes);
+                ByteBuf[] packages = addAndGet(message, bytes);
                 if (packages == null)
                     return message;
 
                 ByteBuf bodyBuf = Unpooled.wrappedBuffer(packages);
-                bodySchema.mergeFrom(bodyBuf, message);
+                bodySchema.mergeFrom(bodyBuf, message, explain);
 
             } else {
                 buf.readerIndex(headLen);
-                buf.writerIndex(writerIndex - 1);
-                bodySchema.mergeFrom(buf, message);
+                bodySchema.mergeFrom(buf, message, explain);
             }
         }
         return message;
     }
 
-    protected byte[][] addAndGet(JTMessage message, byte[] bytes) {
+    protected ByteBuf[] addAndGet(JTMessage message, ByteBuf bytes) {
         return null;
     }
 
     /** 校验 */
     public static boolean verify(ByteBuf buf) {
-        byte checkCode = buf.getByte(buf.readableBytes() - 1);
-        buf = buf.slice(0, buf.readableBytes() - 1);
-        byte calculatedCheckCode = JTUtils.bcc(buf);
-
-        return checkCode == calculatedCheckCode;
+        byte checkCode = JTUtils.bcc(buf, -1);
+        return checkCode == buf.getByte(buf.writerIndex() - 1);
     }
 
     /** 反转义 */
@@ -119,9 +120,7 @@ public class JTMessageDecoder {
 
         int mark = source.indexOf(low, high, (byte) 0x7d);
         if (mark == -1) {
-            if (low > 0 || high == last)
-                return source.slice(low, high - low);
-            return source;
+            return source.slice(low, high - low);
         }
 
         List<ByteBuf> bufList = new ArrayList<>(3);
@@ -138,7 +137,7 @@ public class JTMessageDecoder {
 
         bufList.add(source.slice(low, high - low));
 
-        return new CompositeByteBuf(UnpooledByteBufAllocator.DEFAULT, false, bufList.size(), bufList);
+        return new CompositeByteBuf(ALLOC, false, bufList.size(), bufList);
     }
 
     /** 截取转义前报文，并还原转义位 */

@@ -1,8 +1,8 @@
 package org.yzh.protocol.t808;
 
-import io.github.yezhihao.protostar.DataType;
 import io.github.yezhihao.protostar.annotation.Field;
 import io.github.yezhihao.protostar.annotation.Message;
+import io.netty.buffer.ByteBuf;
 import org.yzh.protocol.basics.JTMessage;
 import org.yzh.protocol.commons.JT808;
 
@@ -13,20 +13,20 @@ import org.yzh.protocol.commons.JT808;
 @Message(JT808.多媒体数据上传)
 public class T0801 extends JTMessage {
 
-    @Field(index = 0, type = DataType.DWORD, desc = "多媒体数据ID")
+    @Field(length = 4, desc = "多媒体数据ID")
     private int id;
-    @Field(index = 4, type = DataType.BYTE, desc = "多媒体类型：0.图像 1.音频 2.视频 ")
+    @Field(length = 1, desc = "多媒体类型：0.图像 1.音频 2.视频 ")
     private int type;
-    @Field(index = 5, type = DataType.BYTE, desc = "多媒体格式编码：0.JPEG 1.TIF 2.MP3 3.WAV 4.WMV ")
+    @Field(length = 1, desc = "多媒体格式编码：0.JPEG 1.TIF 2.MP3 3.WAV 4.WMV ")
     private int format;
-    @Field(index = 6, type = DataType.BYTE, desc = "事件项编码")
+    @Field(length = 1, desc = "事件项编码")
     private int event;
-    @Field(index = 7, type = DataType.BYTE, desc = "通道ID")
+    @Field(length = 1, desc = "通道ID")
     private int channelId;
-    @Field(index = 8, type = DataType.OBJ, length = 28, desc = "位置信息")
+    @Field(length = 28, desc = "位置信息")
     private T0200 location;
-    @Field(index = 36, type = DataType.BYTES, desc = "多媒体数据包")
-    private byte[] packet;
+    @Field(desc = "多媒体数据包")
+    private ByteBuf packet;
 
     public int getId() {
         return id;
@@ -76,11 +76,11 @@ public class T0801 extends JTMessage {
         this.location = location;
     }
 
-    public byte[] getPacket() {
+    public ByteBuf getPacket() {
         return packet;
     }
 
-    public void setPacket(byte[] packet) {
+    public void setPacket(ByteBuf packet) {
         this.packet = packet;
     }
 }

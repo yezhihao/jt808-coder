@@ -1,11 +1,13 @@
 package org.yzh.protocol.codec;
 
-import io.github.yezhihao.protostar.MultiVersionSchemaManager;
+import io.github.yezhihao.protostar.SchemaManager;
+import io.netty.buffer.ByteBuf;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.yzh.protocol.basics.JTMessage;
 
 import java.util.Map;
+import java.util.WeakHashMap;
 import java.util.concurrent.ConcurrentHashMap;
 
 
@@ -18,32 +20,38 @@ public class MultiPacketDecoder extends JTMessageDecoder {
 
     private static final Logger log = LoggerFactory.getLogger(MultiPacketDecoder.class.getSimpleName());
 
-    private static final ConcurrentHashMap<String, MultiPacket> multiPacketsMap = new ConcurrentHashMap<>();
+    private final Map<String, MultiPacket> multiPacketsMap;
 
     private final MultiPacketListener multiPacketListener;
 
     public MultiPacketDecoder(String... basePackages) {
-        this(new MultiVersionSchemaManager(basePackages));
+        this(new SchemaManager(basePackages));
     }
 
-    public MultiPacketDecoder(MultiVersionSchemaManager schemaManager) {
-        this(schemaManager, new MultiPacketListener(20));
+    public MultiPacketDecoder(SchemaManager schemaManager) {
+        this(schemaManager, null);
     }
 
-    public MultiPacketDecoder(MultiVersionSchemaManager schemaManager, MultiPacketListener multiPacketListener) {
+    public MultiPacketDecoder(SchemaManager schemaManager, MultiPacketListener multiPacketListener) {
         super(schemaManager);
-        this.multiPacketListener = multiPacketListener;
-        startListener();
+        if (multiPacketListener == null) {
+            this.multiPacketsMap = new WeakHashMap<>();
+            this.multiPacketListener = null;
+        } else {
+            this.multiPacketsMap = new ConcurrentHashMap<>();
+            this.multiPacketListener = multiPacketListener;
+            startListener();
+        }
     }
 
     @Override
-    protected byte[][] addAndGet(JTMessage message, byte[] packetData) {
+    protected ByteBuf[] addAndGet(JTMessage message, ByteBuf packetData) {
         String clientId = message.getClientId();
         int messageId = message.getMessageId();
         int packageTotal = message.getPackageTotal();
         int packetNo = message.getPackageNo();
 
-        String key = new StringBuilder(21).append(clientId).append("/").append(messageId).append("/").append(packageTotal).toString();
+        String key = new StringBuilder(21).append(clientId).append('/').append(messageId).append('/').append(packageTotal).toString();
 
         MultiPacket multiPacket = multiPacketsMap.get(key);
         if (multiPacket == null)
@@ -52,8 +60,8 @@ public class MultiPacketDecoder extends JTMessageDecoder {
             multiPacket.setSerialNo(message.getSerialNo());
 
 
-        byte[][] packages = multiPacket.addAndGet(packetNo, packetData);
-        log.info("<<<<<<<<<分包信息{}", multiPacket);
+        ByteBuf[] packages = multiPacket.addAndGet(packetNo, packetData);
+        log.info("<<<<<分包消息{}", multiPacket);
         if (packages == null)
             return null;
         multiPacketsMap.remove(key);
@@ -73,8 +81,9 @@ public class MultiPacketDecoder extends JTMessageDecoder {
                     long time = timeout - (now - packet.getLastAccessedTime());
                     if (time <= 0) {
                         if (!multiPacketListener.receiveTimeout(packet)) {
-                            log.warn("<<<<<<<<<分包接收超时{}", packet);
+                            log.warn("<<<<<分包接收超时{}", packet);
                             multiPacketsMap.remove(entry.getKey());
+                            packet.release();
                         }
                     } else {
                         nextDelay = Math.min(time, nextDelay);

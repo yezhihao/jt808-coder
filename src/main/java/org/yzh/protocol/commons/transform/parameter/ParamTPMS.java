@@ -1,5 +1,6 @@
 package org.yzh.protocol.commons.transform.parameter;
 
+import io.github.yezhihao.protostar.Schema;
 import io.github.yezhihao.protostar.annotation.Field;
 import io.github.yezhihao.protostar.util.ByteBufUtils;
 import io.netty.buffer.ByteBuf;
@@ -13,11 +14,9 @@ import java.nio.charset.StandardCharsets;
  */
 public class ParamTPMS {
 
-    public static final int id = 0xF366;
+    public static final int key = 0xF366;
 
-    public static int id() {
-        return id;
-    }
+    public static final Schema<ParamTPMS> SCHEMA = new ParamTPMSSchema();
 
     @Field(desc = "轮胎规格型号(例：195/65R1591V,12个字符,默认值'900R20')")
     private String tireType;
@@ -41,10 +40,6 @@ public class ParamTPMS {
     private int reportInterval = -1;
     @Field(desc = "保留项")
     private byte[] reserved = new byte[6];
-
-    public static int getId() {
-        return id;
-    }
 
     public String getTireType() {
         return tireType;
@@ -134,11 +129,9 @@ public class ParamTPMS {
         this.reserved = reserved;
     }
 
-    public static class S implements io.github.yezhihao.protostar.Schema<ParamTPMS> {
+    private static class ParamTPMSSchema implements Schema<ParamTPMS> {
 
-        public static final S INSTANCE = new S();
-
-        private S() {
+        private ParamTPMSSchema() {
         }
 
         @Override

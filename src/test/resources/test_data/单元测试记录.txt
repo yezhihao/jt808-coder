@@ -1,1239 +1,3 @@
-
-[main] INFO StringSchema         [75]字符长度超出限制: 长度[7],数据长度[20],09876543210987654321
-[main] INFO StringSchema         [75]字符长度超出限制: 长度[7],数据长度[20],09876543210987654321
-hex1 7e121000391234567890127fff3736353433323137363534333231200827111111010301616437323133313537396535346265306230663733376366633732633564623800007b7e
-json1 {
-  "deviceId": "7654321",
-  "alarmId": {
-    "deviceId": "7654321",
-    "dateTime": "200827111111",
-    "serialNo": 1,
-    "fileTotal": 3,
-    "reserved": 1
-  },
-  "alarmNo": "ad72131579e54be0b0f737cfc72c5db8",
-  "type": 0,
-  "messageId": 4624,
-  "properties": 57,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex2 7e121000391234567890127fff3736353433323137363534333231200827111111010301616437323133313537396535346265306230663733376366633732633564623800007b7e
-json2 {
-  "deviceId": "7654321",
-  "alarmId": {
-    "deviceId": "7654321",
-    "dateTime": "200827111111",
-    "serialNo": 1,
-    "fileTotal": 3,
-    "reserved": 1
-  },
-  "alarmNo": "ad72131579e54be0b0f737cfc72c5db8",
-  "type": 0,
-  "messageId": 4624,
-  "properties": 57,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex1 7e121040680112345678901234567890ffff0000000000000000000030393837363534333231303938373635343332310000000000000000000030393837363534333231303938373635343332312008271111110103000161643732313331353739653534626530623066373337636663373263356462380000617e
-json1 {
-  "deviceId": "09876543210987654321",
-  "alarmId": {
-    "deviceId": "09876543210987654321",
-    "dateTime": "200827111111",
-    "serialNo": 1,
-    "fileTotal": 3,
-    "reserved": 1
-  },
-  "alarmNo": "ad72131579e54be0b0f737cfc72c5db8",
-  "type": 0,
-  "messageId": 4624,
-  "properties": 16488,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex2 7e121040680112345678901234567890ffff0000000000000000000030393837363534333231303938373635343332310000000000000000000030393837363534333231303938373635343332312008271111110103000161643732313331353739653534626530623066373337636663373263356462380000617e
-json2 {
-  "deviceId": "09876543210987654321",
-  "alarmId": {
-    "deviceId": "09876543210987654321",
-    "dateTime": "200827111111",
-    "serialNo": 1,
-    "fileTotal": 3,
-    "reserved": 1
-  },
-  "alarmNo": "ad72131579e54be0b0f737cfc72c5db8",
-  "type": 0,
-  "messageId": 4624,
-  "properties": 16488,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex1 7e121100131234567890127fff0d7777772e6a74743830382e636e0100000400327e
-json1 {
-  "name": "www.jtt808.cn",
-  "type": 1,
-  "size": 1024,
-  "messageId": 4625,
-  "properties": 19,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex2 7e121100131234567890127fff0d7777772e6a74743830382e636e0100000400327e
-json2 {
-  "name": "www.jtt808.cn",
-  "type": 1,
-  "size": 1024,
-  "messageId": 4625,
-  "properties": 19,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex1 7e121140130112345678901234567890ffff0d7777772e6a74743830382e636e0100000400797e
-json1 {
-  "name": "www.jtt808.cn",
-  "type": 1,
-  "size": 1024,
-  "messageId": 4625,
-  "properties": 16403,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex2 7e121140130112345678901234567890ffff0d7777772e6a74743830382e636e0100000400797e
-json2 {
-  "name": "www.jtt808.cn",
-  "type": 1,
-  "size": 1024,
-  "messageId": 4625,
-  "properties": 16403,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-[main] INFO StringSchema         [75]字符长度超出限制: 长度[7],数据长度[20],09876543210987654321
-hex1 7e920800521234567890127fff0d34372e3130342e39372e313639200a200b373635343332312008271111110101016164373231333135373965353462653062306637333763666337326335646238000000000000000000000000000000009e7e
-json1 {
-  "ip": "47.104.97.169",
-  "tcpPort": 8202,
-  "udpPort": 8203,
-  "alarmId": {
-    "deviceId": "7654321",
-    "dateTime": "200827111111",
-    "serialNo": 1,
-    "fileTotal": 1,
-    "reserved": 1
-  },
-  "alarmNo": "ad72131579e54be0b0f737cfc72c5db8",
-  "reserved": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
-  ],
-  "messageId": 37384,
-  "properties": 82,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex2 7e920800521234567890127fff0d34372e3130342e39372e313639200a200b373635343332312008271111110101016164373231333135373965353462653062306637333763666337326335646238000000000000000000000000000000009e7e
-json2 {
-  "ip": "47.104.97.169",
-  "tcpPort": 8202,
-  "udpPort": 8203,
-  "alarmId": {
-    "deviceId": "7654321",
-    "dateTime": "200827111111",
-    "serialNo": 1,
-    "fileTotal": 1,
-    "reserved": 1
-  },
-  "alarmNo": "ad72131579e54be0b0f737cfc72c5db8",
-  "reserved": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
-  ],
-  "messageId": 37384,
-  "properties": 82,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex1 7e9208406a0112345678901234567890ffff0d34372e3130342e39372e313639200a200b00000000000000000000303938373635343332313039383736353433323120082711111101010001616437323133313537396535346265306230663733376366633732633564623800000000000000000000000000000000dd7e
-json1 {
-  "ip": "47.104.97.169",
-  "tcpPort": 8202,
-  "udpPort": 8203,
-  "alarmId": {
-    "deviceId": "09876543210987654321",
-    "dateTime": "200827111111",
-    "serialNo": 1,
-    "fileTotal": 1,
-    "reserved": 1
-  },
-  "alarmNo": "ad72131579e54be0b0f737cfc72c5db8",
-  "reserved": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
-  ],
-  "messageId": 37384,
-  "properties": 16490,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex2 7e9208406a0112345678901234567890ffff0d34372e3130342e39372e313639200a200b00000000000000000000303938373635343332313039383736353433323120082711111101010001616437323133313537396535346265306230663733376366633732633564623800000000000000000000000000000000dd7e
-json2 {
-  "ip": "47.104.97.169",
-  "tcpPort": 8202,
-  "udpPort": 8203,
-  "alarmId": {
-    "deviceId": "09876543210987654321",
-    "dateTime": "200827111111",
-    "serialNo": 1,
-    "fileTotal": 1,
-    "reserved": 1
-  },
-  "alarmNo": "ad72131579e54be0b0f737cfc72c5db8",
-  "reserved": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
-  ],
-  "messageId": 37384,
-  "properties": 16490,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex1 7e921200191234567890127fff0d7777772e6a74743830382e636e0001010000000000000400ba7e
-json1 {
-  "name": "www.jtt808.cn",
-  "type": 0,
-  "result": 1,
-  "total": 1,
-  "items": [
-    0,
-    1024
-  ],
-  "messageId": 37394,
-  "properties": 25,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex2 7e921200191234567890127fff0d7777772e6a74743830382e636e0001010000000000000400ba7e
-json2 {
-  "name": "www.jtt808.cn",
-  "type": 0,
-  "result": 1,
-  "total": 1,
-  "items": [
-    0,
-    1024
-  ],
-  "messageId": 37394,
-  "properties": 25,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex1 7e921240190112345678901234567890ffff0d7777772e6a74743830382e636e0001010000000000000400f17e
-json1 {
-  "name": "www.jtt808.cn",
-  "type": 0,
-  "result": 1,
-  "total": 1,
-  "items": [
-    0,
-    1024
-  ],
-  "messageId": 37394,
-  "properties": 16409,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex2 7e921240190112345678901234567890ffff0d7777772e6a74743830382e636e0001010000000000000400f17e
-json2 {
-  "name": "www.jtt808.cn",
-  "type": 0,
-  "result": 1,
-  "total": 1,
-  "items": [
-    0,
-    1024
-  ],
-  "messageId": 37394,
-  "properties": 16409,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex1 7e1003000a1234567890127fff7f040200944901200808967e
-json1 {
-  "audioFormat": 127,
-  "audioChannels": 4,
-  "audioSamplingRate": 2,
-  "audioBitDepth": 0,
-  "audioFrameLength": 37961,
-  "audioSupport": 1,
-  "videoFormat": 32,
-  "maxAudioChannels": 8,
-  "maxVideoChannels": 8,
-  "messageId": 4099,
-  "properties": 10,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex2 7e1003000a1234567890127fff7f040200944901200808967e
-json2 {
-  "audioFormat": 127,
-  "audioChannels": 4,
-  "audioSamplingRate": 2,
-  "audioBitDepth": 0,
-  "audioFrameLength": 37961,
-  "audioSupport": 1,
-  "videoFormat": 32,
-  "maxAudioChannels": 8,
-  "maxVideoChannels": 8,
-  "messageId": 4099,
-  "properties": 10,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex1 7e1003400a0112345678901234567890ffff7f040200944901200808dd7e
-json1 {
-  "audioFormat": 127,
-  "audioChannels": 4,
-  "audioSamplingRate": 2,
-  "audioBitDepth": 0,
-  "audioFrameLength": 37961,
-  "audioSupport": 1,
-  "videoFormat": 32,
-  "maxAudioChannels": 8,
-  "maxVideoChannels": 8,
-  "messageId": 4099,
-  "properties": 16394,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex2 7e1003400a0112345678901234567890ffff7f040200944901200808dd7e
-json2 {
-  "audioFormat": 127,
-  "audioChannels": 4,
-  "audioSamplingRate": 2,
-  "audioBitDepth": 0,
-  "audioFrameLength": 37961,
-  "audioSupport": 1,
-  "videoFormat": 32,
-  "maxAudioChannels": 8,
-  "maxVideoChannels": 8,
-  "messageId": 4099,
-  "properties": 16394,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex1 7e100500101234567890127fff20070719235920070719235981f54812217e
-json1 {
-  "startTime": "200707192359",
-  "endTime": "200707192359",
-  "getOnCount": 33269,
-  "getOffCount": 18450,
-  "messageId": 4101,
-  "properties": 16,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex2 7e100500101234567890127fff20070719235920070719235981f54812217e
-json2 {
-  "startTime": "200707192359",
-  "endTime": "200707192359",
-  "getOnCount": 33269,
-  "getOffCount": 18450,
-  "messageId": 4101,
-  "properties": 16,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex1 7e100540100112345678901234567890ffff20070719235920070719235981f548126a7e
-json1 {
-  "startTime": "200707192359",
-  "endTime": "200707192359",
-  "getOnCount": 33269,
-  "getOffCount": 18450,
-  "messageId": 4101,
-  "properties": 16400,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex2 7e100540100112345678901234567890ffff20070719235920070719235981f548126a7e
-json2 {
-  "startTime": "200707192359",
-  "endTime": "200707192359",
-  "getOnCount": 33269,
-  "getOffCount": 18450,
-  "messageId": 4101,
-  "properties": 16400,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex1 7e1205003e1234567890127fff10e1000000020120010100000020123123595900000000000000000101010000040002200101000000201231235959000000000000000002020200000800dc7e
-json1 {
-  "responseSerialNo": 4321,
-  "items": [
-    {
-      "channelNo": 1,
-      "startTime": "2020-01-01T00:00:00",
-      "endTime": "2020-12-31T23:59:59",
-      "warnBit1": 0,
-      "warnBit2": 0,
-      "mediaType": 1,
-      "streamType": 1,
-      "storageType": 1,
-      "size": 1024
-    },
-    {
-      "channelNo": 2,
-      "startTime": "2020-01-01T00:00:00",
-      "endTime": "2020-12-31T23:59:59",
-      "warnBit1": 0,
-      "warnBit2": 0,
-      "mediaType": 2,
-      "streamType": 2,
-      "storageType": 2,
-      "size": 2048
-    }
-  ],
-  "messageId": 4613,
-  "properties": 62,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex2 7e1205003e1234567890127fff10e1000000020120010100000020123123595900000000000000000101010000040002200101000000201231235959000000000000000002020200000800dc7e
-json2 {
-  "responseSerialNo": 4321,
-  "items": [
-    {
-      "channelNo": 1,
-      "startTime": "2020-01-01T00:00:00",
-      "endTime": "2020-12-31T23:59:59",
-      "warnBit1": 0,
-      "warnBit2": 0,
-      "mediaType": 1,
-      "streamType": 1,
-      "storageType": 1,
-      "size": 1024
-    },
-    {
-      "channelNo": 2,
-      "startTime": "2020-01-01T00:00:00",
-      "endTime": "2020-12-31T23:59:59",
-      "warnBit1": 0,
-      "warnBit2": 0,
-      "mediaType": 2,
-      "streamType": 2,
-      "storageType": 2,
-      "size": 2048
-    }
-  ],
-  "messageId": 4613,
-  "properties": 62,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex1 7e1205403e0112345678901234567890ffff10e1000000020120010100000020123123595900000000000000000101010000040002200101000000201231235959000000000000000002020200000800977e
-json1 {
-  "responseSerialNo": 4321,
-  "items": [
-    {
-      "channelNo": 1,
-      "startTime": "2020-01-01T00:00:00",
-      "endTime": "2020-12-31T23:59:59",
-      "warnBit1": 0,
-      "warnBit2": 0,
-      "mediaType": 1,
-      "streamType": 1,
-      "storageType": 1,
-      "size": 1024
-    },
-    {
-      "channelNo": 2,
-      "startTime": "2020-01-01T00:00:00",
-      "endTime": "2020-12-31T23:59:59",
-      "warnBit1": 0,
-      "warnBit2": 0,
-      "mediaType": 2,
-      "streamType": 2,
-      "storageType": 2,
-      "size": 2048
-    }
-  ],
-  "messageId": 4613,
-  "properties": 16446,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex2 7e1205403e0112345678901234567890ffff10e1000000020120010100000020123123595900000000000000000101010000040002200101000000201231235959000000000000000002020200000800977e
-json2 {
-  "responseSerialNo": 4321,
-  "items": [
-    {
-      "channelNo": 1,
-      "startTime": "2020-01-01T00:00:00",
-      "endTime": "2020-12-31T23:59:59",
-      "warnBit1": 0,
-      "warnBit2": 0,
-      "mediaType": 1,
-      "streamType": 1,
-      "storageType": 1,
-      "size": 1024
-    },
-    {
-      "channelNo": 2,
-      "startTime": "2020-01-01T00:00:00",
-      "endTime": "2020-12-31T23:59:59",
-      "warnBit1": 0,
-      "warnBit2": 0,
-      "mediaType": 2,
-      "streamType": 2,
-      "storageType": 2,
-      "size": 2048
-    }
-  ],
-  "messageId": 4613,
-  "properties": 16446,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex1 7e120600031234567890127fff1b8a018d7e
-json1 {
-  "responseSerialNo": 7050,
-  "result": 1,
-  "messageId": 4614,
-  "properties": 3,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex2 7e120600031234567890127fff1b8a018d7e
-json2 {
-  "responseSerialNo": 7050,
-  "result": 1,
-  "messageId": 4614,
-  "properties": 3,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex1 7e120640030112345678901234567890ffff1b8a01c67e
-json1 {
-  "responseSerialNo": 7050,
-  "result": 1,
-  "messageId": 4614,
-  "properties": 16387,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex2 7e120640030112345678901234567890ffff1b8a01c67e
-json2 {
-  "responseSerialNo": 7050,
-  "result": 1,
-  "messageId": 4614,
-  "properties": 16387,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex1 7e910100171234567890127fff0f3132332e3132332e3132332e313233030440c60c0100207e
-json1 {
-  "ip": "123.123.123.123",
-  "tcpPort": 772,
-  "udpPort": 16582,
-  "channelNo": 12,
-  "mediaType": 1,
-  "streamType": 0,
-  "messageId": 37121,
-  "properties": 23,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex2 7e910100171234567890127fff0f3132332e3132332e3132332e313233030440c60c0100207e
-json2 {
-  "ip": "123.123.123.123",
-  "tcpPort": 772,
-  "udpPort": 16582,
-  "channelNo": 12,
-  "mediaType": 1,
-  "streamType": 0,
-  "messageId": 37121,
-  "properties": 23,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex1 7e910140170112345678901234567890ffff0f3132332e3132332e3132332e313233030440c60c01006b7e
-json1 {
-  "ip": "123.123.123.123",
-  "tcpPort": 772,
-  "udpPort": 16582,
-  "channelNo": 12,
-  "mediaType": 1,
-  "streamType": 0,
-  "messageId": 37121,
-  "properties": 16407,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex2 7e910140170112345678901234567890ffff0f3132332e3132332e3132332e313233030440c60c01006b7e
-json2 {
-  "ip": "123.123.123.123",
-  "tcpPort": 772,
-  "udpPort": 16582,
-  "channelNo": 12,
-  "mediaType": 1,
-  "streamType": 0,
-  "messageId": 37121,
-  "properties": 16407,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex1 7e910200041234567890127fff08010203957e
-json1 {
-  "channelNo": 8,
-  "command": 1,
-  "closeType": 2,
-  "streamType": 3,
-  "messageId": 37122,
-  "properties": 4,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex2 7e910200041234567890127fff08010203957e
-json2 {
-  "channelNo": 8,
-  "command": 1,
-  "closeType": 2,
-  "streamType": 3,
-  "messageId": 37122,
-  "properties": 4,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex1 7e910240040112345678901234567890ffff08010203de7e
-json1 {
-  "channelNo": 8,
-  "command": 1,
-  "closeType": 2,
-  "streamType": 3,
-  "messageId": 37122,
-  "properties": 16388,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex2 7e910240040112345678901234567890ffff08010203de7e
-json2 {
-  "channelNo": 8,
-  "command": 1,
-  "closeType": 2,
-  "streamType": 3,
-  "messageId": 37122,
-  "properties": 16388,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex1 7e910500021234567890127fff02039d7e
-json1 {
-  "channelNo": 2,
-  "packetLossRate": 3,
-  "messageId": 37125,
-  "properties": 2,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex2 7e910500021234567890127fff02039d7e
-json2 {
-  "channelNo": 2,
-  "packetLossRate": 3,
-  "messageId": 37125,
-  "properties": 2,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex1 7e910540020112345678901234567890ffff0203d67e
-json1 {
-  "channelNo": 2,
-  "packetLossRate": 3,
-  "messageId": 37125,
-  "properties": 16386,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex2 7e910540020112345678901234567890ffff0203d67e
-json2 {
-  "channelNo": 2,
-  "packetLossRate": 3,
-  "messageId": 37125,
-  "properties": 16386,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex1 7e920100241234567890127fff0d31322e31322e3132332e313233a7b93c6c320200000000200707192359200707192359e07e
-json1 {
-  "ip": "12.12.123.123",
-  "tcpPort": 42937,
-  "udpPort": 15468,
-  "channelNo": 50,
-  "mediaType": 2,
-  "streamType": 0,
-  "storageType": 0,
-  "playbackMode": 0,
-  "playbackSpeed": 0,
-  "startTime": "200707192359",
-  "endTime": "200707192359",
-  "messageId": 37377,
-  "properties": 36,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex2 7e920100241234567890127fff0d31322e31322e3132332e313233a7b93c6c320200000000200707192359200707192359e07e
-json2 {
-  "ip": "12.12.123.123",
-  "tcpPort": 42937,
-  "udpPort": 15468,
-  "channelNo": 50,
-  "mediaType": 2,
-  "streamType": 0,
-  "storageType": 0,
-  "playbackMode": 0,
-  "playbackSpeed": 0,
-  "startTime": "200707192359",
-  "endTime": "200707192359",
-  "messageId": 37377,
-  "properties": 36,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex1 7e920140240112345678901234567890ffff0d31322e31322e3132332e313233a7b93c6c320200000000200707192359200707192359ab7e
-json1 {
-  "ip": "12.12.123.123",
-  "tcpPort": 42937,
-  "udpPort": 15468,
-  "channelNo": 50,
-  "mediaType": 2,
-  "streamType": 0,
-  "storageType": 0,
-  "playbackMode": 0,
-  "playbackSpeed": 0,
-  "startTime": "200707192359",
-  "endTime": "200707192359",
-  "messageId": 37377,
-  "properties": 16420,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex2 7e920140240112345678901234567890ffff0d31322e31322e3132332e313233a7b93c6c320200000000200707192359200707192359ab7e
-json2 {
-  "ip": "12.12.123.123",
-  "tcpPort": 42937,
-  "udpPort": 15468,
-  "channelNo": 50,
-  "mediaType": 2,
-  "streamType": 0,
-  "storageType": 0,
-  "playbackMode": 0,
-  "playbackSpeed": 0,
-  "startTime": "200707192359",
-  "endTime": "200707192359",
-  "messageId": 37377,
-  "properties": 16420,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex1 7e920200091234567890127fff110103200707192359c37e
-json1 {
-  "channelNo": 17,
-  "playbackMode": 1,
-  "playbackSpeed": 3,
-  "playbackTime": "200707192359",
-  "messageId": 37378,
-  "properties": 9,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex2 7e920200091234567890127fff110103200707192359c37e
-json2 {
-  "channelNo": 17,
-  "playbackMode": 1,
-  "playbackSpeed": 3,
-  "playbackTime": "200707192359",
-  "messageId": 37378,
-  "properties": 9,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex1 7e920240090112345678901234567890ffff110103200707192359887e
-json1 {
-  "channelNo": 17,
-  "playbackMode": 1,
-  "playbackSpeed": 3,
-  "playbackTime": "200707192359",
-  "messageId": 37378,
-  "properties": 16393,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex2 7e920240090112345678901234567890ffff110103200707192359887e
-json2 {
-  "channelNo": 17,
-  "playbackMode": 1,
-  "playbackSpeed": 3,
-  "playbackTime": "200707192359",
-  "messageId": 37378,
-  "properties": 16393,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex1 7e920500181234567890127fffe720070719235920070719235900000000000000009b6e00977e
-json1 {
-  "channelNo": 231,
-  "startTime": "200707192359",
-  "endTime": "200707192359",
-  "warnBit1": 0,
-  "warnBit2": 0,
-  "mediaType": 155,
-  "streamType": 110,
-  "storageType": 0,
-  "messageId": 37381,
-  "properties": 24,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex2 7e920500181234567890127fffe720070719235920070719235900000000000000009b6e00977e
-json2 {
-  "channelNo": 231,
-  "startTime": "200707192359",
-  "endTime": "200707192359",
-  "warnBit1": 0,
-  "warnBit2": 0,
-  "mediaType": 155,
-  "streamType": 110,
-  "storageType": 0,
-  "messageId": 37381,
-  "properties": 24,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex1 7e920540180112345678901234567890ffffe720070719235920070719235900000000000000009b6e00dc7e
-json1 {
-  "channelNo": 231,
-  "startTime": "200707192359",
-  "endTime": "200707192359",
-  "warnBit1": 0,
-  "warnBit2": 0,
-  "mediaType": 155,
-  "streamType": 110,
-  "storageType": 0,
-  "messageId": 37381,
-  "properties": 16408,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex2 7e920540180112345678901234567890ffffe720070719235920070719235900000000000000009b6e00dc7e
-json2 {
-  "channelNo": 231,
-  "startTime": "200707192359",
-  "endTime": "200707192359",
-  "warnBit1": 0,
-  "warnBit2": 0,
-  "mediaType": 155,
-  "streamType": 110,
-  "storageType": 0,
-  "messageId": 37381,
-  "properties": 16408,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex1 7e920600451234567890127fff0b3139322e3136382e312e312b2d08757365726e616d650870617373776f72640b2f616c61726d5f66696c6501200707192359200707192359000000000000000000010101fa7e
-json1 {
-  "ip": "192.168.1.1",
-  "port": 11053,
-  "username": "username",
-  "password": "password",
-  "path": "/alarm_file",
-  "channelNo": 1,
-  "startTime": "200707192359",
-  "endTime": "200707192359",
-  "warnBit1": 0,
-  "warnBit2": 0,
-  "mediaType": 0,
-  "streamType": 1,
-  "storageType": 1,
-  "condition": 1,
-  "messageId": 37382,
-  "properties": 69,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex2 7e920600451234567890127fff0b3139322e3136382e312e312b2d08757365726e616d650870617373776f72640b2f616c61726d5f66696c6501200707192359200707192359000000000000000000010101fa7e
-json2 {
-  "ip": "192.168.1.1",
-  "port": 11053,
-  "username": "username",
-  "password": "password",
-  "path": "/alarm_file",
-  "channelNo": 1,
-  "startTime": "200707192359",
-  "endTime": "200707192359",
-  "warnBit1": 0,
-  "warnBit2": 0,
-  "mediaType": 0,
-  "streamType": 1,
-  "storageType": 1,
-  "condition": 1,
-  "messageId": 37382,
-  "properties": 69,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex1 7e920640450112345678901234567890ffff0b3139322e3136382e312e312b2d08757365726e616d650870617373776f72640b2f616c61726d5f66696c6501200707192359200707192359000000000000000000010101b17e
-json1 {
-  "ip": "192.168.1.1",
-  "port": 11053,
-  "username": "username",
-  "password": "password",
-  "path": "/alarm_file",
-  "channelNo": 1,
-  "startTime": "200707192359",
-  "endTime": "200707192359",
-  "warnBit1": 0,
-  "warnBit2": 0,
-  "mediaType": 0,
-  "streamType": 1,
-  "storageType": 1,
-  "condition": 1,
-  "messageId": 37382,
-  "properties": 16453,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex2 7e920640450112345678901234567890ffff0b3139322e3136382e312e312b2d08757365726e616d650870617373776f72640b2f616c61726d5f66696c6501200707192359200707192359000000000000000000010101b17e
-json2 {
-  "ip": "192.168.1.1",
-  "port": 11053,
-  "username": "username",
-  "password": "password",
-  "path": "/alarm_file",
-  "channelNo": 1,
-  "startTime": "200707192359",
-  "endTime": "200707192359",
-  "warnBit1": 0,
-  "warnBit2": 0,
-  "mediaType": 0,
-  "streamType": 1,
-  "storageType": 1,
-  "condition": 1,
-  "messageId": 37382,
-  "properties": 16453,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex1 7e920700031234567890127fff69fd020a7e
-json1 {
-  "responseSerialNo": 27133,
-  "command": 2,
-  "messageId": 37383,
-  "properties": 3,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex2 7e920700031234567890127fff69fd020a7e
-json2 {
-  "responseSerialNo": 27133,
-  "command": 2,
-  "messageId": 37383,
-  "properties": 3,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex1 7e920740030112345678901234567890ffff69fd02417e
-json1 {
-  "responseSerialNo": 27133,
-  "command": 2,
-  "messageId": 37383,
-  "properties": 16387,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex2 7e920740030112345678901234567890ffff69fd02417e
-json2 {
-  "responseSerialNo": 27133,
-  "command": 2,
-  "messageId": 37383,
-  "properties": 16387,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex1 7e930100031234567890127fff0102039b7e
-json1 {
-  "channelNo": 1,
-  "param1": 2,
-  "param2": 3,
-  "messageId": 37633,
-  "properties": 3,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex2 7e930100031234567890127fff0102039b7e
-json2 {
-  "channelNo": 1,
-  "param1": 2,
-  "param2": 3,
-  "messageId": 37633,
-  "properties": 3,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex1 7e930140030112345678901234567890ffff010203d07e
-json1 {
-  "channelNo": 1,
-  "param1": 2,
-  "param2": 3,
-  "messageId": 37633,
-  "properties": 16387,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex2 7e930140030112345678901234567890ffff010203d07e
-json2 {
-  "channelNo": 1,
-  "param1": 2,
-  "param2": 3,
-  "messageId": 37633,
-  "properties": 16387,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex1 7e930200021234567890127fff01ff677e
-json1 {
-  "channelNo": 1,
-  "param": 255,
-  "messageId": 37634,
-  "properties": 2,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex2 7e930200021234567890127fff01ff677e
-json2 {
-  "channelNo": 1,
-  "param": 255,
-  "messageId": 37634,
-  "properties": 2,
-  "protocolVersion": 0,
-  "clientId": "123456789012",
-  "serialNo": 32767,
-  "verified": true
-}
-hex1 7e930240020112345678901234567890ffff01ff2c7e
-json1 {
-  "channelNo": 1,
-  "param": 255,
-  "messageId": 37634,
-  "properties": 16386,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
-hex2 7e930240020112345678901234567890ffff01ff2c7e
-json2 {
-  "channelNo": 1,
-  "param": 255,
-  "messageId": 37634,
-  "properties": 16386,
-  "protocolVersion": 1,
-  "clientId": "12345678901234567890",
-  "serialNo": 65535,
-  "verified": true
-}
 hex1 7e800100051234567890127fff007b01c8033f7e
 json1 {
   "responseSerialNo": 123,
@@ -1318,8 +82,7 @@ json2 {
   "serialNo": 65535,
   "verified": true
 }
-[main] INFO StringSchema         [75]字符长度超出限制: 长度[7],数据长度[20],09876543210987654321
-hex1 7e0100002e1234567890127fff001f00730000797a68000000000000007777772e6a74743830382e636e3736353433323101b2e241383838383838227e
+hex1 7e0100002e1234567890127fff001f0073797a6800007777772e6a74743830382e636e000000000000003736353433323101b2e241383838383838227e
 json1 {
   "provinceId": 31,
   "cityId": 115,
@@ -1335,7 +98,7 @@ json1 {
   "serialNo": 32767,
   "verified": true
 }
-hex2 7e0100002e1234567890127fff001f00730000797a68000000000000007777772e6a74743830382e636e3736353433323101b2e241383838383838227e
+hex2 7e0100002e1234567890127fff001f0073797a6800007777772e6a74743830382e636e000000000000003736353433323101b2e241383838383838227e
 json2 {
   "provinceId": 31,
   "cityId": 115,
@@ -1351,7 +114,7 @@ json2 {
   "serialNo": 32767,
   "verified": true
 }
-hex1 7e010040550112345678901234567890ffff001f00730000000000000000797a6800000000000000000000000000000000007777772e6a74743830382e636e00000000000000000000303938373635343332313039383736353433323101b2e241383838383838227e
+hex1 7e010040550112345678901234567890ffff001f0073797a6800000000000000007777772e6a74743830382e636e000000000000000000000000000000000030393837363534333231303938373635343332310000000000000000000001b2e241383838383838227e
 json1 {
   "provinceId": 31,
   "cityId": 115,
@@ -1367,7 +130,7 @@ json1 {
   "serialNo": 65535,
   "verified": true
 }
-hex2 7e010040550112345678901234567890ffff001f00730000000000000000797a6800000000000000000000000000000000007777772e6a74743830382e636e00000000000000000000303938373635343332313039383736353433323101b2e241383838383838227e
+hex2 7e010040550112345678901234567890ffff001f0073797a6800000000000000007777772e6a74743830382e636e000000000000000000000000000000000030393837363534333231303938373635343332310000000000000000000001b2e241383838383838227e
 json2 {
   "provinceId": 31,
   "cityId": 115,
@@ -1403,7 +166,7 @@ json2 {
   "serialNo": 32767,
   "verified": true
 }
-hex1 7e010240500112345678901234567890ffff2c706d59477a47756b4f384b345a356c70494f5467386471623365707259614842625853504c7464627947383d313233343536373839303132333435000000000000007777772e6a74743830382e636e557e
+hex1 7e010240500112345678901234567890ffff2c706d59477a47756b4f384b345a356c70494f5467386471623365707259614842625853504c7464627947383d3132333435363738393031323334357777772e6a74743830382e636e00000000000000557e
 json1 {
   "token": "pmYGzGukO8K4Z5lpIOTg8dqb3eprYaHBbXSPLtdbyG8\u003d",
   "imei": "123456789012345",
@@ -1415,7 +178,7 @@ json1 {
   "serialNo": 65535,
   "verified": true
 }
-hex2 7e010240500112345678901234567890ffff2c706d59477a47756b4f384b345a356c70494f5467386471623365707259614842625853504c7464627947383d313233343536373839303132333435000000000000007777772e6a74743830382e636e557e
+hex2 7e010240500112345678901234567890ffff2c706d59477a47756b4f384b345a356c70494f5467386471623365707259614842625853504c7464627947383d3132333435363738393031323334357777772e6a74743830382e636e00000000000000557e
 json2 {
   "token": "pmYGzGukO8K4Z5lpIOTg8dqb3eprYaHBbXSPLtdbyG8\u003d",
   "imei": "123456789012345",
@@ -1739,8 +502,7 @@ json2 {
   "serialNo": 65535,
   "verified": true
 }
-[main] INFO StringSchema         [75]字符长度超出限制: 长度[7],数据长度[20],09876543210987654321
-hex1 7e0107004a1234567890127fff007f0000797a68000000000000007777772e6a74743830382e636e37363534333231123456789012345678900d7777772e6a74743830382e636e0d7777772e6a74743830382e636e7f7f427e
+hex1 7e0107004a1234567890127fff007f797a6800007777772e6a74743830382e636e0000000000000037363534333231123456789012345678900d7777772e6a74743830382e636e0d7777772e6a74743830382e636e7f7f427e
 json1 {
   "deviceType": 127,
   "makerId": "yzh",
@@ -1758,7 +520,7 @@ json1 {
   "serialNo": 32767,
   "verified": true
 }
-hex2 7e0107004a1234567890127fff007f0000797a68000000000000007777772e6a74743830382e636e37363534333231123456789012345678900d7777772e6a74743830382e636e0d7777772e6a74743830382e636e7f7f427e
+hex2 7e0107004a1234567890127fff007f797a6800007777772e6a74743830382e636e0000000000000037363534333231123456789012345678900d7777772e6a74743830382e636e0d7777772e6a74743830382e636e7f7f427e
 json2 {
   "deviceType": 127,
   "makerId": "yzh",
@@ -1776,7 +538,7 @@ json2 {
   "serialNo": 32767,
   "verified": true
 }
-hex1 7e0107406b0112345678901234567890ffff007f0000797a6800000000000000000000000000000000007777772e6a74743830382e636e000000000000000000003039383736353433323130393837363534333231123456789012345678900d7777772e6a74743830382e636e0d7777772e6a74743830382e636e7f7f187e
+hex1 7e0107406b0112345678901234567890ffff007f797a6800007777772e6a74743830382e636e0000000000000000000000000000000000303938373635343332313039383736353433323100000000000000000000123456789012345678900d7777772e6a74743830382e636e0d7777772e6a74743830382e636e7f7f187e
 json1 {
   "deviceType": 127,
   "makerId": "yzh",
@@ -1794,7 +556,7 @@ json1 {
   "serialNo": 65535,
   "verified": true
 }
-hex2 7e0107406b0112345678901234567890ffff007f0000797a6800000000000000000000000000000000007777772e6a74743830382e636e000000000000000000003039383736353433323130393837363534333231123456789012345678900d7777772e6a74743830382e636e0d7777772e6a74743830382e636e7f7f187e
+hex2 7e0107406b0112345678901234567890ffff007f797a6800007777772e6a74743830382e636e0000000000000000000000000000000000303938373635343332313039383736353433323100000000000000000000123456789012345678900d7777772e6a74743830382e636e0d7777772e6a74743830382e636e7f7f187e
 json2 {
   "deviceType": 127,
   "makerId": "yzh",
@@ -2292,7 +1054,7 @@ json2 {
   "serialNo": 65535,
   "verified": true
 }
-hex1 7e0702004e1234567890127fff022007211830000004d5c5c8fd000000000000003132333435363738393031323328d6d0bbaac8cbc3f1b9b2bacdb9fab5c0c2b7d4cbcae4b4d3d2b5c8cbd4b1b4d3d2b5d7cab8f1d6a420190630327e
+hex1 7e0702004e1234567890127fff022007211830000004d5c5c8fd313233343536373839303132330000000000000028d6d0bbaac8cbc3f1b9b2bacdb9fab5c0c2b7d4cbcae4b4d3d2b5c8cbd4b1b4d3d2b5d7cab8f1d6a420190630327e
 json1 {
   "status": 2,
   "dateTime": "200721183000",
@@ -2308,7 +1070,7 @@ json1 {
   "serialNo": 32767,
   "verified": true
 }
-hex2 7e0702004e1234567890127fff022007211830000004d5c5c8fd000000000000003132333435363738393031323328d6d0bbaac8cbc3f1b9b2bacdb9fab5c0c2b7d4cbcae4b4d3d2b5c8cbd4b1b4d3d2b5d7cab8f1d6a420190630327e
+hex2 7e0702004e1234567890127fff022007211830000004d5c5c8fd313233343536373839303132330000000000000028d6d0bbaac8cbc3f1b9b2bacdb9fab5c0c2b7d4cbcae4b4d3d2b5c8cbd4b1b4d3d2b5d7cab8f1d6a420190630327e
 json2 {
   "status": 2,
   "dateTime": "200721183000",
@@ -2324,7 +1086,7 @@ json2 {
   "serialNo": 32767,
   "verified": true
 }
-hex1 7e0702404e0112345678901234567890ffff022007211830000004d5c5c8fd000000000000003132333435363738393031323328d6d0bbaac8cbc3f1b9b2bacdb9fab5c0c2b7d4cbcae4b4d3d2b5c8cbd4b1b4d3d2b5d7cab8f1d6a420190630797e
+hex1 7e070240620112345678901234567890ffff022007211830000004d5c5c8fd313233343536373839303132330000000000000028d6d0bbaac8cbc3f1b9b2bacdb9fab5c0c2b7d4cbcae4b4d3d2b5c8cbd4b1b4d3d2b5d7cab8f1d6a4201906300000000000000000000000000000000000000000557e
 json1 {
   "status": 2,
   "dateTime": "200721183000",
@@ -2333,14 +1095,15 @@ json1 {
   "licenseNo": "1234567890123",
   "institution": "中华人民共和国道路运输从业人员从业资格证",
   "licenseValidPeriod": "20190630",
+  "idCard": "",
   "messageId": 1794,
-  "properties": 16462,
+  "properties": 16482,
   "protocolVersion": 1,
   "clientId": "12345678901234567890",
   "serialNo": 65535,
   "verified": true
 }
-hex2 7e0702404e0112345678901234567890ffff022007211830000004d5c5c8fd000000000000003132333435363738393031323328d6d0bbaac8cbc3f1b9b2bacdb9fab5c0c2b7d4cbcae4b4d3d2b5c8cbd4b1b4d3d2b5d7cab8f1d6a420190630797e
+hex2 7e070240620112345678901234567890ffff022007211830000004d5c5c8fd313233343536373839303132330000000000000028d6d0bbaac8cbc3f1b9b2bacdb9fab5c0c2b7d4cbcae4b4d3d2b5c8cbd4b1b4d3d2b5d7cab8f1d6a4201906300000000000000000000000000000000000000000557e
 json2 {
   "status": 2,
   "dateTime": "200721183000",
@@ -2349,8 +1112,9 @@ json2 {
   "licenseNo": "1234567890123",
   "institution": "中华人民共和国道路运输从业人员从业资格证",
   "licenseValidPeriod": "20190630",
+  "idCard": "",
   "messageId": 1794,
-  "properties": 16462,
+  "properties": 16482,
   "protocolVersion": 1,
   "clientId": "12345678901234567890",
   "serialNo": 65535,
@@ -2362,72 +1126,64 @@ json1 {
   "type": 1,
   "items": [
     {
-      "location": {
-        "warnBit": 1024,
-        "statusBit": 2048,
-        "latitude": 116307629,
-        "longitude": 40058359,
-        "altitude": 312,
-        "speed": 3,
-        "direction": 99,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 1024,
+      "statusBit": 2048,
+      "latitude": 116307629,
+      "longitude": 40058359,
+      "altitude": 312,
+      "speed": 3,
+      "direction": 99,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     },
     {
-      "location": {
-        "warnBit": 2048,
-        "statusBit": 4096,
-        "latitude": 232615258,
-        "longitude": 80116718,
-        "altitude": 624,
-        "speed": 6,
-        "direction": 198,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 2048,
+      "statusBit": 4096,
+      "latitude": 232615258,
+      "longitude": 80116718,
+      "altitude": 624,
+      "speed": 6,
+      "direction": 198,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     },
     {
-      "location": {
-        "warnBit": 1024,
-        "statusBit": 2048,
-        "latitude": 116307629,
-        "longitude": 40058359,
-        "altitude": 312,
-        "speed": 3,
-        "direction": 99,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 1024,
+      "statusBit": 2048,
+      "latitude": 116307629,
+      "longitude": 40058359,
+      "altitude": 312,
+      "speed": 3,
+      "direction": 99,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     },
     {
-      "location": {
-        "warnBit": 2048,
-        "statusBit": 4096,
-        "latitude": 232615258,
-        "longitude": 80116718,
-        "altitude": 624,
-        "speed": 6,
-        "direction": 198,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 2048,
+      "statusBit": 4096,
+      "latitude": 232615258,
+      "longitude": 80116718,
+      "altitude": 624,
+      "speed": 6,
+      "direction": 198,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     }
   ],
   "messageId": 1796,
@@ -2443,72 +1199,64 @@ json2 {
   "type": 1,
   "items": [
     {
-      "location": {
-        "warnBit": 1024,
-        "statusBit": 2048,
-        "latitude": 116307629,
-        "longitude": 40058359,
-        "altitude": 312,
-        "speed": 3,
-        "direction": 99,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 1024,
+      "statusBit": 2048,
+      "latitude": 116307629,
+      "longitude": 40058359,
+      "altitude": 312,
+      "speed": 3,
+      "direction": 99,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     },
     {
-      "location": {
-        "warnBit": 2048,
-        "statusBit": 4096,
-        "latitude": 232615258,
-        "longitude": 80116718,
-        "altitude": 624,
-        "speed": 6,
-        "direction": 198,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 2048,
+      "statusBit": 4096,
+      "latitude": 232615258,
+      "longitude": 80116718,
+      "altitude": 624,
+      "speed": 6,
+      "direction": 198,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     },
     {
-      "location": {
-        "warnBit": 1024,
-        "statusBit": 2048,
-        "latitude": 116307629,
-        "longitude": 40058359,
-        "altitude": 312,
-        "speed": 3,
-        "direction": 99,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 1024,
+      "statusBit": 2048,
+      "latitude": 116307629,
+      "longitude": 40058359,
+      "altitude": 312,
+      "speed": 3,
+      "direction": 99,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     },
     {
-      "location": {
-        "warnBit": 2048,
-        "statusBit": 4096,
-        "latitude": 232615258,
-        "longitude": 80116718,
-        "altitude": 624,
-        "speed": 6,
-        "direction": 198,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 2048,
+      "statusBit": 4096,
+      "latitude": 232615258,
+      "longitude": 80116718,
+      "altitude": 624,
+      "speed": 6,
+      "direction": 198,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     }
   ],
   "messageId": 1796,
@@ -2524,72 +1272,64 @@ json1 {
   "type": 1,
   "items": [
     {
-      "location": {
-        "warnBit": 1024,
-        "statusBit": 2048,
-        "latitude": 116307629,
-        "longitude": 40058359,
-        "altitude": 312,
-        "speed": 3,
-        "direction": 99,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 1024,
+      "statusBit": 2048,
+      "latitude": 116307629,
+      "longitude": 40058359,
+      "altitude": 312,
+      "speed": 3,
+      "direction": 99,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     },
     {
-      "location": {
-        "warnBit": 2048,
-        "statusBit": 4096,
-        "latitude": 232615258,
-        "longitude": 80116718,
-        "altitude": 624,
-        "speed": 6,
-        "direction": 198,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 2048,
+      "statusBit": 4096,
+      "latitude": 232615258,
+      "longitude": 80116718,
+      "altitude": 624,
+      "speed": 6,
+      "direction": 198,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     },
     {
-      "location": {
-        "warnBit": 1024,
-        "statusBit": 2048,
-        "latitude": 116307629,
-        "longitude": 40058359,
-        "altitude": 312,
-        "speed": 3,
-        "direction": 99,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 1024,
+      "statusBit": 2048,
+      "latitude": 116307629,
+      "longitude": 40058359,
+      "altitude": 312,
+      "speed": 3,
+      "direction": 99,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     },
     {
-      "location": {
-        "warnBit": 2048,
-        "statusBit": 4096,
-        "latitude": 232615258,
-        "longitude": 80116718,
-        "altitude": 624,
-        "speed": 6,
-        "direction": 198,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 2048,
+      "statusBit": 4096,
+      "latitude": 232615258,
+      "longitude": 80116718,
+      "altitude": 624,
+      "speed": 6,
+      "direction": 198,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     }
   ],
   "messageId": 1796,
@@ -2605,72 +1345,64 @@ json2 {
   "type": 1,
   "items": [
     {
-      "location": {
-        "warnBit": 1024,
-        "statusBit": 2048,
-        "latitude": 116307629,
-        "longitude": 40058359,
-        "altitude": 312,
-        "speed": 3,
-        "direction": 99,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 1024,
+      "statusBit": 2048,
+      "latitude": 116307629,
+      "longitude": 40058359,
+      "altitude": 312,
+      "speed": 3,
+      "direction": 99,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     },
     {
-      "location": {
-        "warnBit": 2048,
-        "statusBit": 4096,
-        "latitude": 232615258,
-        "longitude": 80116718,
-        "altitude": 624,
-        "speed": 6,
-        "direction": 198,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 2048,
+      "statusBit": 4096,
+      "latitude": 232615258,
+      "longitude": 80116718,
+      "altitude": 624,
+      "speed": 6,
+      "direction": 198,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     },
     {
-      "location": {
-        "warnBit": 1024,
-        "statusBit": 2048,
-        "latitude": 116307629,
-        "longitude": 40058359,
-        "altitude": 312,
-        "speed": 3,
-        "direction": 99,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 1024,
+      "statusBit": 2048,
+      "latitude": 116307629,
+      "longitude": 40058359,
+      "altitude": 312,
+      "speed": 3,
+      "direction": 99,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     },
     {
-      "location": {
-        "warnBit": 2048,
-        "statusBit": 4096,
-        "latitude": 232615258,
-        "longitude": 80116718,
-        "altitude": 624,
-        "speed": 6,
-        "direction": 198,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 2048,
+      "statusBit": 4096,
+      "latitude": 232615258,
+      "longitude": 80116718,
+      "altitude": 624,
+      "speed": 6,
+      "direction": 198,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     }
   ],
   "messageId": 1796,
@@ -2966,13 +1698,7 @@ json1 {
     "serialNo": 0,
     "verified": true
   },
-  "packet": [
-    13,
-    123,
-    13,
-    123,
-    123
-  ],
+  "packet": "0d7b0d7b7b",
   "messageId": 2049,
   "properties": 41,
   "protocolVersion": 0,
@@ -3002,13 +1728,7 @@ json2 {
     "serialNo": 0,
     "verified": true
   },
-  "packet": [
-    13,
-    123,
-    13,
-    123,
-    123
-  ],
+  "packet": "0d7b0d7b7b",
   "messageId": 2049,
   "properties": 41,
   "protocolVersion": 0,
@@ -3038,13 +1758,7 @@ json1 {
     "serialNo": 0,
     "verified": true
   },
-  "packet": [
-    13,
-    123,
-    13,
-    123,
-    123
-  ],
+  "packet": "0d7b0d7b7b",
   "messageId": 2049,
   "properties": 16425,
   "protocolVersion": 1,
@@ -3074,13 +1788,7 @@ json2 {
     "serialNo": 0,
     "verified": true
   },
-  "packet": [
-    13,
-    123,
-    13,
-    123,
-    123
-  ],
+  "packet": "0d7b0d7b7b",
   "messageId": 2049,
   "properties": 16425,
   "protocolVersion": 1,
@@ -3476,7 +2184,6 @@ hex1 7e080500291234567890127ffff4c0000009000000010000000200000003000000040000000
 json1 {
   "responseSerialNo": 62656,
   "result": 0,
-  "total": 9,
   "id": [
     1,
     2,
@@ -3499,7 +2206,6 @@ hex2 7e080500291234567890127ffff4c0000009000000010000000200000003000000040000000
 json2 {
   "responseSerialNo": 62656,
   "result": 0,
-  "total": 9,
   "id": [
     1,
     2,
@@ -3522,7 +2228,6 @@ hex1 7e080540290112345678901234567890fffff4c000000900000001000000020000000300000
 json1 {
   "responseSerialNo": 62656,
   "result": 0,
-  "total": 9,
   "id": [
     1,
     2,
@@ -3545,7 +2250,6 @@ hex2 7e080540290112345678901234567890fffff4c000000900000001000000020000000300000
 json2 {
   "responseSerialNo": 62656,
   "result": 0,
-  "total": 9,
   "id": [
     1,
     2,
@@ -3648,10 +2352,437 @@ json2 {
   "serialNo": 65535,
   "verified": true
 }
+hex1 7e1003000a1234567890127fff7f040200944901200808967e
+json1 {
+  "audioFormat": 127,
+  "audioChannels": 4,
+  "audioSamplingRate": 2,
+  "audioBitDepth": 0,
+  "audioFrameLength": 37961,
+  "audioSupport": 1,
+  "videoFormat": 32,
+  "maxAudioChannels": 8,
+  "maxVideoChannels": 8,
+  "messageId": 4099,
+  "properties": 10,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex2 7e1003000a1234567890127fff7f040200944901200808967e
+json2 {
+  "audioFormat": 127,
+  "audioChannels": 4,
+  "audioSamplingRate": 2,
+  "audioBitDepth": 0,
+  "audioFrameLength": 37961,
+  "audioSupport": 1,
+  "videoFormat": 32,
+  "maxAudioChannels": 8,
+  "maxVideoChannels": 8,
+  "messageId": 4099,
+  "properties": 10,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex1 7e1003400a0112345678901234567890ffff7f040200944901200808dd7e
+json1 {
+  "audioFormat": 127,
+  "audioChannels": 4,
+  "audioSamplingRate": 2,
+  "audioBitDepth": 0,
+  "audioFrameLength": 37961,
+  "audioSupport": 1,
+  "videoFormat": 32,
+  "maxAudioChannels": 8,
+  "maxVideoChannels": 8,
+  "messageId": 4099,
+  "properties": 16394,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex2 7e1003400a0112345678901234567890ffff7f040200944901200808dd7e
+json2 {
+  "audioFormat": 127,
+  "audioChannels": 4,
+  "audioSamplingRate": 2,
+  "audioBitDepth": 0,
+  "audioFrameLength": 37961,
+  "audioSupport": 1,
+  "videoFormat": 32,
+  "maxAudioChannels": 8,
+  "maxVideoChannels": 8,
+  "messageId": 4099,
+  "properties": 16394,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex1 7e100500101234567890127fff20070719235920070719235981f54812217e
+json1 {
+  "startTime": "200707192359",
+  "endTime": "200707192359",
+  "getOnCount": 33269,
+  "getOffCount": 18450,
+  "messageId": 4101,
+  "properties": 16,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex2 7e100500101234567890127fff20070719235920070719235981f54812217e
+json2 {
+  "startTime": "200707192359",
+  "endTime": "200707192359",
+  "getOnCount": 33269,
+  "getOffCount": 18450,
+  "messageId": 4101,
+  "properties": 16,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex1 7e100540100112345678901234567890ffff20070719235920070719235981f548126a7e
+json1 {
+  "startTime": "200707192359",
+  "endTime": "200707192359",
+  "getOnCount": 33269,
+  "getOffCount": 18450,
+  "messageId": 4101,
+  "properties": 16400,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex2 7e100540100112345678901234567890ffff20070719235920070719235981f548126a7e
+json2 {
+  "startTime": "200707192359",
+  "endTime": "200707192359",
+  "getOnCount": 33269,
+  "getOffCount": 18450,
+  "messageId": 4101,
+  "properties": 16400,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex1 7e1205003e1234567890127fff10e1000000020120072600000020072623235900000000000000000101010000040002200726000000200726232359000000000000000002020200000800dc7e
+json1 {
+  "responseSerialNo": 4321,
+  "items": [
+    {
+      "channelNo": 1,
+      "startTime": "2020-07-26T00:00:00",
+      "endTime": "2020-07-26T23:23:59",
+      "warnBit1": 0,
+      "warnBit2": 0,
+      "mediaType": 1,
+      "streamType": 1,
+      "storageType": 1,
+      "size": 1024
+    },
+    {
+      "channelNo": 2,
+      "startTime": "2020-07-26T00:00:00",
+      "endTime": "2020-07-26T23:23:59",
+      "warnBit1": 0,
+      "warnBit2": 0,
+      "mediaType": 2,
+      "streamType": 2,
+      "storageType": 2,
+      "size": 2048
+    }
+  ],
+  "messageId": 4613,
+  "properties": 62,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex2 7e1205003e1234567890127fff10e1000000020120072600000020072623235900000000000000000101010000040002200726000000200726232359000000000000000002020200000800dc7e
+json2 {
+  "responseSerialNo": 4321,
+  "items": [
+    {
+      "channelNo": 1,
+      "startTime": "2020-07-26T00:00:00",
+      "endTime": "2020-07-26T23:23:59",
+      "warnBit1": 0,
+      "warnBit2": 0,
+      "mediaType": 1,
+      "streamType": 1,
+      "storageType": 1,
+      "size": 1024
+    },
+    {
+      "channelNo": 2,
+      "startTime": "2020-07-26T00:00:00",
+      "endTime": "2020-07-26T23:23:59",
+      "warnBit1": 0,
+      "warnBit2": 0,
+      "mediaType": 2,
+      "streamType": 2,
+      "storageType": 2,
+      "size": 2048
+    }
+  ],
+  "messageId": 4613,
+  "properties": 62,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex1 7e1205403e0112345678901234567890ffff10e1000000020120072600000020072623235900000000000000000101010000040002200726000000200726232359000000000000000002020200000800977e
+json1 {
+  "responseSerialNo": 4321,
+  "items": [
+    {
+      "channelNo": 1,
+      "startTime": "2020-07-26T00:00:00",
+      "endTime": "2020-07-26T23:23:59",
+      "warnBit1": 0,
+      "warnBit2": 0,
+      "mediaType": 1,
+      "streamType": 1,
+      "storageType": 1,
+      "size": 1024
+    },
+    {
+      "channelNo": 2,
+      "startTime": "2020-07-26T00:00:00",
+      "endTime": "2020-07-26T23:23:59",
+      "warnBit1": 0,
+      "warnBit2": 0,
+      "mediaType": 2,
+      "streamType": 2,
+      "storageType": 2,
+      "size": 2048
+    }
+  ],
+  "messageId": 4613,
+  "properties": 16446,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex2 7e1205403e0112345678901234567890ffff10e1000000020120072600000020072623235900000000000000000101010000040002200726000000200726232359000000000000000002020200000800977e
+json2 {
+  "responseSerialNo": 4321,
+  "items": [
+    {
+      "channelNo": 1,
+      "startTime": "2020-07-26T00:00:00",
+      "endTime": "2020-07-26T23:23:59",
+      "warnBit1": 0,
+      "warnBit2": 0,
+      "mediaType": 1,
+      "streamType": 1,
+      "storageType": 1,
+      "size": 1024
+    },
+    {
+      "channelNo": 2,
+      "startTime": "2020-07-26T00:00:00",
+      "endTime": "2020-07-26T23:23:59",
+      "warnBit1": 0,
+      "warnBit2": 0,
+      "mediaType": 2,
+      "streamType": 2,
+      "storageType": 2,
+      "size": 2048
+    }
+  ],
+  "messageId": 4613,
+  "properties": 16446,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex1 7e120600031234567890127fff1b8a018d7e
+json1 {
+  "responseSerialNo": 7050,
+  "result": 1,
+  "messageId": 4614,
+  "properties": 3,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex2 7e120600031234567890127fff1b8a018d7e
+json2 {
+  "responseSerialNo": 7050,
+  "result": 1,
+  "messageId": 4614,
+  "properties": 3,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex1 7e120640030112345678901234567890ffff1b8a01c67e
+json1 {
+  "responseSerialNo": 7050,
+  "result": 1,
+  "messageId": 4614,
+  "properties": 16387,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex2 7e120640030112345678901234567890ffff1b8a01c67e
+json2 {
+  "responseSerialNo": 7050,
+  "result": 1,
+  "messageId": 4614,
+  "properties": 16387,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex1 7e121000391234567890127fff3736353433323137363534333231200827111111010301616437323133313537396535346265306230663733376366633732633564623800007b7e
+json1 {
+  "deviceId": "7654321",
+  "alarmId": {
+    "deviceId": "7654321",
+    "dateTime": "200827111111",
+    "serialNo": 1,
+    "fileTotal": 3,
+    "reserved": 1
+  },
+  "alarmNo": "ad72131579e54be0b0f737cfc72c5db8",
+  "type": 0,
+  "messageId": 4624,
+  "properties": 57,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex2 7e121000391234567890127fff3736353433323137363534333231200827111111010301616437323133313537396535346265306230663733376366633732633564623800007b7e
+json2 {
+  "deviceId": "7654321",
+  "alarmId": {
+    "deviceId": "7654321",
+    "dateTime": "200827111111",
+    "serialNo": 1,
+    "fileTotal": 3,
+    "reserved": 1
+  },
+  "alarmNo": "ad72131579e54be0b0f737cfc72c5db8",
+  "type": 0,
+  "messageId": 4624,
+  "properties": 57,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex1 7e121040680112345678901234567890ffff3039383736353433323130393837363534333231000000000000000000003039383736353433323130393837363534333231000000000000000000002008271111110103000161643732313331353739653534626530623066373337636663373263356462380000617e
+json1 {
+  "deviceId": "09876543210987654321",
+  "alarmId": {
+    "deviceId": "09876543210987654321",
+    "dateTime": "200827111111",
+    "serialNo": 1,
+    "fileTotal": 3,
+    "reserved": 1
+  },
+  "alarmNo": "ad72131579e54be0b0f737cfc72c5db8",
+  "type": 0,
+  "messageId": 4624,
+  "properties": 16488,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex2 7e121040680112345678901234567890ffff3039383736353433323130393837363534333231000000000000000000003039383736353433323130393837363534333231000000000000000000002008271111110103000161643732313331353739653534626530623066373337636663373263356462380000617e
+json2 {
+  "deviceId": "09876543210987654321",
+  "alarmId": {
+    "deviceId": "09876543210987654321",
+    "dateTime": "200827111111",
+    "serialNo": 1,
+    "fileTotal": 3,
+    "reserved": 1
+  },
+  "alarmNo": "ad72131579e54be0b0f737cfc72c5db8",
+  "type": 0,
+  "messageId": 4624,
+  "properties": 16488,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex1 7e121100131234567890127fff0d7777772e6a74743830382e636e0100000400327e
+json1 {
+  "name": "www.jtt808.cn",
+  "type": 1,
+  "size": 1024,
+  "messageId": 4625,
+  "properties": 19,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex2 7e121100131234567890127fff0d7777772e6a74743830382e636e0100000400327e
+json2 {
+  "name": "www.jtt808.cn",
+  "type": 1,
+  "size": 1024,
+  "messageId": 4625,
+  "properties": 19,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex1 7e121140130112345678901234567890ffff0d7777772e6a74743830382e636e0100000400797e
+json1 {
+  "name": "www.jtt808.cn",
+  "type": 1,
+  "size": 1024,
+  "messageId": 4625,
+  "properties": 16403,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex2 7e121140130112345678901234567890ffff0d7777772e6a74743830382e636e0100000400797e
+json2 {
+  "name": "www.jtt808.cn",
+  "type": 1,
+  "size": 1024,
+  "messageId": 4625,
+  "properties": 16403,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
 hex1 7e800300151234567890127fff1099090001000200030004000500060007000800091d7e
 json1 {
   "responseSerialNo": 4249,
-  "total": 9,
   "id": [
     1,
     2,
@@ -3673,7 +2804,6 @@ json1 {
 hex2 7e800300151234567890127fff1099090001000200030004000500060007000800091d7e
 json2 {
   "responseSerialNo": 4249,
-  "total": 9,
   "id": [
     1,
     2,
@@ -3695,7 +2825,6 @@ json2 {
 hex1 7e800340160112345678901234567890ffff10990009000100020003000400050006000700080009557e
 json1 {
   "responseSerialNo": 4249,
-  "total": 9,
   "id": [
     1,
     2,
@@ -3717,7 +2846,6 @@ json1 {
 hex2 7e800340160112345678901234567890ffff10990009000100020003000400050006000700080009557e
 json2 {
   "responseSerialNo": 4249,
-  "total": 9,
   "id": [
     1,
     2,
@@ -4138,7 +3266,6 @@ json2 {
 }
 hex1 7e810600191234567890127fff0600000001000000030000000500000007000000090000007fe47e
 json1 {
-  "total": 6,
   "id": [
     1,
     3,
@@ -4156,7 +3283,6 @@ json1 {
 }
 hex2 7e810600191234567890127fff0600000001000000030000000500000007000000090000007fe47e
 json2 {
-  "total": 6,
   "id": [
     1,
     3,
@@ -4174,7 +3300,6 @@ json2 {
 }
 hex1 7e810640190112345678901234567890ffff0600000001000000030000000500000007000000090000007faf7e
 json1 {
-  "total": 6,
   "id": [
     1,
     3,
@@ -4192,7 +3317,6 @@ json1 {
 }
 hex2 7e810640190112345678901234567890ffff0600000001000000030000000500000007000000090000007faf7e
 json2 {
-  "total": 6,
   "id": [
     1,
     3,
@@ -4208,7 +3332,7 @@ json2 {
   "serialNo": 65535,
   "verified": true
 }
-hex1 7e810800211234567890127fff340000797a680d7777772e6a74743830382e636e00000009010203040506070809d87e
+hex1 7e810800211234567890127fff34797a6800000d7777772e6a74743830382e636e00000009010203040506070809d87e
 json1 {
   "type": 52,
   "makerId": "yzh",
@@ -4231,7 +3355,7 @@ json1 {
   "serialNo": 32767,
   "verified": true
 }
-hex2 7e810800211234567890127fff340000797a680d7777772e6a74743830382e636e00000009010203040506070809d87e
+hex2 7e810800211234567890127fff34797a6800000d7777772e6a74743830382e636e00000009010203040506070809d87e
 json2 {
   "type": 52,
   "makerId": "yzh",
@@ -4254,7 +3378,7 @@ json2 {
   "serialNo": 32767,
   "verified": true
 }
-hex1 7e810840210112345678901234567890ffff340000797a680d7777772e6a74743830382e636e00000009010203040506070809937e
+hex1 7e810840210112345678901234567890ffff34797a6800000d7777772e6a74743830382e636e00000009010203040506070809937e
 json1 {
   "type": 52,
   "makerId": "yzh",
@@ -4277,7 +3401,7 @@ json1 {
   "serialNo": 65535,
   "verified": true
 }
-hex2 7e810840210112345678901234567890ffff340000797a680d7777772e6a74743830382e636e00000009010203040506070809937e
+hex2 7e810840210112345678901234567890ffff34797a6800000d7777772e6a74743830382e636e00000009010203040506070809937e
 json2 {
   "type": 52,
   "makerId": "yzh",
@@ -4616,44 +3740,44 @@ json2 {
   "serialNo": 65535,
   "verified": true
 }
-hex1 7e830300411234567890127fff0209000004befccac2010004b9fac4da020004b9fabcca030004b9c9c6b1040004bbf9bdf0050004cde2bbe3060004cce5d3fd070004d3e9c0d6080004c6fbb3b5817e
+hex1 7e830300411234567890127fff0209010004befccac2020004b9fac4da030004b9fabcca040004b9c9c6b1050004bbf9bdf0060004cde2bbe3070004cce5d3fd080004d3e9c0d6090004c6fbb3b5887e
 json1 {
   "type": 2,
   "infos": [
     {
-      "type": 0,
+      "type": 1,
       "name": "军事"
     },
     {
-      "type": 1,
+      "type": 2,
       "name": "国内"
     },
     {
-      "type": 2,
+      "type": 3,
       "name": "国际"
     },
     {
-      "type": 3,
+      "type": 4,
       "name": "股票"
     },
     {
-      "type": 4,
+      "type": 5,
       "name": "基金"
     },
     {
-      "type": 5,
+      "type": 6,
       "name": "外汇"
     },
     {
-      "type": 6,
+      "type": 7,
       "name": "体育"
     },
     {
-      "type": 7,
+      "type": 8,
       "name": "娱乐"
     },
     {
-      "type": 8,
+      "type": 9,
       "name": "汽车"
     }
   ],
@@ -4664,44 +3788,44 @@ json1 {
   "serialNo": 32767,
   "verified": true
 }
-hex2 7e830300411234567890127fff0209000004befccac2010004b9fac4da020004b9fabcca030004b9c9c6b1040004bbf9bdf0050004cde2bbe3060004cce5d3fd070004d3e9c0d6080004c6fbb3b5817e
+hex2 7e830300411234567890127fff0209010004befccac2020004b9fac4da030004b9fabcca040004b9c9c6b1050004bbf9bdf0060004cde2bbe3070004cce5d3fd080004d3e9c0d6090004c6fbb3b5887e
 json2 {
   "type": 2,
   "infos": [
     {
-      "type": 0,
+      "type": 1,
       "name": "军事"
     },
     {
-      "type": 1,
+      "type": 2,
       "name": "国内"
     },
     {
-      "type": 2,
+      "type": 3,
       "name": "国际"
     },
     {
-      "type": 3,
+      "type": 4,
       "name": "股票"
     },
     {
-      "type": 4,
+      "type": 5,
       "name": "基金"
     },
     {
-      "type": 5,
+      "type": 6,
       "name": "外汇"
     },
     {
-      "type": 6,
+      "type": 7,
       "name": "体育"
     },
     {
-      "type": 7,
+      "type": 8,
       "name": "娱乐"
     },
     {
-      "type": 8,
+      "type": 9,
       "name": "汽车"
     }
   ],
@@ -4712,44 +3836,44 @@ json2 {
   "serialNo": 32767,
   "verified": true
 }
-hex1 7e830340410112345678901234567890ffff0209000004befccac2010004b9fac4da020004b9fabcca030004b9c9c6b1040004bbf9bdf0050004cde2bbe3060004cce5d3fd070004d3e9c0d6080004c6fbb3b5ca7e
+hex1 7e830340410112345678901234567890ffff0209010004befccac2020004b9fac4da030004b9fabcca040004b9c9c6b1050004bbf9bdf0060004cde2bbe3070004cce5d3fd080004d3e9c0d6090004c6fbb3b5c37e
 json1 {
   "type": 2,
   "infos": [
     {
-      "type": 0,
+      "type": 1,
       "name": "军事"
     },
     {
-      "type": 1,
+      "type": 2,
       "name": "国内"
     },
     {
-      "type": 2,
+      "type": 3,
       "name": "国际"
     },
     {
-      "type": 3,
+      "type": 4,
       "name": "股票"
     },
     {
-      "type": 4,
+      "type": 5,
       "name": "基金"
     },
     {
-      "type": 5,
+      "type": 6,
       "name": "外汇"
     },
     {
-      "type": 6,
+      "type": 7,
       "name": "体育"
     },
     {
-      "type": 7,
+      "type": 8,
       "name": "娱乐"
     },
     {
-      "type": 8,
+      "type": 9,
       "name": "汽车"
     }
   ],
@@ -4760,44 +3884,44 @@ json1 {
   "serialNo": 65535,
   "verified": true
 }
-hex2 7e830340410112345678901234567890ffff0209000004befccac2010004b9fac4da020004b9fabcca030004b9c9c6b1040004bbf9bdf0050004cde2bbe3060004cce5d3fd070004d3e9c0d6080004c6fbb3b5ca7e
+hex2 7e830340410112345678901234567890ffff0209010004befccac2020004b9fac4da030004b9fabcca040004b9c9c6b1050004bbf9bdf0060004cde2bbe3070004cce5d3fd080004d3e9c0d6090004c6fbb3b5c37e
 json2 {
   "type": 2,
   "infos": [
     {
-      "type": 0,
+      "type": 1,
       "name": "军事"
     },
     {
-      "type": 1,
+      "type": 2,
       "name": "国内"
     },
     {
-      "type": 2,
+      "type": 3,
       "name": "国际"
     },
     {
-      "type": 3,
+      "type": 4,
       "name": "股票"
     },
     {
-      "type": 4,
+      "type": 5,
       "name": "基金"
     },
     {
-      "type": 5,
+      "type": 6,
       "name": "外汇"
     },
     {
-      "type": 6,
+      "type": 7,
       "name": "体育"
     },
     {
-      "type": 7,
+      "type": 8,
       "name": "娱乐"
     },
     {
-      "type": 8,
+      "type": 9,
       "name": "汽车"
     }
   ],
@@ -4852,7 +3976,7 @@ json2 {
   "serialNo": 65535,
   "verified": true
 }
-hex1 7e840000151234567890127fff000000000000000031323334353637383930313233aa7e
+hex1 7e840000151234567890127fff003132333435363738393031323300000000000000aa7e
 json1 {
   "type": 0,
   "phoneNumber": "1234567890123",
@@ -4863,7 +3987,7 @@ json1 {
   "serialNo": 32767,
   "verified": true
 }
-hex2 7e840000151234567890127fff000000000000000031323334353637383930313233aa7e
+hex2 7e840000151234567890127fff003132333435363738393031323300000000000000aa7e
 json2 {
   "type": 0,
   "phoneNumber": "1234567890123",
@@ -4874,7 +3998,7 @@ json2 {
   "serialNo": 32767,
   "verified": true
 }
-hex1 7e840040150112345678901234567890ffff000000000000000031323334353637383930313233e17e
+hex1 7e840040150112345678901234567890ffff003132333435363738393031323300000000000000e17e
 json1 {
   "type": 0,
   "phoneNumber": "1234567890123",
@@ -4885,7 +4009,7 @@ json1 {
   "serialNo": 65535,
   "verified": true
 }
-hex2 7e840040150112345678901234567890ffff000000000000000031323334353637383930313233e17e
+hex2 7e840040150112345678901234567890ffff003132333435363738393031323300000000000000e17e
 json2 {
   "type": 0,
   "phoneNumber": "1234567890123",
@@ -5334,7 +4458,6 @@ json2 {
 }
 hex1 7e860100111234567890127fff040000000100000002000000030000ffff987e
 json1 {
-  "total": 4,
   "id": [
     1,
     2,
@@ -5350,7 +4473,6 @@ json1 {
 }
 hex2 7e860100111234567890127fff040000000100000002000000030000ffff987e
 json2 {
-  "total": 4,
   "id": [
     1,
     2,
@@ -5366,7 +4488,6 @@ json2 {
 }
 hex1 7e860140110112345678901234567890ffff040000000100000002000000030000ffffd37e
 json1 {
-  "total": 4,
   "id": [
     1,
     2,
@@ -5382,7 +4503,6 @@ json1 {
 }
 hex2 7e860140110112345678901234567890ffff040000000100000002000000030000ffffd37e
 json2 {
-  "total": 4,
   "id": [
     1,
     2,
@@ -6121,7 +5241,6 @@ json2 {
 hex1 7e860800191234567890127fff0000000005000000020000000400000006000000083b9ac9ff077e
 json1 {
   "type": 0,
-  "total": 5,
   "id": [
     2,
     4,
@@ -6139,7 +5258,6 @@ json1 {
 hex2 7e860800191234567890127fff0000000005000000020000000400000006000000083b9ac9ff077e
 json2 {
   "type": 0,
-  "total": 5,
   "id": [
     2,
     4,
@@ -6157,7 +5275,6 @@ json2 {
 hex1 7e860840190112345678901234567890ffff0000000005000000020000000400000006000000083b9ac9ff4c7e
 json1 {
   "type": 0,
-  "total": 5,
   "id": [
     2,
     4,
@@ -6175,7 +5292,6 @@ json1 {
 hex2 7e860840190112345678901234567890ffff0000000005000000020000000400000006000000083b9ac9ff4c7e
 json2 {
   "type": 0,
-  "total": 5,
   "id": [
     2,
     4,
@@ -6193,7 +5309,6 @@ json2 {
 hex1 7e880000171234567890127fff0000c15f09000100020003000400050006000700080009037e
 json1 {
   "mediaId": 49503,
-  "total": 9,
   "id": [
     1,
     2,
@@ -6215,7 +5330,6 @@ json1 {
 hex2 7e880000171234567890127fff0000c15f09000100020003000400050006000700080009037e
 json2 {
   "mediaId": 49503,
-  "total": 9,
   "id": [
     1,
     2,
@@ -6237,7 +5351,6 @@ json2 {
 hex1 7e880040170112345678901234567890ffff0000c15f09000100020003000400050006000700080009487e
 json1 {
   "mediaId": 49503,
-  "total": 9,
   "id": [
     1,
     2,
@@ -6259,7 +5372,6 @@ json1 {
 hex2 7e880040170112345678901234567890ffff0000c15f09000100020003000400050006000700080009487e
 json2 {
   "mediaId": 49503,
-  "total": 9,
   "id": [
     1,
     2,
@@ -6566,6 +5678,810 @@ json2 {
   "serialNo": 65535,
   "verified": true
 }
+hex1 7e910100171234567890127fff0f3132332e3132332e3132332e313233030440c60c0100207e
+json1 {
+  "ip": "123.123.123.123",
+  "tcpPort": 772,
+  "udpPort": 16582,
+  "channelNo": 12,
+  "mediaType": 1,
+  "streamType": 0,
+  "messageId": 37121,
+  "properties": 23,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex2 7e910100171234567890127fff0f3132332e3132332e3132332e313233030440c60c0100207e
+json2 {
+  "ip": "123.123.123.123",
+  "tcpPort": 772,
+  "udpPort": 16582,
+  "channelNo": 12,
+  "mediaType": 1,
+  "streamType": 0,
+  "messageId": 37121,
+  "properties": 23,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex1 7e910140170112345678901234567890ffff0f3132332e3132332e3132332e313233030440c60c01006b7e
+json1 {
+  "ip": "123.123.123.123",
+  "tcpPort": 772,
+  "udpPort": 16582,
+  "channelNo": 12,
+  "mediaType": 1,
+  "streamType": 0,
+  "messageId": 37121,
+  "properties": 16407,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex2 7e910140170112345678901234567890ffff0f3132332e3132332e3132332e313233030440c60c01006b7e
+json2 {
+  "ip": "123.123.123.123",
+  "tcpPort": 772,
+  "udpPort": 16582,
+  "channelNo": 12,
+  "mediaType": 1,
+  "streamType": 0,
+  "messageId": 37121,
+  "properties": 16407,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex1 7e910200041234567890127fff08010203957e
+json1 {
+  "channelNo": 8,
+  "command": 1,
+  "closeType": 2,
+  "streamType": 3,
+  "messageId": 37122,
+  "properties": 4,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex2 7e910200041234567890127fff08010203957e
+json2 {
+  "channelNo": 8,
+  "command": 1,
+  "closeType": 2,
+  "streamType": 3,
+  "messageId": 37122,
+  "properties": 4,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex1 7e910240040112345678901234567890ffff08010203de7e
+json1 {
+  "channelNo": 8,
+  "command": 1,
+  "closeType": 2,
+  "streamType": 3,
+  "messageId": 37122,
+  "properties": 16388,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex2 7e910240040112345678901234567890ffff08010203de7e
+json2 {
+  "channelNo": 8,
+  "command": 1,
+  "closeType": 2,
+  "streamType": 3,
+  "messageId": 37122,
+  "properties": 16388,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex1 7e910500021234567890127fff02039d7e
+json1 {
+  "channelNo": 2,
+  "packetLossRate": 3,
+  "messageId": 37125,
+  "properties": 2,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex2 7e910500021234567890127fff02039d7e
+json2 {
+  "channelNo": 2,
+  "packetLossRate": 3,
+  "messageId": 37125,
+  "properties": 2,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex1 7e910540020112345678901234567890ffff0203d67e
+json1 {
+  "channelNo": 2,
+  "packetLossRate": 3,
+  "messageId": 37125,
+  "properties": 16386,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex2 7e910540020112345678901234567890ffff0203d67e
+json2 {
+  "channelNo": 2,
+  "packetLossRate": 3,
+  "messageId": 37125,
+  "properties": 16386,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex1 7e920100241234567890127fff0d31322e31322e3132332e313233a7b93c6c320200000000200707192359200707192359e07e
+json1 {
+  "ip": "12.12.123.123",
+  "tcpPort": 42937,
+  "udpPort": 15468,
+  "channelNo": 50,
+  "mediaType": 2,
+  "streamType": 0,
+  "storageType": 0,
+  "playbackMode": 0,
+  "playbackSpeed": 0,
+  "startTime": "200707192359",
+  "endTime": "200707192359",
+  "messageId": 37377,
+  "properties": 36,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex2 7e920100241234567890127fff0d31322e31322e3132332e313233a7b93c6c320200000000200707192359200707192359e07e
+json2 {
+  "ip": "12.12.123.123",
+  "tcpPort": 42937,
+  "udpPort": 15468,
+  "channelNo": 50,
+  "mediaType": 2,
+  "streamType": 0,
+  "storageType": 0,
+  "playbackMode": 0,
+  "playbackSpeed": 0,
+  "startTime": "200707192359",
+  "endTime": "200707192359",
+  "messageId": 37377,
+  "properties": 36,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex1 7e920140240112345678901234567890ffff0d31322e31322e3132332e313233a7b93c6c320200000000200707192359200707192359ab7e
+json1 {
+  "ip": "12.12.123.123",
+  "tcpPort": 42937,
+  "udpPort": 15468,
+  "channelNo": 50,
+  "mediaType": 2,
+  "streamType": 0,
+  "storageType": 0,
+  "playbackMode": 0,
+  "playbackSpeed": 0,
+  "startTime": "200707192359",
+  "endTime": "200707192359",
+  "messageId": 37377,
+  "properties": 16420,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex2 7e920140240112345678901234567890ffff0d31322e31322e3132332e313233a7b93c6c320200000000200707192359200707192359ab7e
+json2 {
+  "ip": "12.12.123.123",
+  "tcpPort": 42937,
+  "udpPort": 15468,
+  "channelNo": 50,
+  "mediaType": 2,
+  "streamType": 0,
+  "storageType": 0,
+  "playbackMode": 0,
+  "playbackSpeed": 0,
+  "startTime": "200707192359",
+  "endTime": "200707192359",
+  "messageId": 37377,
+  "properties": 16420,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex1 7e920200091234567890127fff110103200707192359c37e
+json1 {
+  "channelNo": 17,
+  "playbackMode": 1,
+  "playbackSpeed": 3,
+  "playbackTime": "200707192359",
+  "messageId": 37378,
+  "properties": 9,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex2 7e920200091234567890127fff110103200707192359c37e
+json2 {
+  "channelNo": 17,
+  "playbackMode": 1,
+  "playbackSpeed": 3,
+  "playbackTime": "200707192359",
+  "messageId": 37378,
+  "properties": 9,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex1 7e920240090112345678901234567890ffff110103200707192359887e
+json1 {
+  "channelNo": 17,
+  "playbackMode": 1,
+  "playbackSpeed": 3,
+  "playbackTime": "200707192359",
+  "messageId": 37378,
+  "properties": 16393,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex2 7e920240090112345678901234567890ffff110103200707192359887e
+json2 {
+  "channelNo": 17,
+  "playbackMode": 1,
+  "playbackSpeed": 3,
+  "playbackTime": "200707192359",
+  "messageId": 37378,
+  "properties": 16393,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex1 7e920500181234567890127fffe720070719235920070719235900000000000000009b6e00977e
+json1 {
+  "channelNo": 231,
+  "startTime": "200707192359",
+  "endTime": "200707192359",
+  "warnBit1": 0,
+  "warnBit2": 0,
+  "mediaType": 155,
+  "streamType": 110,
+  "storageType": 0,
+  "messageId": 37381,
+  "properties": 24,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex2 7e920500181234567890127fffe720070719235920070719235900000000000000009b6e00977e
+json2 {
+  "channelNo": 231,
+  "startTime": "200707192359",
+  "endTime": "200707192359",
+  "warnBit1": 0,
+  "warnBit2": 0,
+  "mediaType": 155,
+  "streamType": 110,
+  "storageType": 0,
+  "messageId": 37381,
+  "properties": 24,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex1 7e920540180112345678901234567890ffffe720070719235920070719235900000000000000009b6e00dc7e
+json1 {
+  "channelNo": 231,
+  "startTime": "200707192359",
+  "endTime": "200707192359",
+  "warnBit1": 0,
+  "warnBit2": 0,
+  "mediaType": 155,
+  "streamType": 110,
+  "storageType": 0,
+  "messageId": 37381,
+  "properties": 16408,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex2 7e920540180112345678901234567890ffffe720070719235920070719235900000000000000009b6e00dc7e
+json2 {
+  "channelNo": 231,
+  "startTime": "200707192359",
+  "endTime": "200707192359",
+  "warnBit1": 0,
+  "warnBit2": 0,
+  "mediaType": 155,
+  "streamType": 110,
+  "storageType": 0,
+  "messageId": 37381,
+  "properties": 16408,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex1 7e920600451234567890127fff0b3139322e3136382e312e312b2d08757365726e616d650870617373776f72640b2f616c61726d5f66696c6501200707192359200707192359000000000000000000010101fa7e
+json1 {
+  "ip": "192.168.1.1",
+  "port": 11053,
+  "username": "username",
+  "password": "password",
+  "path": "/alarm_file",
+  "channelNo": 1,
+  "startTime": "200707192359",
+  "endTime": "200707192359",
+  "warnBit1": 0,
+  "warnBit2": 0,
+  "mediaType": 0,
+  "streamType": 1,
+  "storageType": 1,
+  "condition": 1,
+  "messageId": 37382,
+  "properties": 69,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex2 7e920600451234567890127fff0b3139322e3136382e312e312b2d08757365726e616d650870617373776f72640b2f616c61726d5f66696c6501200707192359200707192359000000000000000000010101fa7e
+json2 {
+  "ip": "192.168.1.1",
+  "port": 11053,
+  "username": "username",
+  "password": "password",
+  "path": "/alarm_file",
+  "channelNo": 1,
+  "startTime": "200707192359",
+  "endTime": "200707192359",
+  "warnBit1": 0,
+  "warnBit2": 0,
+  "mediaType": 0,
+  "streamType": 1,
+  "storageType": 1,
+  "condition": 1,
+  "messageId": 37382,
+  "properties": 69,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex1 7e920640450112345678901234567890ffff0b3139322e3136382e312e312b2d08757365726e616d650870617373776f72640b2f616c61726d5f66696c6501200707192359200707192359000000000000000000010101b17e
+json1 {
+  "ip": "192.168.1.1",
+  "port": 11053,
+  "username": "username",
+  "password": "password",
+  "path": "/alarm_file",
+  "channelNo": 1,
+  "startTime": "200707192359",
+  "endTime": "200707192359",
+  "warnBit1": 0,
+  "warnBit2": 0,
+  "mediaType": 0,
+  "streamType": 1,
+  "storageType": 1,
+  "condition": 1,
+  "messageId": 37382,
+  "properties": 16453,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex2 7e920640450112345678901234567890ffff0b3139322e3136382e312e312b2d08757365726e616d650870617373776f72640b2f616c61726d5f66696c6501200707192359200707192359000000000000000000010101b17e
+json2 {
+  "ip": "192.168.1.1",
+  "port": 11053,
+  "username": "username",
+  "password": "password",
+  "path": "/alarm_file",
+  "channelNo": 1,
+  "startTime": "200707192359",
+  "endTime": "200707192359",
+  "warnBit1": 0,
+  "warnBit2": 0,
+  "mediaType": 0,
+  "streamType": 1,
+  "storageType": 1,
+  "condition": 1,
+  "messageId": 37382,
+  "properties": 16453,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex1 7e920700031234567890127fff69fd020a7e
+json1 {
+  "responseSerialNo": 27133,
+  "command": 2,
+  "messageId": 37383,
+  "properties": 3,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex2 7e920700031234567890127fff69fd020a7e
+json2 {
+  "responseSerialNo": 27133,
+  "command": 2,
+  "messageId": 37383,
+  "properties": 3,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex1 7e920740030112345678901234567890ffff69fd02417e
+json1 {
+  "responseSerialNo": 27133,
+  "command": 2,
+  "messageId": 37383,
+  "properties": 16387,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex2 7e920740030112345678901234567890ffff69fd02417e
+json2 {
+  "responseSerialNo": 27133,
+  "command": 2,
+  "messageId": 37383,
+  "properties": 16387,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex1 7e920800521234567890127fff0d34372e3130342e39372e313639200a200b373635343332312008271111110101016164373231333135373965353462653062306637333763666337326335646238000000000000000000000000000000009e7e
+json1 {
+  "ip": "47.104.97.169",
+  "tcpPort": 8202,
+  "udpPort": 8203,
+  "alarmId": {
+    "deviceId": "7654321",
+    "dateTime": "200827111111",
+    "serialNo": 1,
+    "fileTotal": 1,
+    "reserved": 1
+  },
+  "alarmNo": "ad72131579e54be0b0f737cfc72c5db8",
+  "reserved": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "messageId": 37384,
+  "properties": 82,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex2 7e920800521234567890127fff0d34372e3130342e39372e313639200a200b373635343332312008271111110101016164373231333135373965353462653062306637333763666337326335646238000000000000000000000000000000009e7e
+json2 {
+  "ip": "47.104.97.169",
+  "tcpPort": 8202,
+  "udpPort": 8203,
+  "alarmId": {
+    "deviceId": "7654321",
+    "dateTime": "200827111111",
+    "serialNo": 1,
+    "fileTotal": 1,
+    "reserved": 1
+  },
+  "alarmNo": "ad72131579e54be0b0f737cfc72c5db8",
+  "reserved": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "messageId": 37384,
+  "properties": 82,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex1 7e9208406a0112345678901234567890ffff0d34372e3130342e39372e313639200a200b30393837363534333231303938373635343332310000000000000000000020082711111101010001616437323133313537396535346265306230663733376366633732633564623800000000000000000000000000000000dd7e
+json1 {
+  "ip": "47.104.97.169",
+  "tcpPort": 8202,
+  "udpPort": 8203,
+  "alarmId": {
+    "deviceId": "09876543210987654321",
+    "dateTime": "200827111111",
+    "serialNo": 1,
+    "fileTotal": 1,
+    "reserved": 1
+  },
+  "alarmNo": "ad72131579e54be0b0f737cfc72c5db8",
+  "reserved": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "messageId": 37384,
+  "properties": 16490,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex2 7e9208406a0112345678901234567890ffff0d34372e3130342e39372e313639200a200b30393837363534333231303938373635343332310000000000000000000020082711111101010001616437323133313537396535346265306230663733376366633732633564623800000000000000000000000000000000dd7e
+json2 {
+  "ip": "47.104.97.169",
+  "tcpPort": 8202,
+  "udpPort": 8203,
+  "alarmId": {
+    "deviceId": "09876543210987654321",
+    "dateTime": "200827111111",
+    "serialNo": 1,
+    "fileTotal": 1,
+    "reserved": 1
+  },
+  "alarmNo": "ad72131579e54be0b0f737cfc72c5db8",
+  "reserved": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "messageId": 37384,
+  "properties": 16490,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex1 7e921200191234567890127fff0d7777772e6a74743830382e636e0001010000000000000400ba7e
+json1 {
+  "name": "www.jtt808.cn",
+  "type": 0,
+  "result": 1,
+  "total": 1,
+  "items": [
+    0,
+    1024
+  ],
+  "messageId": 37394,
+  "properties": 25,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex2 7e921200191234567890127fff0d7777772e6a74743830382e636e0001010000000000000400ba7e
+json2 {
+  "name": "www.jtt808.cn",
+  "type": 0,
+  "result": 1,
+  "total": 1,
+  "items": [
+    0,
+    1024
+  ],
+  "messageId": 37394,
+  "properties": 25,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex1 7e921240190112345678901234567890ffff0d7777772e6a74743830382e636e0001010000000000000400f17e
+json1 {
+  "name": "www.jtt808.cn",
+  "type": 0,
+  "result": 1,
+  "total": 1,
+  "items": [
+    0,
+    1024
+  ],
+  "messageId": 37394,
+  "properties": 16409,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex2 7e921240190112345678901234567890ffff0d7777772e6a74743830382e636e0001010000000000000400f17e
+json2 {
+  "name": "www.jtt808.cn",
+  "type": 0,
+  "result": 1,
+  "total": 1,
+  "items": [
+    0,
+    1024
+  ],
+  "messageId": 37394,
+  "properties": 16409,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex1 7e930100031234567890127fff0102039b7e
+json1 {
+  "channelNo": 1,
+  "param1": 2,
+  "param2": 3,
+  "messageId": 37633,
+  "properties": 3,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex2 7e930100031234567890127fff0102039b7e
+json2 {
+  "channelNo": 1,
+  "param1": 2,
+  "param2": 3,
+  "messageId": 37633,
+  "properties": 3,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex1 7e930140030112345678901234567890ffff010203d07e
+json1 {
+  "channelNo": 1,
+  "param1": 2,
+  "param2": 3,
+  "messageId": 37633,
+  "properties": 16387,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex2 7e930140030112345678901234567890ffff010203d07e
+json2 {
+  "channelNo": 1,
+  "param1": 2,
+  "param2": 3,
+  "messageId": 37633,
+  "properties": 16387,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex1 7e930200021234567890127fff01ff677e
+json1 {
+  "channelNo": 1,
+  "param": 255,
+  "messageId": 37634,
+  "properties": 2,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex2 7e930200021234567890127fff01ff677e
+json2 {
+  "channelNo": 1,
+  "param": 255,
+  "messageId": 37634,
+  "properties": 2,
+  "protocolVersion": 0,
+  "clientId": "123456789012",
+  "serialNo": 32767,
+  "verified": true
+}
+hex1 7e930240020112345678901234567890ffff01ff2c7e
+json1 {
+  "channelNo": 1,
+  "param": 255,
+  "messageId": 37634,
+  "properties": 16386,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
+hex2 7e930240020112345678901234567890ffff01ff2c7e
+json2 {
+  "channelNo": 1,
+  "param": 255,
+  "messageId": 37634,
+  "properties": 16386,
+  "protocolVersion": 1,
+  "clientId": "12345678901234567890",
+  "serialNo": 65535,
+  "verified": true
+}
 hex1 7e0201001e1234567890127fff686200002a5a000074280000a3e50000db4fbc732711012c200707192359747e
 json1 {
   "responseSerialNo": 26722,
@@ -6576,7 +6492,7 @@ json1 {
   "altitude": 48243,
   "speed": 10001,
   "direction": 300,
-  "dateTime": "2020-07-07T19:23:59",
+  "dateTime": "200707192359",
   "messageId": 513,
   "properties": 30,
   "protocolVersion": 0,
@@ -6594,7 +6510,7 @@ json2 {
   "altitude": 48243,
   "speed": 10001,
   "direction": 300,
-  "dateTime": "2020-07-07T19:23:59",
+  "dateTime": "200707192359",
   "messageId": 513,
   "properties": 30,
   "protocolVersion": 0,
@@ -6612,7 +6528,7 @@ json1 {
   "altitude": 48243,
   "speed": 10001,
   "direction": 300,
-  "dateTime": "2020-07-07T19:23:59",
+  "dateTime": "200707192359",
   "messageId": 513,
   "properties": 16414,
   "protocolVersion": 1,
@@ -6630,7 +6546,7 @@ json2 {
   "altitude": 48243,
   "speed": 10001,
   "direction": 300,
-  "dateTime": "2020-07-07T19:23:59",
+  "dateTime": "200707192359",
   "messageId": 513,
   "properties": 16414,
   "protocolVersion": 1,
@@ -7201,7 +7117,7 @@ json2 {
 hex1 7e090000ad1234567890127ffff803013709b2e2cad4b9abcbbe3108544553542d30303105312e312e3005312e312e310b6465766963655f69645f310b757365725f636f64655f31023709b2e2cad4b9abcbbe3208544553542d30303205312e322e3005312e312e320b6465766963655f69645f320b757365725f636f64655f32033709b2e2cad4b9abcbbe3308544553542d30303305312e332e3005312e312e330b6465766963655f69645f330b757365725f636f64655f33797e
 json1 {
   "message": {
-    "id": 248,
+    "key": 248,
     "value": {
       "items": [
         {
@@ -7244,7 +7160,7 @@ json1 {
 hex2 7e090000ad1234567890127ffff803013709b2e2cad4b9abcbbe3108544553542d30303105312e312e3005312e312e310b6465766963655f69645f310b757365725f636f64655f31023709b2e2cad4b9abcbbe3208544553542d30303205312e322e3005312e312e320b6465766963655f69645f320b757365725f636f64655f32033709b2e2cad4b9abcbbe3308544553542d30303305312e332e3005312e312e330b6465766963655f69645f330b757365725f636f64655f33797e
 json2 {
   "message": {
-    "id": 248,
+    "key": 248,
     "value": {
       "items": [
         {
@@ -7287,7 +7203,7 @@ json2 {
 hex1 7e090040ad0112345678901234567890fffff803013709b2e2cad4b9abcbbe3108544553542d30303105312e312e3005312e312e310b6465766963655f69645f310b757365725f636f64655f31023709b2e2cad4b9abcbbe3208544553542d30303205312e322e3005312e312e320b6465766963655f69645f320b757365725f636f64655f32033709b2e2cad4b9abcbbe3308544553542d30303305312e332e3005312e312e330b6465766963655f69645f330b757365725f636f64655f33327e
 json1 {
   "message": {
-    "id": 248,
+    "key": 248,
     "value": {
       "items": [
         {
@@ -7330,7 +7246,7 @@ json1 {
 hex2 7e090040ad0112345678901234567890fffff803013709b2e2cad4b9abcbbe3108544553542d30303105312e312e3005312e312e310b6465766963655f69645f310b757365725f636f64655f31023709b2e2cad4b9abcbbe3208544553542d30303205312e322e3005312e312e320b6465766963655f69645f320b757365725f636f64655f32033709b2e2cad4b9abcbbe3308544553542d30303305312e332e3005312e312e330b6465766963655f69645f330b757365725f636f64655f33327e
 json2 {
   "message": {
-    "id": 248,
+    "key": 248,
     "value": {
       "items": [
         {
@@ -7370,10 +7286,6 @@ json2 {
   "serialNo": 65535,
   "verified": true
 }
-[main] INFO StringSchema         [75]字符长度超出限制: 长度[7],数据长度[20],09876543210987654321
-[main] INFO StringSchema         [75]字符长度超出限制: 长度[7],数据长度[20],09876543210987654321
-[main] INFO StringSchema         [75]字符长度超出限制: 长度[7],数据长度[20],09876543210987654321
-[main] INFO StringSchema         [75]字符长度超出限制: 长度[7],数据长度[20],09876543210987654321
 hex1 7e020000d41234567890127fff000004000000080006eeb6ad02633df7013800030063200707192359642f000000400101010a0a01010a0a00640001b2070003640e200707192359000137363534333231200827111111010101652f0000004102020214000000141400c8000516150006c81c200707192359000237363534333231200827111111020202662900000042031e012c00087a23000a2c2a200707192359000337363534333231200827111111030303006729000000430404280190000bde31000d9038200707192359000437363534333231200827111111040404b57e
 json1 {
   "warnBit": 1024,
@@ -7572,7 +7484,7 @@ json2 {
   "serialNo": 32767,
   "verified": true
 }
-hex1 7e020041340112345678901234567890ffff000004000000080006eeb6ad02633df70138000300632007071923596447000000400101010a0a01010a0a00640001b2070003640e20070719235900010000000000000000000030393837363534333231303938373635343332312008271111110101000165470000004102020214000000141400c8000516150006c81c200707192359000200000000000000000000303938373635343332313039383736353433323120082711111102020002664100000042031e012c00087a23000a2c2a200707192359000300000000000000000000303938373635343332313039383736353433323120082711111103030003006741000000430404280190000bde31000d90382007071923590004000000000000000000003039383736353433323130393837363534333231200827111111040400041f7e
+hex1 7e020041340112345678901234567890ffff000004000000080006eeb6ad02633df70138000300632007071923596447000000400101010a0a01010a0a00640001b2070003640e20070719235900013039383736353433323130393837363534333231000000000000000000002008271111110101000165470000004102020214000000141400c8000516150006c81c200707192359000230393837363534333231303938373635343332310000000000000000000020082711111102020002664100000042031e012c00087a23000a2c2a200707192359000330393837363534333231303938373635343332310000000000000000000020082711111103030003006741000000430404280190000bde31000d90382007071923590004303938373635343332313039383736353433323100000000000000000000200827111111040400041f7e
 json1 {
   "warnBit": 1024,
   "statusBit": 2048,
@@ -7671,7 +7583,7 @@ json1 {
   "serialNo": 65535,
   "verified": true
 }
-hex2 7e020041340112345678901234567890ffff000004000000080006eeb6ad02633df70138000300632007071923596447000000400101010a0a01010a0a00640001b2070003640e20070719235900010000000000000000000030393837363534333231303938373635343332312008271111110101000165470000004102020214000000141400c8000516150006c81c200707192359000200000000000000000000303938373635343332313039383736353433323120082711111102020002664100000042031e012c00087a23000a2c2a200707192359000300000000000000000000303938373635343332313039383736353433323120082711111103030003006741000000430404280190000bde31000d90382007071923590004000000000000000000003039383736353433323130393837363534333231200827111111040400041f7e
+hex2 7e020041340112345678901234567890ffff000004000000080006eeb6ad02633df70138000300632007071923596447000000400101010a0a01010a0a00640001b2070003640e20070719235900013039383736353433323130393837363534333231000000000000000000002008271111110101000165470000004102020214000000141400c8000516150006c81c200707192359000230393837363534333231303938373635343332310000000000000000000020082711111102020002664100000042031e012c00087a23000a2c2a200707192359000330393837363534333231303938373635343332310000000000000000000020082711111103030003006741000000430404280190000bde31000d90382007071923590004303938373635343332313039383736353433323100000000000000000000200827111111040400041f7e
 json2 {
   "warnBit": 1024,
   "statusBit": 2048,
@@ -7820,7 +7732,7 @@ json2 {
   "verified": true
 }
 
-7e0100002e1234567890127fff001f00730000797a68000000000000007777772e6a74743830382e636e3736353433323101b2e241383838383838227e
+7e0100002e1234567890127fff001f0073797a6800007777772e6a74743830382e636e000000000000003736353433323101b2e241383838383838227e
 {
   "provinceId": 31,
   "cityId": 115,
@@ -7836,7 +7748,7 @@ json2 {
   "serialNo": 32767,
   "verified": true
 }
-7e0100002e1234567890127fff001f00730000797a68000000000000007777772e6a74743830382e636e3736353433323101b2e241383838383838227e
+7e0100002e1234567890127fff001f0073797a6800007777772e6a74743830382e636e000000000000003736353433323101b2e241383838383838227e
 {
   "provinceId": 31,
   "cityId": 115,
@@ -7853,7 +7765,7 @@ json2 {
   "verified": true
 }
 
-7e010040550112345678901234567890ffff001f00730000000000000000797a6800000000000000000000000000000000007777772e6a74743830382e636e00000000000000000000303938373635343332313039383736353433323101b2e241383838383838227e
+7e010040550112345678901234567890ffff001f0073797a6800000000000000007777772e6a74743830382e636e000000000000000000000000000000000030393837363534333231303938373635343332310000000000000000000001b2e241383838383838227e
 {
   "provinceId": 31,
   "cityId": 115,
@@ -7869,7 +7781,7 @@ json2 {
   "serialNo": 65535,
   "verified": true
 }
-7e010040550112345678901234567890ffff001f00730000000000000000797a6800000000000000000000000000000000007777772e6a74743830382e636e00000000000000000000303938373635343332313039383736353433323101b2e241383838383838227e
+7e010040550112345678901234567890ffff001f0073797a6800000000000000007777772e6a74743830382e636e000000000000000000000000000000000030393837363534333231303938373635343332310000000000000000000001b2e241383838383838227e
 {
   "provinceId": 31,
   "cityId": 115,
@@ -7907,7 +7819,7 @@ json2 {
   "verified": true
 }
 
-7e010240500100000000017299841738ffff2c706d59477a47756b4f384b345a356c70494f5467386471623365707259614842625853504c7464627947383d3132333435363738393031323334350000000000000000000000000000332e372e3135347e
+7e010240500100000000017299841738ffff2c706d59477a47756b4f384b345a356c70494f5467386471623365707259614842625853504c7464627947383d313233343536373839303132333435332e372e31350000000000000000000000000000347e
 {
   "token": "pmYGzGukO8K4Z5lpIOTg8dqb3eprYaHBbXSPLtdbyG8\u003d",
   "imei": "123456789012345",
@@ -7919,7 +7831,7 @@ json2 {
   "serialNo": 65535,
   "verified": true
 }
-7e010240500100000000017299841738ffff2c706d59477a47756b4f384b345a356c70494f5467386471623365707259614842625853504c7464627947383d3132333435363738393031323334350000000000000000000000000000332e372e3135347e
+7e010240500100000000017299841738ffff2c706d59477a47756b4f384b345a356c70494f5467386471623365707259614842625853504c7464627947383d313233343536373839303132333435332e372e31350000000000000000000000000000347e
 {
   "token": "pmYGzGukO8K4Z5lpIOTg8dqb3eprYaHBbXSPLtdbyG8\u003d",
   "imei": "123456789012345",
@@ -8190,7 +8102,7 @@ json2 {
   "verified": true
 }
 
-7e010700421234567890127fff007f0000797a6800000000000000000000004a54543830382e434e3736353433323112345678901234567890096a74743830382e636e096a74743830382e636e7f7f337e
+7e010700421234567890127fff007f797a6800004a54543830382e434e00000000000000000000003736353433323112345678901234567890096a74743830382e636e096a74743830382e636e7f7f337e
 {
   "deviceType": 127,
   "makerId": "yzh",
@@ -8208,7 +8120,7 @@ json2 {
   "serialNo": 32767,
   "verified": true
 }
-7e010700421234567890127fff007f0000797a6800000000000000000000004a54543830382e434e3736353433323112345678901234567890096a74743830382e636e096a74743830382e636e7f7f337e
+7e010700421234567890127fff007f797a6800004a54543830382e434e00000000000000000000003736353433323112345678901234567890096a74743830382e636e096a74743830382e636e7f7f337e
 {
   "deviceType": 127,
   "makerId": "yzh",
@@ -8227,7 +8139,7 @@ json2 {
   "verified": true
 }
 
-7e010740630112345678901234567890ffff007f0000797a680000000000000000000000000000000000000000004a54543830382e434e00000000000000000000303938373635343332313039383736353433323112345678901234567890096a74743830382e636e096a74743830382e636e7f7f697e
+7e010740630112345678901234567890ffff007f797a6800004a54543830382e434e00000000000000000000000000000000000000000030393837363534333231303938373635343332310000000000000000000012345678901234567890096a74743830382e636e096a74743830382e636e7f7f697e
 {
   "deviceType": 127,
   "makerId": "yzh",
@@ -8245,7 +8157,7 @@ json2 {
   "serialNo": 65535,
   "verified": true
 }
-7e010740630112345678901234567890ffff007f0000797a680000000000000000000000000000000000000000004a54543830382e434e00000000000000000000303938373635343332313039383736353433323112345678901234567890096a74743830382e636e096a74743830382e636e7f7f697e
+7e010740630112345678901234567890ffff007f797a6800004a54543830382e434e00000000000000000000000000000000000000000030393837363534333231303938373635343332310000000000000000000012345678901234567890096a74743830382e636e096a74743830382e636e7f7f697e
 {
   "deviceType": 127,
   "makerId": "yzh",
@@ -8750,7 +8662,7 @@ json2 {
   "verified": true
 }
 
-7e0702004e0123456789017fff022007211830000004d5c5c8fd000000000000003132333435363738393031323328d6d0bbaac8cbc3f1b9b2bacdb9fab5c0c2b7d4cbcae4b4d3d2b5c8cbd4b1b4d3d2b5d7cab8f1d6a420190630307e
+7e0702004e0123456789017fff022007211830000004d5c5c8fd313233343536373839303132330000000000000028d6d0bbaac8cbc3f1b9b2bacdb9fab5c0c2b7d4cbcae4b4d3d2b5c8cbd4b1b4d3d2b5d7cab8f1d6a420190630307e
 {
   "status": 2,
   "dateTime": "200721183000",
@@ -8766,7 +8678,7 @@ json2 {
   "serialNo": 32767,
   "verified": true
 }
-7e0702004e0123456789017fff022007211830000004d5c5c8fd000000000000003132333435363738393031323328d6d0bbaac8cbc3f1b9b2bacdb9fab5c0c2b7d4cbcae4b4d3d2b5c8cbd4b1b4d3d2b5d7cab8f1d6a420190630307e
+7e0702004e0123456789017fff022007211830000004d5c5c8fd313233343536373839303132330000000000000028d6d0bbaac8cbc3f1b9b2bacdb9fab5c0c2b7d4cbcae4b4d3d2b5c8cbd4b1b4d3d2b5d7cab8f1d6a420190630307e
 {
   "status": 2,
   "dateTime": "200721183000",
@@ -8783,7 +8695,7 @@ json2 {
   "verified": true
 }
 
-7e0702404e0100000000017299841738ffff022007211830000004d5c5c8fd000000000000003132333435363738393031323328d6d0bbaac8cbc3f1b9b2bacdb9fab5c0c2b7d4cbcae4b4d3d2b5c8cbd4b1b4d3d2b5d7cab8f1d6a420190630387e
+7e070240620100000000017299841738ffff022007211830000004d5c5c8fd313233343536373839303132330000000000000028d6d0bbaac8cbc3f1b9b2bacdb9fab5c0c2b7d4cbcae4b4d3d2b5c8cbd4b1b4d3d2b5d7cab8f1d6a42019063033313031313532303031303130313030335800007b7e
 {
   "status": 2,
   "dateTime": "200721183000",
@@ -8792,14 +8704,15 @@ json2 {
   "licenseNo": "1234567890123",
   "institution": "中华人民共和国道路运输从业人员从业资格证",
   "licenseValidPeriod": "20190630",
+  "idCard": "31011520010101003X",
   "messageId": 1794,
-  "properties": 16462,
+  "properties": 16482,
   "protocolVersion": 1,
   "clientId": "17299841738",
   "serialNo": 65535,
   "verified": true
 }
-7e0702404e0100000000017299841738ffff022007211830000004d5c5c8fd000000000000003132333435363738393031323328d6d0bbaac8cbc3f1b9b2bacdb9fab5c0c2b7d4cbcae4b4d3d2b5c8cbd4b1b4d3d2b5d7cab8f1d6a420190630387e
+7e070240620100000000017299841738ffff022007211830000004d5c5c8fd313233343536373839303132330000000000000028d6d0bbaac8cbc3f1b9b2bacdb9fab5c0c2b7d4cbcae4b4d3d2b5c8cbd4b1b4d3d2b5d7cab8f1d6a42019063033313031313532303031303130313030335800007b7e
 {
   "status": 2,
   "dateTime": "200721183000",
@@ -8808,8 +8721,9 @@ json2 {
   "licenseNo": "1234567890123",
   "institution": "中华人民共和国道路运输从业人员从业资格证",
   "licenseValidPeriod": "20190630",
+  "idCard": "31011520010101003X",
   "messageId": 1794,
-  "properties": 16462,
+  "properties": 16482,
   "protocolVersion": 1,
   "clientId": "17299841738",
   "serialNo": 65535,
@@ -8822,55 +8736,49 @@ json2 {
   "type": 1,
   "items": [
     {
-      "location": {
-        "warnBit": 1024,
-        "statusBit": 2048,
-        "latitude": 116307629,
-        "longitude": 40058359,
-        "altitude": 312,
-        "speed": 3,
-        "direction": 99,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 1024,
+      "statusBit": 2048,
+      "latitude": 116307629,
+      "longitude": 40058359,
+      "altitude": 312,
+      "speed": 3,
+      "direction": 99,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     },
     {
-      "location": {
-        "warnBit": 1024,
-        "statusBit": 2048,
-        "latitude": 116307629,
-        "longitude": 40058359,
-        "altitude": 312,
-        "speed": 3,
-        "direction": 99,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 1024,
+      "statusBit": 2048,
+      "latitude": 116307629,
+      "longitude": 40058359,
+      "altitude": 312,
+      "speed": 3,
+      "direction": 99,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     },
     {
-      "location": {
-        "warnBit": 1024,
-        "statusBit": 2048,
-        "latitude": 116307629,
-        "longitude": 40058359,
-        "altitude": 312,
-        "speed": 3,
-        "direction": 99,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 1024,
+      "statusBit": 2048,
+      "latitude": 116307629,
+      "longitude": 40058359,
+      "altitude": 312,
+      "speed": 3,
+      "direction": 99,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     }
   ],
   "messageId": 1796,
@@ -8886,55 +8794,49 @@ json2 {
   "type": 1,
   "items": [
     {
-      "location": {
-        "warnBit": 1024,
-        "statusBit": 2048,
-        "latitude": 116307629,
-        "longitude": 40058359,
-        "altitude": 312,
-        "speed": 3,
-        "direction": 99,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 1024,
+      "statusBit": 2048,
+      "latitude": 116307629,
+      "longitude": 40058359,
+      "altitude": 312,
+      "speed": 3,
+      "direction": 99,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     },
     {
-      "location": {
-        "warnBit": 1024,
-        "statusBit": 2048,
-        "latitude": 116307629,
-        "longitude": 40058359,
-        "altitude": 312,
-        "speed": 3,
-        "direction": 99,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 1024,
+      "statusBit": 2048,
+      "latitude": 116307629,
+      "longitude": 40058359,
+      "altitude": 312,
+      "speed": 3,
+      "direction": 99,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     },
     {
-      "location": {
-        "warnBit": 1024,
-        "statusBit": 2048,
-        "latitude": 116307629,
-        "longitude": 40058359,
-        "altitude": 312,
-        "speed": 3,
-        "direction": 99,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 1024,
+      "statusBit": 2048,
+      "latitude": 116307629,
+      "longitude": 40058359,
+      "altitude": 312,
+      "speed": 3,
+      "direction": 99,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     }
   ],
   "messageId": 1796,
@@ -8951,55 +8853,49 @@ json2 {
   "type": 1,
   "items": [
     {
-      "location": {
-        "warnBit": 1024,
-        "statusBit": 2048,
-        "latitude": 116307629,
-        "longitude": 40058359,
-        "altitude": 312,
-        "speed": 3,
-        "direction": 99,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 1024,
+      "statusBit": 2048,
+      "latitude": 116307629,
+      "longitude": 40058359,
+      "altitude": 312,
+      "speed": 3,
+      "direction": 99,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     },
     {
-      "location": {
-        "warnBit": 1024,
-        "statusBit": 2048,
-        "latitude": 116307629,
-        "longitude": 40058359,
-        "altitude": 312,
-        "speed": 3,
-        "direction": 99,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 1024,
+      "statusBit": 2048,
+      "latitude": 116307629,
+      "longitude": 40058359,
+      "altitude": 312,
+      "speed": 3,
+      "direction": 99,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     },
     {
-      "location": {
-        "warnBit": 1024,
-        "statusBit": 2048,
-        "latitude": 116307629,
-        "longitude": 40058359,
-        "altitude": 312,
-        "speed": 3,
-        "direction": 99,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 1024,
+      "statusBit": 2048,
+      "latitude": 116307629,
+      "longitude": 40058359,
+      "altitude": 312,
+      "speed": 3,
+      "direction": 99,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     }
   ],
   "messageId": 1796,
@@ -9015,55 +8911,49 @@ json2 {
   "type": 1,
   "items": [
     {
-      "location": {
-        "warnBit": 1024,
-        "statusBit": 2048,
-        "latitude": 116307629,
-        "longitude": 40058359,
-        "altitude": 312,
-        "speed": 3,
-        "direction": 99,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 1024,
+      "statusBit": 2048,
+      "latitude": 116307629,
+      "longitude": 40058359,
+      "altitude": 312,
+      "speed": 3,
+      "direction": 99,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     },
     {
-      "location": {
-        "warnBit": 1024,
-        "statusBit": 2048,
-        "latitude": 116307629,
-        "longitude": 40058359,
-        "altitude": 312,
-        "speed": 3,
-        "direction": 99,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 1024,
+      "statusBit": 2048,
+      "latitude": 116307629,
+      "longitude": 40058359,
+      "altitude": 312,
+      "speed": 3,
+      "direction": 99,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     },
     {
-      "location": {
-        "warnBit": 1024,
-        "statusBit": 2048,
-        "latitude": 116307629,
-        "longitude": 40058359,
-        "altitude": 312,
-        "speed": 3,
-        "direction": 99,
-        "dateTime": "200707192359",
-        "messageId": 0,
-        "properties": 0,
-        "protocolVersion": 0,
-        "serialNo": 0,
-        "verified": true
-      }
+      "warnBit": 1024,
+      "statusBit": 2048,
+      "latitude": 116307629,
+      "longitude": 40058359,
+      "altitude": 312,
+      "speed": 3,
+      "direction": 99,
+      "dateTime": "200707192359",
+      "messageId": 0,
+      "properties": 0,
+      "protocolVersion": 0,
+      "serialNo": 0,
+      "verified": true
     }
   ],
   "messageId": 1796,
@@ -9364,13 +9254,7 @@ json2 {
     "serialNo": 0,
     "verified": true
   },
-  "packet": [
-    13,
-    123,
-    13,
-    123,
-    123
-  ],
+  "packet": "0d7b0d7b7b",
   "messageId": 2049,
   "properties": 41,
   "protocolVersion": 0,
@@ -9400,13 +9284,7 @@ json2 {
     "serialNo": 0,
     "verified": true
   },
-  "packet": [
-    13,
-    123,
-    13,
-    123,
-    123
-  ],
+  "packet": "0d7b0d7b7b",
   "messageId": 2049,
   "properties": 41,
   "protocolVersion": 0,
@@ -9437,13 +9315,7 @@ json2 {
     "serialNo": 0,
     "verified": true
   },
-  "packet": [
-    13,
-    123,
-    13,
-    123,
-    123
-  ],
+  "packet": "0d7b0d7b7b",
   "messageId": 2049,
   "properties": 16425,
   "protocolVersion": 1,
@@ -9473,13 +9345,7 @@ json2 {
     "serialNo": 0,
     "verified": true
   },
-  "packet": [
-    13,
-    123,
-    13,
-    123,
-    123
-  ],
+  "packet": "0d7b0d7b7b",
   "messageId": 2049,
   "properties": 16425,
   "protocolVersion": 1,
@@ -9878,7 +9744,6 @@ json2 {
 {
   "responseSerialNo": 62656,
   "result": 0,
-  "total": 9,
   "id": [
     1,
     2,
@@ -9901,7 +9766,6 @@ json2 {
 {
   "responseSerialNo": 62656,
   "result": 0,
-  "total": 9,
   "id": [
     1,
     2,
@@ -9925,7 +9789,6 @@ json2 {
 {
   "responseSerialNo": 62656,
   "result": 0,
-  "total": 9,
   "id": [
     1,
     2,
@@ -9948,7 +9811,6 @@ json2 {
 {
   "responseSerialNo": 62656,
   "result": 0,
-  "total": 9,
   "id": [
     1,
     2,
@@ -10057,7 +9919,6 @@ json2 {
 7e800300150123456789017fff1099090001000200030004000500060007000800091f7e
 {
   "responseSerialNo": 4249,
-  "total": 9,
   "id": [
     1,
     2,
@@ -10079,7 +9940,6 @@ json2 {
 7e800300150123456789017fff1099090001000200030004000500060007000800091f7e
 {
   "responseSerialNo": 4249,
-  "total": 9,
   "id": [
     1,
     2,
@@ -10102,7 +9962,6 @@ json2 {
 7e800340160100000000017299841738ffff10990009000100020003000400050006000700080009147e
 {
   "responseSerialNo": 4249,
-  "total": 9,
   "id": [
     1,
     2,
@@ -10124,7 +9983,6 @@ json2 {
 7e800340160100000000017299841738ffff10990009000100020003000400050006000700080009147e
 {
   "responseSerialNo": 4249,
-  "total": 9,
   "id": [
     1,
     2,
@@ -10496,7 +10354,6 @@ json2 {
 
 7e810600190123456789017fff0600000001000000030000000500000007000000090000007fe67e
 {
-  "total": 6,
   "id": [
     1,
     3,
@@ -10514,7 +10371,6 @@ json2 {
 }
 7e810600190123456789017fff0600000001000000030000000500000007000000090000007fe67e
 {
-  "total": 6,
   "id": [
     1,
     3,
@@ -10533,7 +10389,6 @@ json2 {
 
 7e810640190100000000017299841738ffff0600000001000000030000000500000007000000090000007fee7e
 {
-  "total": 6,
   "id": [
     1,
     3,
@@ -10551,7 +10406,6 @@ json2 {
 }
 7e810640190100000000017299841738ffff0600000001000000030000000500000007000000090000007fee7e
 {
-  "total": 6,
   "id": [
     1,
     3,
@@ -10568,7 +10422,7 @@ json2 {
   "verified": true
 }
 
-7e8108001a0123456789017fff34000061736406312e312e313200000009010203040506070809d47e
+7e8108001a0123456789017fff34617364000006312e312e313200000009010203040506070809d47e
 {
   "type": 52,
   "makerId": "asd",
@@ -10591,7 +10445,7 @@ json2 {
   "serialNo": 32767,
   "verified": true
 }
-7e8108001a0123456789017fff34000061736406312e312e313200000009010203040506070809d47e
+7e8108001a0123456789017fff34617364000006312e312e313200000009010203040506070809d47e
 {
   "type": 52,
   "makerId": "asd",
@@ -10615,7 +10469,7 @@ json2 {
   "verified": true
 }
 
-7e8108401a0100000000017299841738ffff34000061736406312e312e313200000009010203040506070809dc7e
+7e8108401a0100000000017299841738ffff34617364000006312e312e313200000009010203040506070809dc7e
 {
   "type": 52,
   "makerId": "asd",
@@ -10638,7 +10492,7 @@ json2 {
   "serialNo": 65535,
   "verified": true
 }
-7e8108401a0100000000017299841738ffff34000061736406312e312e313200000009010203040506070809dc7e
+7e8108401a0100000000017299841738ffff34617364000006312e312e313200000009010203040506070809dc7e
 {
   "type": 52,
   "makerId": "asd",
@@ -11228,7 +11082,7 @@ json2 {
   "verified": true
 }
 
-7e840000150123456789017fff000000000000000031323334353637383930313233a87e
+7e840000150123456789017fff003132333435363738393031323300000000000000a87e
 {
   "type": 0,
   "phoneNumber": "1234567890123",
@@ -11239,7 +11093,7 @@ json2 {
   "serialNo": 32767,
   "verified": true
 }
-7e840000150123456789017fff000000000000000031323334353637383930313233a87e
+7e840000150123456789017fff003132333435363738393031323300000000000000a87e
 {
   "type": 0,
   "phoneNumber": "1234567890123",
@@ -11251,7 +11105,7 @@ json2 {
   "verified": true
 }
 
-7e840040150100000000017299841738ffff000000000000000031323334353637383930313233a07e
+7e840040150100000000017299841738ffff003132333435363738393031323300000000000000a07e
 {
   "type": 0,
   "phoneNumber": "1234567890123",
@@ -11262,7 +11116,7 @@ json2 {
   "serialNo": 65535,
   "verified": true
 }
-7e840040150100000000017299841738ffff000000000000000031323334353637383930313233a07e
+7e840040150100000000017299841738ffff003132333435363738393031323300000000000000a07e
 {
   "type": 0,
   "phoneNumber": "1234567890123",
@@ -11718,7 +11572,6 @@ json2 {
 
 7e860100110123456789017fff040000000100000002000000030000ffff9a7e
 {
-  "total": 4,
   "id": [
     1,
     2,
@@ -11734,7 +11587,6 @@ json2 {
 }
 7e860100110123456789017fff040000000100000002000000030000ffff9a7e
 {
-  "total": 4,
   "id": [
     1,
     2,
@@ -11751,7 +11603,6 @@ json2 {
 
 7e860140110100000000017299841738ffff040000000100000002000000030000ffff927e
 {
-  "total": 4,
   "id": [
     1,
     2,
@@ -11767,7 +11618,6 @@ json2 {
 }
 7e860140110100000000017299841738ffff040000000100000002000000030000ffff927e
 {
-  "total": 4,
   "id": [
     1,
     2,
@@ -12167,7 +12017,7 @@ json2 {
   "verified": true
 }
 
-7e8604403f0100000000017299841738ffff000000030002200707192359200707192359007b3c00050000007b000001590000007b000001590000007b000001590000007b000001590000007b00000159dd7e
+7e860440430100000000017299841738ffff000000030002200707192359200707192359007b3c00050000007b000001590000007b000001590000007b000001590000007b000001590000007b0000015900000000a17e
 {
   "id": 3,
   "attribute": 2,
@@ -12197,14 +12047,16 @@ json2 {
       "longitude": 345
     }
   ],
+  "nightMaxSpeed": 0,
+  "name": "",
   "messageId": 34308,
-  "properties": 16447,
+  "properties": 16451,
   "protocolVersion": 1,
   "clientId": "17299841738",
   "serialNo": 65535,
   "verified": true
 }
-7e8604403f0100000000017299841738ffff000000030002200707192359200707192359007b3c00050000007b000001590000007b000001590000007b000001590000007b000001590000007b00000159dd7e
+7e860440430100000000017299841738ffff000000030002200707192359200707192359007b3c00050000007b000001590000007b000001590000007b000001590000007b000001590000007b0000015900000000a17e
 {
   "id": 3,
   "attribute": 2,
@@ -12234,8 +12086,10 @@ json2 {
       "longitude": 345
     }
   ],
+  "nightMaxSpeed": 0,
+  "name": "",
   "messageId": 34308,
-  "properties": 16447,
+  "properties": 16451,
   "protocolVersion": 1,
   "clientId": "17299841738",
   "serialNo": 65535,
@@ -12509,7 +12363,6 @@ json2 {
 7e880000170123456789017fff0000c15f09000100020003000400050006000700080009017e
 {
   "mediaId": 49503,
-  "total": 9,
   "id": [
     1,
     2,
@@ -12531,7 +12384,6 @@ json2 {
 7e880000170123456789017fff0000c15f09000100020003000400050006000700080009017e
 {
   "mediaId": 49503,
-  "total": 9,
   "id": [
     1,
     2,
@@ -12554,7 +12406,6 @@ json2 {
 7e880040170100000000017299841738ffff0000c15f09000100020003000400050006000700080009097e
 {
   "mediaId": 49503,
-  "total": 9,
   "id": [
     1,
     2,
@@ -12576,7 +12427,6 @@ json2 {
 7e880040170100000000017299841738ffff0000c15f09000100020003000400050006000700080009097e
 {
   "mediaId": 49503,
-  "total": 9,
   "id": [
     1,
     2,
@@ -12904,7 +12754,7 @@ json2 {
   "altitude": 48243,
   "speed": 10001,
   "direction": 300,
-  "dateTime": "2020-05-12T12:12:59",
+  "dateTime": "200512121259",
   "attributes": {
     "1": 3224115
   },
@@ -12925,7 +12775,7 @@ json2 {
   "altitude": 48243,
   "speed": 10001,
   "direction": 300,
-  "dateTime": "2020-05-12T12:12:59",
+  "dateTime": "200512121259",
   "attributes": {
     "1": 3224115
   },
@@ -12947,7 +12797,7 @@ json2 {
   "altitude": 48243,
   "speed": 10001,
   "direction": 300,
-  "dateTime": "2020-05-12T12:12:59",
+  "dateTime": "200512121259",
   "attributes": {
     "1": 3224115
   },
@@ -12968,7 +12818,7 @@ json2 {
   "altitude": 48243,
   "speed": 10001,
   "direction": 300,
-  "dateTime": "2020-05-12T12:12:59",
+  "dateTime": "200512121259",
   "attributes": {
     "1": 3224115
   },
@@ -13545,7 +13395,7 @@ json2 {
 7e0900000f0123456789017fff006173647a786371776531323333354c7e
 {
   "message": {
-    "id": 0,
+    "key": 0,
     "value": [
       97,
       115,
@@ -13570,11 +13420,10 @@ json2 {
   "serialNo": 32767,
   "verified": true
 }
-[main] WARN commons.transform.PassthroughConverter[56]未注册的透传消息:ID[dec:0,hex:0], VALUE[6173647a78637177653132333335]
 7e0900000f0123456789017fff006173647a786371776531323333354c7e
 {
   "message": {
-    "id": 0,
+    "key": 0,
     "value": [
       97,
       115,
@@ -13603,7 +13452,7 @@ json2 {
 7e0900400f0100000000017299841738ffff006173647a78637177653132333335447e
 {
   "message": {
-    "id": 0,
+    "key": 0,
     "value": [
       97,
       115,
@@ -13628,11 +13477,10 @@ json2 {
   "serialNo": 65535,
   "verified": true
 }
-[main] WARN commons.transform.PassthroughConverter[56]未注册的透传消息:ID[dec:0,hex:0], VALUE[6173647a78637177653132333335]
 7e0900400f0100000000017299841738ffff006173647a78637177653132333335447e
 {
   "message": {
-    "id": 0,
+    "key": 0,
     "value": [
       97,
       115,
@@ -13658,7 +13506,7 @@ json2 {
   "verified": true
 }
 
-[main] INFO MultiPacketDecoder   [51]<<<<<<<<<分包信息[cid=17299841738, msg=1205, total=18, count=1, retryCount=0, time=0, packets={1, , , , , , , , , , , , , , , , , }]
+[main] INFO MultiPacketDecoder   <<<<<分包消息[1205]终端上传音视频资源列表, cid=17299841738, total=18, count=1, retryCount=0, waitTime=0, packets={1, , , , , , , , , , , , , , , , , }
 {
   "responseSerialNo": 0,
   "messageId": 4613,
@@ -13670,7 +13518,7 @@ json2 {
   "packageNo": 1,
   "verified": true
 }
-[main] INFO MultiPacketDecoder   [51]<<<<<<<<<分包信息[cid=17299841738, msg=1205, total=18, count=2, retryCount=0, time=0, packets={1,2, , , , , , , , , , , , , , , , }]
+[main] INFO MultiPacketDecoder   <<<<<分包消息[1205]终端上传音视频资源列表, cid=17299841738, total=18, count=2, retryCount=0, waitTime=0, packets={1,2, , , , , , , , , , , , , , , , }
 {
   "responseSerialNo": 0,
   "messageId": 4613,
@@ -13682,7 +13530,7 @@ json2 {
   "packageNo": 2,
   "verified": true
 }
-[main] INFO MultiPacketDecoder   [51]<<<<<<<<<分包信息[cid=17299841738, msg=1205, total=18, count=3, retryCount=0, time=0, packets={1,2,3, , , , , , , , , , , , , , , }]
+[main] INFO MultiPacketDecoder   <<<<<分包消息[1205]终端上传音视频资源列表, cid=17299841738, total=18, count=3, retryCount=0, waitTime=0, packets={1,2,3, , , , , , , , , , , , , , , }
 {
   "responseSerialNo": 0,
   "messageId": 4613,
@@ -13694,7 +13542,7 @@ json2 {
   "packageNo": 3,
   "verified": true
 }
-[main] INFO MultiPacketDecoder   [51]<<<<<<<<<分包信息[cid=17299841738, msg=1205, total=18, count=4, retryCount=0, time=0, packets={1,2,3,4, , , , , , , , , , , , , , }]
+[main] INFO MultiPacketDecoder   <<<<<分包消息[1205]终端上传音视频资源列表, cid=17299841738, total=18, count=4, retryCount=0, waitTime=0, packets={1,2,3,4, , , , , , , , , , , , , , }
 {
   "responseSerialNo": 0,
   "messageId": 4613,
@@ -13706,7 +13554,7 @@ json2 {
   "packageNo": 4,
   "verified": true
 }
-[main] INFO MultiPacketDecoder   [51]<<<<<<<<<分包信息[cid=17299841738, msg=1205, total=18, count=5, retryCount=0, time=0, packets={1,2,3,4,5, , , , , , , , , , , , , }]
+[main] INFO MultiPacketDecoder   <<<<<分包消息[1205]终端上传音视频资源列表, cid=17299841738, total=18, count=5, retryCount=0, waitTime=0, packets={1,2,3,4,5, , , , , , , , , , , , , }
 {
   "responseSerialNo": 0,
   "messageId": 4613,
@@ -13718,7 +13566,7 @@ json2 {
   "packageNo": 5,
   "verified": true
 }
-[main] INFO MultiPacketDecoder   [51]<<<<<<<<<分包信息[cid=17299841738, msg=1205, total=18, count=6, retryCount=0, time=0, packets={1,2,3,4,5,6, , , , , , , , , , , , }]
+[main] INFO MultiPacketDecoder   <<<<<分包消息[1205]终端上传音视频资源列表, cid=17299841738, total=18, count=6, retryCount=0, waitTime=0, packets={1,2,3,4,5,6, , , , , , , , , , , , }
 {
   "responseSerialNo": 0,
   "messageId": 4613,
@@ -13730,7 +13578,7 @@ json2 {
   "packageNo": 6,
   "verified": true
 }
-[main] INFO MultiPacketDecoder   [51]<<<<<<<<<分包信息[cid=17299841738, msg=1205, total=18, count=7, retryCount=0, time=0, packets={1,2,3,4,5,6,7, , , , , , , , , , , }]
+[main] INFO MultiPacketDecoder   <<<<<分包消息[1205]终端上传音视频资源列表, cid=17299841738, total=18, count=7, retryCount=0, waitTime=0, packets={1,2,3,4,5,6,7, , , , , , , , , , , }
 {
   "responseSerialNo": 0,
   "messageId": 4613,
@@ -13742,7 +13590,7 @@ json2 {
   "packageNo": 7,
   "verified": true
 }
-[main] INFO MultiPacketDecoder   [51]<<<<<<<<<分包信息[cid=17299841738, msg=1205, total=18, count=8, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8, , , , , , , , , , }]
+[main] INFO MultiPacketDecoder   <<<<<分包消息[1205]终端上传音视频资源列表, cid=17299841738, total=18, count=8, retryCount=0, waitTime=0, packets={1,2,3,4,5,6,7,8, , , , , , , , , , }
 {
   "responseSerialNo": 0,
   "messageId": 4613,
@@ -13754,7 +13602,7 @@ json2 {
   "packageNo": 8,
   "verified": true
 }
-[main] INFO MultiPacketDecoder   [51]<<<<<<<<<分包信息[cid=17299841738, msg=1205, total=18, count=9, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9, , , , , , , , , }]
+[main] INFO MultiPacketDecoder   <<<<<分包消息[1205]终端上传音视频资源列表, cid=17299841738, total=18, count=9, retryCount=0, waitTime=0, packets={1,2,3,4,5,6,7,8,9, , , , , , , , , }
 {
   "responseSerialNo": 0,
   "messageId": 4613,
@@ -13766,7 +13614,7 @@ json2 {
   "packageNo": 9,
   "verified": true
 }
-[main] INFO MultiPacketDecoder   [51]<<<<<<<<<分包信息[cid=17299841738, msg=1205, total=18, count=10, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10, , , , , , , , }]
+[main] INFO MultiPacketDecoder   <<<<<分包消息[1205]终端上传音视频资源列表, cid=17299841738, total=18, count=10, retryCount=0, waitTime=0, packets={1,2,3,4,5,6,7,8,9,10, , , , , , , , }
 {
   "responseSerialNo": 0,
   "messageId": 4613,
@@ -13778,7 +13626,7 @@ json2 {
   "packageNo": 10,
   "verified": true
 }
-[main] INFO MultiPacketDecoder   [51]<<<<<<<<<分包信息[cid=17299841738, msg=1205, total=18, count=11, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10,11, , , , , , , }]
+[main] INFO MultiPacketDecoder   <<<<<分包消息[1205]终端上传音视频资源列表, cid=17299841738, total=18, count=11, retryCount=0, waitTime=0, packets={1,2,3,4,5,6,7,8,9,10,11, , , , , , , }
 {
   "responseSerialNo": 0,
   "messageId": 4613,
@@ -13790,7 +13638,7 @@ json2 {
   "packageNo": 11,
   "verified": true
 }
-[main] INFO MultiPacketDecoder   [51]<<<<<<<<<分包信息[cid=17299841738, msg=1205, total=18, count=12, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10,11,12, , , , , , }]
+[main] INFO MultiPacketDecoder   <<<<<分包消息[1205]终端上传音视频资源列表, cid=17299841738, total=18, count=12, retryCount=0, waitTime=0, packets={1,2,3,4,5,6,7,8,9,10,11,12, , , , , , }
 {
   "responseSerialNo": 0,
   "messageId": 4613,
@@ -13802,7 +13650,7 @@ json2 {
   "packageNo": 12,
   "verified": true
 }
-[main] INFO MultiPacketDecoder   [51]<<<<<<<<<分包信息[cid=17299841738, msg=1205, total=18, count=13, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10,11,12,13, , , , , }]
+[main] INFO MultiPacketDecoder   <<<<<分包消息[1205]终端上传音视频资源列表, cid=17299841738, total=18, count=13, retryCount=0, waitTime=0, packets={1,2,3,4,5,6,7,8,9,10,11,12,13, , , , , }
 {
   "responseSerialNo": 0,
   "messageId": 4613,
@@ -13814,7 +13662,7 @@ json2 {
   "packageNo": 13,
   "verified": true
 }
-[main] INFO MultiPacketDecoder   [51]<<<<<<<<<分包信息[cid=17299841738, msg=1205, total=18, count=14, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10,11,12,13,14, , , , }]
+[main] INFO MultiPacketDecoder   <<<<<分包消息[1205]终端上传音视频资源列表, cid=17299841738, total=18, count=14, retryCount=0, waitTime=0, packets={1,2,3,4,5,6,7,8,9,10,11,12,13,14, , , , }
 {
   "responseSerialNo": 0,
   "messageId": 4613,
@@ -13826,7 +13674,7 @@ json2 {
   "packageNo": 14,
   "verified": true
 }
-[main] INFO MultiPacketDecoder   [51]<<<<<<<<<分包信息[cid=17299841738, msg=1205, total=18, count=15, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15, , , }]
+[main] INFO MultiPacketDecoder   <<<<<分包消息[1205]终端上传音视频资源列表, cid=17299841738, total=18, count=15, retryCount=0, waitTime=0, packets={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15, , , }
 {
   "responseSerialNo": 0,
   "messageId": 4613,
@@ -13838,7 +13686,7 @@ json2 {
   "packageNo": 15,
   "verified": true
 }
-[main] INFO MultiPacketDecoder   [51]<<<<<<<<<分包信息[cid=17299841738, msg=1205, total=18, count=16, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16, , }]
+[main] INFO MultiPacketDecoder   <<<<<分包消息[1205]终端上传音视频资源列表, cid=17299841738, total=18, count=16, retryCount=0, waitTime=0, packets={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16, , }
 {
   "responseSerialNo": 0,
   "messageId": 4613,
@@ -13850,7 +13698,7 @@ json2 {
   "packageNo": 16,
   "verified": true
 }
-[main] INFO MultiPacketDecoder   [51]<<<<<<<<<分包信息[cid=17299841738, msg=1205, total=18, count=17, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17, }]
+[main] INFO MultiPacketDecoder   <<<<<分包消息[1205]终端上传音视频资源列表, cid=17299841738, total=18, count=17, retryCount=0, waitTime=0, packets={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17, }
 {
   "responseSerialNo": 0,
   "messageId": 4613,
@@ -13862,7 +13710,7 @@ json2 {
   "packageNo": 17,
   "verified": true
 }
-[main] INFO MultiPacketDecoder   [51]<<<<<<<<<分包信息[cid=17299841738, msg=1205, total=18, count=18, retryCount=0, time=0, packets={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18}]
+[main] INFO MultiPacketDecoder   <<<<<分包消息[1205]终端上传音视频资源列表, cid=17299841738, total=18, count=18, retryCount=0, waitTime=0, packets={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18}
 {
   "responseSerialNo": 2,
   "items": [
@@ -15856,7 +15704,7 @@ json2 {
   "packageNo": 18,
   "verified": true
 }
-[main] INFO MultiPacketDecoder   [51]<<<<<<<<<分包信息[cid=13224005528, msg=104, total=2, count=1, retryCount=0, time=0, packets={1, }]
+[main] INFO MultiPacketDecoder   <<<<<分包消息[0104]查询终端参数应答, cid=13224005528, total=2, count=1, retryCount=0, waitTime=0, packets={1, }
 {
   "responseSerialNo": 0,
   "total": 0,
@@ -15869,7 +15717,7 @@ json2 {
   "packageNo": 1,
   "verified": true
 }
-[main] INFO MultiPacketDecoder   [51]<<<<<<<<<分包信息[cid=13224005528, msg=104, total=2, count=2, retryCount=0, time=0, packets={1,2}]
+[main] INFO MultiPacketDecoder   <<<<<分包消息[0104]查询终端参数应答, cid=13224005528, total=2, count=2, retryCount=0, waitTime=0, packets={1,2}
 {
   "responseSerialNo": 420,
   "total": 88,

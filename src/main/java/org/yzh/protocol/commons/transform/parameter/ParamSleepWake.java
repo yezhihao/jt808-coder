@@ -1,10 +1,12 @@
 package org.yzh.protocol.commons.transform.parameter;
 
+import io.github.yezhihao.protostar.Schema;
 import io.github.yezhihao.protostar.annotation.Field;
-import io.github.yezhihao.protostar.util.Bcd;
 import io.netty.buffer.ByteBuf;
 
 import java.time.LocalTime;
+
+import static io.github.yezhihao.protostar.util.DateTool.BCD;
 
 /**
  * 终端休眠唤醒模式设置数据格式
@@ -13,11 +15,9 @@ import java.time.LocalTime;
  */
 public class ParamSleepWake {
 
-    public static final int id = 0x007C;
+    public static final int key = 0x007C;
 
-    public static int id() {
-        return id;
-    }
+    public static final Schema<ParamSleepWake> SCHEMA = new ParamSleepWakeSchema();
 
     @Field(desc = "休眠唤醒模式：[0]条件唤醒 [1]定时唤醒 [2]手动唤醒")
     private int mode;
@@ -43,13 +43,6 @@ public class ParamSleepWake {
     private LocalTime wakeTime4;
     @Field(desc = "时间段4关闭时间")
     private LocalTime sleepTime4;
-
-    public ParamSleepWake() {
-    }
-
-    public static int getId() {
-        return id;
-    }
 
     public int getMode() {
         return mode;
@@ -147,11 +140,9 @@ public class ParamSleepWake {
         this.sleepTime4 = sleepTime4;
     }
 
-    public static class S implements io.github.yezhihao.protostar.Schema<ParamSleepWake> {
+    private static class ParamSleepWakeSchema implements Schema<ParamSleepWake> {
 
-        public static final S INSTANCE = new S();
-
-        private S() {
+        private ParamSleepWakeSchema() {
         }
 
         @Override
@@ -161,14 +152,14 @@ public class ParamSleepWake {
             message.conditionType = input.readByte();
             message.dayOfWeek = input.readByte();
             message.timeFlag = input.readByte();
-            message.wakeTime1 = Bcd.readTime2(input);
-            message.sleepTime1 = Bcd.readTime2(input);
-            message.wakeTime2 = Bcd.readTime2(input);
-            message.sleepTime2 = Bcd.readTime2(input);
-            message.wakeTime3 = Bcd.readTime2(input);
-            message.sleepTime3 = Bcd.readTime2(input);
-            message.wakeTime4 = Bcd.readTime2(input);
-            message.sleepTime4 = Bcd.readTime2(input);
+            message.wakeTime1 = BCD.readTime2(input);
+            message.sleepTime1 = BCD.readTime2(input);
+            message.wakeTime2 = BCD.readTime2(input);
+            message.sleepTime2 = BCD.readTime2(input);
+            message.wakeTime3 = BCD.readTime2(input);
+            message.sleepTime3 = BCD.readTime2(input);
+            message.wakeTime4 = BCD.readTime2(input);
+            message.sleepTime4 = BCD.readTime2(input);
             return message;
         }
 
@@ -178,14 +169,14 @@ public class ParamSleepWake {
             output.writeByte(message.conditionType);
             output.writeByte(message.dayOfWeek);
             output.writeByte(message.timeFlag);
-            Bcd.writeTime2(output, message.wakeTime1);
-            Bcd.writeTime2(output, message.sleepTime1);
-            Bcd.writeTime2(output, message.wakeTime2);
-            Bcd.writeTime2(output, message.sleepTime2);
-            Bcd.writeTime2(output, message.wakeTime3);
-            Bcd.writeTime2(output, message.sleepTime3);
-            Bcd.writeTime2(output, message.wakeTime4);
-            Bcd.writeTime2(output, message.sleepTime4);
+            BCD.writeTime2(output, message.wakeTime1);
+            BCD.writeTime2(output, message.sleepTime1);
+            BCD.writeTime2(output, message.wakeTime2);
+            BCD.writeTime2(output, message.sleepTime2);
+            BCD.writeTime2(output, message.wakeTime3);
+            BCD.writeTime2(output, message.sleepTime3);
+            BCD.writeTime2(output, message.wakeTime4);
+            BCD.writeTime2(output, message.sleepTime4);
         }
     }
 }

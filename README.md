@@ -1,14 +1,14 @@
-部标JT808 JT/T808协议客户端
+部标JT808 808协议客户端
 ====================
 
-<p align="center">
+<p>
     <img src="https://img.shields.io/badge/JDK-1.8+-green.svg"></img>
     <img src="https://img.shields.io/badge/License-Apache 2.0-green.svg"></img>
     <img src="https://img.shields.io/badge/QQ群-906230542-blue"></img>
 </p>
 
 ## 项目介绍
-* 基于Netty-buffer，实现JT/T808部标协议的编码解码；
+* 基于Netty-buffer，实现JT808部标协议的编码解码；
 * 基于Netty-handler，实现客户端消息发送与接收；
 * 最简洁、清爽、易用的部标开发框架。
 
@@ -25,12 +25,12 @@
 |T/GDRTA 002(主动安全-粤标)|2019|支持|基于JT/T808-2019|
 
 ## 代码仓库
- * Gitee仓库地址：[https://gitee.com/yezhihao/jt808-coder/tree/master](https://gitee.com/yezhihao/jt808-coder/tree/master)
- * Github仓库地址：[https://github.com/yezhihao/jt808-coder/tree/master](https://github.com/yezhihao/jt808-coder/tree/master)
+* Gitee仓库地址：[https://gitee.com/yezhihao/jt808-coder/tree/master](https://gitee.com/yezhihao/jt808-coder/tree/master)
+* Github仓库地址：[https://github.com/yezhihao/jt808-coder/tree/master](https://github.com/yezhihao/jt808-coder/tree/master)
 
 
 ## 使用
- 消息定义样例：
+消息定义样例：
  ```java
 @Message(JT808.定位数据批量上传)
 public class T0704 extends AbstractMessage<Header> {
@@ -81,8 +81,7 @@ public class SampleTest {
 ```
 
 ## 测试
-* Elucidator 报文解释器 - 解码
-* DarkRepulsor 报文解释器 - 编码
+* Elucidator 报文解释器 - 编码解码
 
 分析报文内每个属性所处的位置以及转换后的值，以便查询报文解析出错的原因
 
@@ -179,11 +178,16 @@ src
 
 
 项目创立于2017年9月，至今，jt808-server已接入多家公司的线上产品线，接入场景如车辆管理平台，IOT业务和大数据作业等，截止最新统计时间为止，jt808-server已接入的公司包括不限于：
-    
+
 	- 1.福建九桃贸易有限公司
 	- 2.深圳市特维视科技有限公司
 	- 3.厦门河联信息科技有限公司
 	- 4.北京华盾互联科技有限公司
+	- 5.宜昌华维物流有限责任公司
+	- 6.江苏推米信息科技有限公司
+	- 7.山东六度信息科技有限公司
+	- 8.亚信创新技术(南京)有限公司
+	- 9.无锡创趣网络科技有限公司
     - ……
-    
+
 > 更多接入的公司，欢迎在 [登记地址](https://gitee.com/yezhihao/jt808-server/issues/I36WKD ) 登记，登记仅仅为了项目推广。

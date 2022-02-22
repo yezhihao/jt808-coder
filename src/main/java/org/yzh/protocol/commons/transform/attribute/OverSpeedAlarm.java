@@ -1,18 +1,17 @@
 package org.yzh.protocol.commons.transform.attribute;
 
+import io.github.yezhihao.protostar.Schema;
 import io.netty.buffer.ByteBuf;
 
 /**
- * 超速报警附加信息见表 28
+ * 超速报警 0x11
  * length 1 或 5
  */
 public class OverSpeedAlarm {
 
-    public static final int id = 0x11;
+    public static final int key = 17;
 
-    public static int id() {
-        return id;
-    }
+    public static final Schema<OverSpeedAlarm> SCHEMA = new OverSpeedAlarmSchema();
 
     /** 位置类型：0.无特定位置 1.圆形区域 2.矩形区域 3.多边形区域 4.路段 */
     private byte areaType;
@@ -52,11 +51,9 @@ public class OverSpeedAlarm {
         return sb.toString();
     }
 
-    public static class Schema implements io.github.yezhihao.protostar.Schema<OverSpeedAlarm> {
+    private static class OverSpeedAlarmSchema implements Schema<OverSpeedAlarm> {
 
-        public static final Schema INSTANCE = new Schema();
-
-        private Schema() {
+        private OverSpeedAlarmSchema() {
         }
 
         @Override

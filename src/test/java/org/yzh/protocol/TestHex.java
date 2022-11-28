@@ -2,7 +2,7 @@ package org.yzh.protocol;
 
 import io.netty.buffer.ByteBufUtil;
 import io.netty.buffer.Unpooled;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.yzh.protocol.basics.JTMessage;
 
 import java.io.BufferedReader;

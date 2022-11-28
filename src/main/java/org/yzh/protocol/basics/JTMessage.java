@@ -3,10 +3,8 @@ package org.yzh.protocol.basics;
 import io.github.yezhihao.netmc.core.model.Message;
 import io.github.yezhihao.protostar.annotation.Field;
 import io.github.yezhihao.protostar.util.ToStringBuilder;
-import io.netty.buffer.ByteBuf;
 import org.yzh.protocol.commons.MessageId;
 
-import java.beans.Transient;
 
 /**
  * @author yezhihao
@@ -31,9 +29,6 @@ public class JTMessage implements Message {
     protected Integer packageNo;
     /** bcc校验 */
     protected boolean verified = true;
-
-    protected transient ByteBuf payload;
-
 
     public JTMessage() {
     }
@@ -117,15 +112,6 @@ public class JTMessage implements Message {
         this.verified = verified;
     }
 
-    @Transient
-    public ByteBuf getPayload() {
-        return payload;
-    }
-
-    public void setPayload(ByteBuf payload) {
-        this.payload = payload;
-    }
-
     public int reflectMessageId() {
         if (messageId != 0)
             return messageId;
@@ -140,6 +126,10 @@ public class JTMessage implements Message {
     }
 
     public boolean transform() {
+        return true;
+    }
+
+    public boolean noBuffer() {
         return true;
     }
 

@@ -1,10 +1,10 @@
 package org.yzh.protocol;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.yzh.protocol.basics.JTMessage;
 import org.yzh.protocol.commons.JT808;
 
-import static org.yzh.protocol.BeanTest.*;
+import static org.yzh.protocol.BeanTest.selfCheck;
 import static org.yzh.protocol.JT808Beans.*;
 
 /**

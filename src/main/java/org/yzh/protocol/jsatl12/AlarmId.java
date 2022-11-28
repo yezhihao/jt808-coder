@@ -24,8 +24,6 @@ public class AlarmId {
     @Field(length = 2, desc = "预留(粤标)", version = 1)
     private int reserved;
 
-    private transient String platformAlarmId;
-
     public AlarmId() {
     }
 
@@ -75,14 +73,6 @@ public class AlarmId {
 
     public void setReserved(int reserved) {
         this.reserved = reserved;
-    }
-
-    public String getPlatformAlarmId() {
-        return platformAlarmId;
-    }
-
-    public void setPlatformAlarmId(String platformAlarmId) {
-        this.platformAlarmId = platformAlarmId;
     }
 
     @Override

@@ -11,7 +11,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 /**
  * JT/T *协议单元测试类
@@ -53,8 +53,8 @@ public class BeanTest {
         println(json2);
 
         System.out.println();
-        assertEquals(hex1, hex2, "hex not equals");
-        assertEquals(json1, json2, "object not equals");
+        assertEquals(hex1, hex2);
+        assertEquals(json1, json2);
     }
 
     public static void selfCheck(JTMessage bean) {
@@ -72,8 +72,8 @@ public class BeanTest {
         String json2 = gson.toJson(bean2);
         println("json2 " + json2);
 
-        assertEquals(hex1, hex2, "hex not equals");
-        assertEquals(json1, json2, "object not equals");
+        assertEquals(hex1, hex2);
+        assertEquals(json1, json2);
     }
 
     public static JTMessage transform(String hex) {
